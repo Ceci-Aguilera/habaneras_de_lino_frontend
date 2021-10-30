@@ -1,0 +1,15 @@
+.containerImageBanner{
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+    background-color: black;
+    color:white;
+}
+
+.imageBanner{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+    height: 200px;
+}

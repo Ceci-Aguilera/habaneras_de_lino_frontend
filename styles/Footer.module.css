@@ -1,0 +1,88 @@
+.footer {
+    background-color: white;
+        color: black !important;
+    font-weight: 300 !important;
+    text-align: center;
+    margin-top: 50px;
+    height: 200px;
+    width: 100vw !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 0px;
+  }
+  
+  .footerWrapper {
+        color: black !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  @media screen and (max-width: 758px) {
+    .footerWrapper {
+            color: black !important;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      justify-content: center;
+    }
+  
+    .footer {
+      background-color: white;
+          color: black !important;
+      font-weight: 300 !important;
+      text-align: center;
+      margin-top: 50px;
+      height: 300px;
+      width: 100vw !important;
+      position: relative;
+      bottom: 0;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+      padding: 0px;
+    }
+  
+    .footerLink,
+    .p,
+    .contactUsP {
+            color: black !important;
+      text-decoration: none;
+      margin-top: 30px;
+      padding: 0px;
+    }
+  }
+  
+  .footerLink,
+  .p {
+        color: black !important;
+    text-decoration: none;
+    margin-top: 30px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .footerLink:hover,
+  .footerLink:after,
+  .footerLink:focus,
+  .footerLink:active {
+        color: black !important;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .contactUsP {
+        color: black !important;
+    text-decoration: none;
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  
+  .contactUsRow {
+    width: min-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
