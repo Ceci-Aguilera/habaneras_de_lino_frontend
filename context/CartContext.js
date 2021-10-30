@@ -17,9 +17,11 @@ export const getCart = async () => {
       return await axios
         .get(cart_url, config)
         .then(async (res) => {
+            // console.log("In context")
+            // console.log(res.data)
             if(res.data){
                 const result = await res.data;
-                return {status: "Cart not null", cart: res}   ;   
+                return {status: "Cart not null", cart: result}   ;   
             }
             else{
                 return {status: "Cart null", cart:null};
@@ -36,7 +38,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(async () => {
     const temp_cart = await getCart();
-    setCart(temp_cart["Cart"]);
+    setCart(temp_cart['cart']['Cart']);
   }, []);
 
   const add_product = async (body) => {

@@ -4,15 +4,19 @@ import CategoryGrid from '../components/CategoryGrid'
 import styles from '../styles/Home.module.css'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
+import { useCart } from '../context/CartContext'
 
 export default function Home() {
+
+  const {cart} = useCart()
+
   const [categories, setCategories] = useState(null);
 
     useEffect(async () => {
        getCategories(setCategories);
-       testCart()
     }, []);
   
+    console.log(cart)
   return (
     <div className={styles.container}>
       <Head>
@@ -51,21 +55,3 @@ const getCategories = (setCategories) => {
     });
 };
 
-const testCart = () => {
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-
-  const categories_url = 'http://127.0.0.1:8000/' + "store/cart/";
-  axios
-    .get(categories_url, config)
-    .then(async (res) => {
-      const result = await res.data;
-      console.log(result);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};

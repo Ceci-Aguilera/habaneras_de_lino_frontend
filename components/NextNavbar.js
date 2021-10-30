@@ -19,8 +19,11 @@ import {
 import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
+import { useCart } from "../context/CartContext";
 
 const NextNavbar = () => {
+  const {cart} = useCart()
+
   return (
     <Navbar
       collapseOnSelect
@@ -65,8 +68,8 @@ const NextNavbar = () => {
                 width="200px"
               ></Image> */}
             </Navbar.Brand>
-            <Nav.Link className={styles.linkItem} href="/prices">
-              PRICES
+            <Nav.Link className={styles.linkItem} href="/cart">
+              Cart {(cart==null)?0:cart.products.length}
             </Nav.Link>
             <Nav.Link className={styles.linkItem} href="#footer">
               CONTACT US
