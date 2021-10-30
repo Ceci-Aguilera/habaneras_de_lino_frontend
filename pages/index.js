@@ -10,6 +10,7 @@ export default function Home() {
 
     useEffect(async () => {
        getCategories(setCategories);
+       testCart()
     }, []);
   
   return (
@@ -44,6 +45,25 @@ const getCategories = (setCategories) => {
     .then(async (res) => {
       const result = await res.data;
       setCategories(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+const testCart = () => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  const categories_url = 'http://127.0.0.1:8000/' + "store/cart/";
+  axios
+    .get(categories_url, config)
+    .then(async (res) => {
+      const result = await res.data;
+      console.log(result);
     })
     .catch((error) => {
       console.log(error);

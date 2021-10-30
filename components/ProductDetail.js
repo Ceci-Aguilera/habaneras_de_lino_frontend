@@ -24,8 +24,20 @@ const ProductDetail = ({ product }) => {
 
     const [cant, setCant] = useState(1);
     const [clothing_s, setClothingS] = useState('S');
+    const [price, setPrice] = useState(product.price)
 
-    console.log(product)
+    const body = JSON.stringify({
+        cant,
+        clothing_s,
+        original_product_id: product.id,
+        price: product.price*cant,
+    })
+
+    const onBuyClickedHandler = async(e) => {
+        e.preventDefault();
+        await onBuyClick(body)
+    } 
+
     return product == null ? (
         <div></div>
     ) : (
@@ -51,20 +63,23 @@ const ProductDetail = ({ product }) => {
                 >
                     <Card>
                         <Card.Body>
-                            <Form.Select aria-label="Default select example">
-                                <option>Talla de Ropa</option>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Talla de Ropa</Form.Label>
+                                <Form.Select aria-label="Default select example" onChange={(e) => setClothingS(e.target.value)}>
                                 <option value="S">S</option>
                                 <option value="M">M</option>
                                 <option value="L">L</option>
                             </Form.Select>
+                            </Form.Group>
+                            
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Cantidad</Form.Label>
-                                <Form.Control type="number" placeholder="1" />
+                                <Form.Control type="number" onChange={(e) => setCant(e.target.value)} value={cant}/>
                             </Form.Group>
 
                         </Card.Body>
                         <Card.Footer>
-                            <Button>Comprar</Button>
+                            <Button onClick={(e)=>onBuyClickedHandler(e)}>Comprar</Button>
                         </Card.Footer>
                     </Card>
                 </Col>
@@ -72,5 +87,27 @@ const ProductDetail = ({ product }) => {
         </Container>
     );
 };
+
+
+const onBuyClick = async(body) => {
+    const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+    
+      const cart_url = 'http://127.0.0.1:8000/' + "store/cart/";
+      axios
+        .post(cart_url, body,config)
+        .then(async (res) => {
+          const result = await res.data;
+          console.log(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+} 
+
+
 
 export default ProductDetail;
