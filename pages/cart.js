@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <CartDetail cart = {cart} />
+        <CartDetail />
       </main>
 
       <footer className={styles.footer}>

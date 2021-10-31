@@ -68,9 +68,34 @@ export const CartProvider = ({ children }) => {
       });
   };
 
+  const delete_product = async(id) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+  
+    const cart_url = 'http://127.0.0.1:8000/' + `store/cart/delete-product/${id}/`;
+    
+    return await axios.delete(cart_url, config).then(async(response) => {
+      const res = await response.data;
+      const temp_cart = res["Cart"];
+
+      setCart(temp_cart);
+
+      setLoading(false);
+      router.push("/");
+
+    }).catch((error)=>{
+      
+      setLoading(false);
+        console.log(error);
+    })
+  }
+
   
   return (
-    <CartContext.Provider value={{ cart, add_product}}>
+    <CartContext.Provider value={{ cart, add_product, delete_product}}>
       {children}
     </CartContext.Provider>
   );

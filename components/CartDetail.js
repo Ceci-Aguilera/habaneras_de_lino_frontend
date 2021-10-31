@@ -19,10 +19,17 @@ import {
 import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
+import { useCart } from "../context/CartContext";
 
-const CartDetail = ({ cart }) => {
+const CartDetail = () => {
 
-    console.log(cart)
+    const {cart, delete_product} = useCart()
+
+    const onDeleteClickHandler = async(e, index) =>{
+        e.preventDefault();
+        const product = cart.products[index]
+        await delete_product(product.id)
+    }
 
     return cart == null ? (
         <div></div>
@@ -35,17 +42,41 @@ const CartDetail = ({ cart }) => {
                     {cart.products.map((prod, index) => {
                         return (
                             <Card key={index}>
-                                <Card.Img variant="top" src={prod.product.image} className={styles.card_image}/>
-                            </Card>
-                            // <Row key={index}>
+                                <Row key={index}>
 
-                            //     <Col xs={12} sm={12} md={6} lg={6}>
-                            //         <img alt={prod.product.title} src={prod.product.image} />
-                            //     </Col>
-                            //     <Col xs={12} sm={12} md={6} lg={6}>
-                            //         <p >{prod.product.title}</p>
-                            //     </Col>
-                            // </Row>
+                                    <Col xs={12} sm={12} md={6} lg={6}>
+                                        <Card.Img variant="top" src={prod.product.image} className={styles.card_image}/>
+                                    </Col>
+                                    <Col xs={12} sm={12} md={6} lg={6}>
+                                        <Row><p >{prod.product.title}</p></Row>
+                                        <Row>
+                                            Talla de Ropa: <p>{prod.clothing_s}</p>
+                                        </Row>
+                                        <Row>
+                                            Cantidad: <p>{prod.cant}</p>
+                                        </Row>
+                                        <Row>
+                                            Precio: <p>{prod.price}</p>
+                                        </Row>
+ 
+                                        <Row>
+                                            <Col xs={12} sm={12} md={6} lg={6}>
+                                                <Link href={`/custom_product/${prod.id}/`}>
+                                                <Button>
+                                                  Edit  
+                                                </Button>
+                                                </Link>
+                                            </Col>
+                                            <Col xs={12} sm={12} md={6} lg={6}>
+                                                <Button onClick={(e) => onDeleteClickHandler(e, index)}>
+                                                  Delete  
+                                                </Button>
+                                                </Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Card>
+
                         )
                     })}
 
@@ -55,6 +86,8 @@ const CartDetail = ({ cart }) => {
         </Container>
     );
 };
+
+
 
 
 
