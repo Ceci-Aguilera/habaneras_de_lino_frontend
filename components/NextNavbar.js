@@ -28,8 +28,8 @@ const NextNavbar = () => {
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="light"
-      variant="light"
+      bg="dark"
+      variant="dark"
       className={styles.navbar}
     >
       <Container>
@@ -40,38 +40,36 @@ const NextNavbar = () => {
           href="/"
         >
             GuayaberaStyle
-          {/* <Image
-            src={truckLogo}
-            alt="Logo not available"
-            height="150px"
-            width="200px"
-          ></Image> */}
         </Navbar.Brand>
 
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className={styles.navbar_nav} className="m-auto">
+          <>
+          <Nav className="ml-auto">
+          <p className={styles.linkItemFakish}>
+              Cart 0
+            </p>
+            </Nav>
+          <Nav className={`${styles.navbar_nav} mx-auto order-0`}>
             <Nav.Link className={styles.linkItem} href="/">
               About Us
             </Nav.Link>
             <Navbar.Brand
-              className={`d-none d-lg-block ${styles.brand}`}
+              className={`d-none d-lg-block mx-auto ${styles.brand}`}
               href="/"
             >
                 GuayaberaStyle
-              {/* <Image
-                src={truckLogo}
-                alt="Logo not available"
-                height="150px"
-                width="200px"
-              ></Image> */}
             </Navbar.Brand>
-            <Nav.Link className={styles.linkItem} href="/cart">
-              Cart {(cart==null)?0:cart.products.length}
-            </Nav.Link>
+ 
             <Nav.Link className={styles.linkItem} href="#footer">
               Contact Us
             </Nav.Link>
           </Nav>
+          <Nav className="mr-auto">
+          <Nav.Link className={styles.linkItem} href="/cart">
+              Cart {(cart==null)?0:cart.products.length}
+            </Nav.Link>
+           </Nav>
+           </>
         </Navbar.Collapse>
       </Container>
     </Navbar>

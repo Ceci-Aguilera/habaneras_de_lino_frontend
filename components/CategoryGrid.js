@@ -39,9 +39,9 @@ const CategoryGrid = ({ categories }) => {
                             className={styles.categoryCol}
                         >
                             <Link href={`/category/${cat.id}/`}>
-                                <Card>
+                                <Card className={styles.card}>
                                 <Card.Img variant="top" src={cat.image} className={styles.card_image}/>
-                                    <Card.Footer>
+                                    <Card.Footer className={styles.card_footer}>
                                         {cat.title}
                                     </Card.Footer>
                                 </Card>

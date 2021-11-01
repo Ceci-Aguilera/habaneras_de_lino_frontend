@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/CartDetail.module.css";
+import styles from "../styles/OrderResume.module.css";
 import {
     Nav,
     Navbar,
@@ -28,18 +28,18 @@ const OrderResume = () => {
     return cart == null ? (
         <div></div>
     ) : (
-        <Container className={styles.cartDetailContainer}>
-            <Card>
-                <Card.Header>Cart</Card.Header>
-                <Card.Body>
+        <Container className={styles.orderResumeContainer}>
+            <Card className={styles.card}>
+                <Card.Header className={styles.card_header}>Cart</Card.Header>
+                <Card.Body className={styles.card_body}>
                     <p>
-                        Subtotal: {cart.cost}
+                        Subtotal: ${cart.cost}
                     </p>
                     <p>
                         Taxes: 0.7%
                     </p>
                     <p>
-                        Precio total (envio + taxes): {cart.cost + (cart.cost * 0.07)}
+                        Precio total (envio + taxes): ${cart.cost + (cart.cost * 0.07)}
                     </p>
 
                 </Card.Body>

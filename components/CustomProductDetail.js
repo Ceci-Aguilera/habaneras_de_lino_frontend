@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/ProductDetail.module.css";
+import styles from "../styles/CustomProductDetail.module.css";
 import {
     Nav,
     Navbar,
@@ -19,8 +19,11 @@ import {
 import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
+import { useCart } from "../context/CartContext";
 
 const CustomProductDetail = ({ product }) => {
+
+    const {cart, update_product} = useCart()
 
     const [cant, setCant] = useState(1);
     const [clothing_s, setClothingS] = useState('S');
@@ -43,7 +46,8 @@ const CustomProductDetail = ({ product }) => {
     const onSaveClickedHandler = async(e) => {
         e.preventDefault();
         if(cant > 0){
-            await onSaveClick(product.id, body)
+            // await onSaveClick(product.id, body)
+            await update_product(product.id, body)
         }
         
     } 
@@ -51,7 +55,7 @@ const CustomProductDetail = ({ product }) => {
     return product == null ? (
         <div></div>
     ) : (
-        <Container className={styles.productsDetaulContainer}>
+        <Container className={styles.customProductsDetailContainer}>
             <Row className={styles.row}>
                 <Col
                     xs={12}
@@ -71,8 +75,8 @@ const CustomProductDetail = ({ product }) => {
                     lg={6}
                     className={styles.productCol}
                 >
-                    <Card>
-                        <Card.Body>
+                    <Card className={styles.card}>
+                    <Card.Body className={styles.card_body}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Talla de Ropa</Form.Label>
                                 <Form.Select aria-label="Default select example" onChange={(e) => setClothingS(e.target.value)}>
@@ -88,8 +92,8 @@ const CustomProductDetail = ({ product }) => {
                             </Form.Group>
 
                         </Card.Body>
-                        <Card.Footer>
-                            <Button onClick={(e)=>onSaveClickedHandler(e)}>Save</Button>
+                        <Card.Footer className={styles.card_footer}>
+                        <Button className={styles.button} onClick={(e)=>onSaveClickedHandler(e)}>Save</Button>
                         </Card.Footer>
                     </Card>
                 </Col>
@@ -97,26 +101,6 @@ const CustomProductDetail = ({ product }) => {
         </Container>
     );
 };
-
-
-const onSaveClick = async(id, body) => {
-    const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-    
-      const cart_url = 'http://127.0.0.1:8000/' + `store/custom-products/${id}/`;
-      axios
-        .post(cart_url, body,config)
-        .then(async (res) => {
-          const result = await res.data;
-          router.push('/')
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-} 
 
 
 

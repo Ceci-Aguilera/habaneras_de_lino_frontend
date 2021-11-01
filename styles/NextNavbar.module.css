@@ -1,0 +1,11 @@
+.navbar {
+  font-weight: lighter;
+  color: white !important;
+  background-color: #e97451 !important;
+  border-bottom: 1px solid white;
+}
+
+.linkItemFakish {
+  color: transparent !important;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,40 @@
+.productsDetailContainer{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    /* background-color:white; */
+}
+
+.card{
+    background-color: #efdecd;
+    color: #e97451;;
+    border: 1px solid white;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.card_footer{
+    background-color: #efdecd;
+    border-top: 1px solid white;
+    text-align: center;
+}
+
+.button{
+    background-color: #e97451 !important;
+    color: white;
+    border-color: #e97451;
+}
+
+.button:hover,
+.button:focus,
+.button:after,
+.button:active{
+    background-color: #fe7451 !important;
+    color: white;
+    border-color: #e97451;
+}
+
+@media screen and (max-width: 758px) {
+    .card{
+        margin-top: 50px;
+    }
+}

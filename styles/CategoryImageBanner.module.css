@@ -1,9 +1,10 @@
 .containerImageBanner{
     text-align: center;
+    margin-top: 20px;
     margin-left: auto !important;
     margin-right: auto !important;
     width: 100%;
-    background-color: black;
+    background-color: #e97451;
     color:white;
 }
 

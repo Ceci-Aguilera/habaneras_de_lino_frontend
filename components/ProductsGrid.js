@@ -39,9 +39,9 @@ const ProductsGrid = ({ products }) => {
                             className={styles.productCol}
                         >
                             <Link href={`/product/${prod.id}/`}>
-                                <Card>
+                                <Card className={styles.card}>
                                 <Card.Img variant="top" src={prod.image} className={styles.card_image}/>
-                                    <Card.Footer>
+                                    <Card.Footer className={styles.card_footer}>
                                         ${prod.price}
                                     </Card.Footer>
                                 </Card>

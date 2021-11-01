@@ -1,0 +1,17 @@
+.productsGridContainer{
+    /* margin-top: 50px; */
+    margin-bottom: 100px;
+}
+
+.card{
+    border: 1px solid white;
+    margin-top: 50px;
+}
+
+.card_footer{
+    background-color: #e97451;
+    color: white;
+    border-top: 1px solid white;
+    text-align: center;
+    font-weight: lighter;
+}

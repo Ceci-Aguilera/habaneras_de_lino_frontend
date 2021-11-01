@@ -47,7 +47,7 @@ const ProductDetail = ({ product }) => {
     return product == null ? (
         <div></div>
     ) : (
-        <Container className={styles.productsDetaulContainer}>
+        <Container className={styles.productsDetailContainer}>
             <Row className={styles.row}>
                 <Col
                     xs={12}
@@ -67,8 +67,8 @@ const ProductDetail = ({ product }) => {
                     lg={6}
                     className={styles.productCol}
                 >
-                    <Card>
-                        <Card.Body>
+                    <Card className={styles.card}>
+                        <Card.Body className={styles.card_body}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Talla de Ropa</Form.Label>
                                 <Form.Select aria-label="Default select example" onChange={(e) => setClothingS(e.target.value)}>
@@ -84,8 +84,8 @@ const ProductDetail = ({ product }) => {
                             </Form.Group>
 
                         </Card.Body>
-                        <Card.Footer>
-                            <Button onClick={(e)=>onBuyClickedHandler(e)}>Comprar</Button>
+                        <Card.Footer className={styles.card_footer}>
+                            <Button className={styles.button} onClick={(e)=>onBuyClickedHandler(e)}>Comprar</Button>
                         </Card.Footer>
                     </Card>
                 </Col>

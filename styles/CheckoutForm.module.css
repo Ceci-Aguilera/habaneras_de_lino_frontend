@@ -1,3 +1,21 @@
+.checkoutContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: lighter;
+}
+
+.card{
+    background-color: #efdecd;
+    color: #e97451;
+    border: 1px solid white;
+}
+
+.card_header{
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
 .form{
     max-width: 600px;
     margin-left: auto !important;
@@ -15,9 +33,9 @@
 }
 
 .formControl{
-    border-color:#808285;
+    border-color:#e97451;
     font-size:20px;
-    border-radius: 0px;
+    border-radius: 20px;
     font-weight: 300 !important;
 }
 
@@ -46,11 +64,12 @@
 }
 
 .orderNowButton{
-    background-color: #bf1e2d;
+    background-color: #e97451;
     color:white;
-    border-color: black;
-    border-radius: 0px;
+    border-color: #e97451;
+    /* border-radius: 0px; */
     font-size: 18px;
+    width: 60%;
 }
 
 .orderNowButton:hover,

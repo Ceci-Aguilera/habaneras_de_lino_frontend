@@ -1,0 +1,18 @@
+.orderResumeContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: lighter;
+}
+
+.card{
+    background-color: #efdecd;
+    color: #e97451;
+    border: 1px solid white;
+    font-size: 18px;
+}
+
+.card_header{
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}

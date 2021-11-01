@@ -1,5 +1,31 @@
-.row{
-    width:70%;
-    margin-left:auto !important;
-    margin-right:auto !important;
+.categoryGridContainer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.row {
+  width: 70%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.card {
+  border: 1px solid white;
+}
+
+.card_footer {
+  border-top: 1px solid white;
+  background-color: #e97451;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 758px) {
+  .card_image {
+    max-height: 300px;
+  }
+  .categoryCol {
+    margin-top: 20px;
+  }
 }

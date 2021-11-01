@@ -58,10 +58,10 @@ const CheckoutForm = () => {
     return cart == null ? (
         <div></div>
     ) : (
-        <Container className={styles.cartDetailContainer}>
+        <Container className={styles.checkoutContainer}>
 
-            <Card>
-                <Card.Header>Informacion sobre el pago</Card.Header>
+            <Card className={styles.card}>
+                <Card.Header className={styles.card_header}>Informacion sobre el pago</Card.Header>
                 <Card.Body>
                     <Container className={styles.orderDetailContainer}>
                         <Form className={styles.form}>

@@ -23,15 +23,15 @@ import { useCart } from "../context/CartContext";
 
 const CartDetail = () => {
 
-    const {cart, delete_product, delete_cart} = useCart()
+    const { cart, delete_product, delete_cart } = useCart()
 
-    const onDeleteClickHandler = async(e, index) =>{
+    const onDeleteClickHandler = async (e, index) => {
         e.preventDefault();
         const product = cart.products[index]
         await delete_product(product.id)
     }
 
-    const onDeleteCartHandler = async(e) => {
+    const onDeleteCartHandler = async (e) => {
         e.preventDefault();
         await delete_cart()
     }
@@ -40,68 +40,74 @@ const CartDetail = () => {
         <div></div>
     ) : (
         <Container className={styles.cartDetailContainer}>
-            <Card>
-                <Card.Header>Cart</Card.Header>
+            <Card className={styles.card_main}>
+                <Card.Header className={styles.card_main_header}>Cart</Card.Header>
                 <Card.Body>
 
                     {cart.products.map((prod, index) => {
                         return (
-                            <Card key={index}>
+                            <Card key={index} className={styles.product_card}>
                                 <Row key={index}>
 
-                                    <Col xs={12} sm={12} md={6} lg={6}>
-                                        <Card.Img variant="top" src={prod.product.image} className={styles.card_image}/>
+                                    <Col xs={12} sm={12} md={6} lg={4} className={styles.image_col}>
+                                        <Card.Img variant="top" src={prod.product.image} className={styles.card_image} />
                                     </Col>
-                                    <Col xs={12} sm={12} md={6} lg={6}>
-                                        <Row><p >{prod.product.title}</p></Row>
-                                        <Row>
-                                            Talla de Ropa: <p>{prod.clothing_s}</p>
+                                    <Col xs={12} sm={12} md={6} lg={8}>
+                                        <Row className={styles.row_name_of_product}><p >{prod.product.title}</p></Row>
+                                        <Row className={styles.row_product_vars}>
+                                            <Col xs={6} sm={6} md={6} lg={6}>
+
+                                            <p> Talla de Ropa: {prod.clothing_s}</p>
+                                            <p> Talla de Ropa: {prod.clothing_s}</p>
+                                            </Col>
+                                            <Col xs={6} sm={6} md={6} lg={6}>
+
+                                            <p>Cantidad: {prod.cant}</p>
+                                            <p>Precio: ${prod.price}</p>
+                                            </Col>
+
                                         </Row>
-                                        <Row>
-                                            Cantidad: <p>{prod.cant}</p>
-                                        </Row>
-                                        <Row>
-                                            Precio: <p>{prod.price}</p>
-                                        </Row>
- 
-                                        <Row>
+
+                                        <Row className={styles.row_buttons}>
                                             <Col xs={12} sm={12} md={6} lg={6}>
                                                 <Link href={`/custom_product/${prod.id}/`}>
-                                                <Button>
-                                                  Edit  
-                                                </Button>
+                                                    <Button className={`${styles.button_main} ${styles.edit_button}`}>
+                                                        Edit
+                                                    </Button>
                                                 </Link>
                                             </Col>
                                             <Col xs={12} sm={12} md={6} lg={6}>
-                                                <Button onClick={(e) => onDeleteClickHandler(e, index)}>
-                                                  Delete  
+                                                <Button  className={`${styles.button_main} ${styles.delete_button}`} onClick={(e) => onDeleteClickHandler(e, index)}>
+                                                    Delete
                                                 </Button>
-                                                </Col>
+                                            </Col>
                                         </Row>
                                     </Col>
                                 </Row>
-                                <Row>
-                                            <p>Precio Total: {cart.cost}</p>
-                                        </Row>
- 
-                                        <Row>
-                                            <Col xs={12} sm={12} md={6} lg={6}>
-                                                <Link href={`/order/`}>
-                                                <Button>
-                                                  Hacer Compra  
-                                                </Button>
-                                                </Link>
-                                            </Col>
-                                            <Col xs={12} sm={12} md={6} lg={6}>
-                                                <Button onClick={(e) => onDeleteCartHandler(e)}>
-                                                  Delete  
-                                                </Button>
-                                                </Col>
-                                        </Row>
+
                             </Card>
 
                         )
                     })}
+
+                    <Row className={styles.row_final_price}>
+                        <p>Precio Total: ${cart.cost}</p>
+                    </Row>
+
+                    <Row className={styles.row_final_buttons}>
+                        <Col xs={12} sm={12} md={6} lg={6}>
+                            <Link href={`/order/`}>
+                                <Button className={`${styles.button_main} ${styles.order_button}`}>
+                                    Hacer Compra
+                                </Button>
+                            </Link>
+                        </Col>
+                        <Col xs={12} sm={12} md={6} lg={6}>
+                            <Button className={`${styles.button_main} ${styles.delete_order_button}`} onClick={(e) => onDeleteCartHandler(e)}>
+                                Delete
+                            </Button>
+                        </Col>
+                    </Row>
 
                 </Card.Body>
             </Card>
