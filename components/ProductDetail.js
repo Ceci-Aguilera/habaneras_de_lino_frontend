@@ -27,11 +27,15 @@ const ProductDetail = ({ product }) => {
 
     const [cant, setCant] = useState(1);
     const [clothing_s, setClothingS] = useState('S');
+    const [sleeve, setSleeve] = useState('Corta');
+    const [fit, setFit] = useState('Regular Fit');
     const [price, setPrice] = useState(product.price)
 
     const body = JSON.stringify({
         cant,
         clothing_s,
+        size_of_sleeve: sleeve,
+        fit,
         original_product_id: product.id,
         price: product.price*cant,
     })
@@ -40,7 +44,6 @@ const ProductDetail = ({ product }) => {
         e.preventDefault();
         if(cant > 0){
             add_product(body)
-            // await onBuyClick(body)
         }
     } 
 
@@ -77,6 +80,22 @@ const ProductDetail = ({ product }) => {
                                 <option value="L">L</option>
                             </Form.Select>
                             </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Corte</Form.Label>
+                                <Form.Select aria-label="Default select example" onChange={(e) => setFit(e.target.value)}>
+                                <option value="Regular Fit">Regular Fit</option>
+                                <option value="Slim Fit">Slim Fit</option>
+                            </Form.Select>
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Largo de Manga</Form.Label>
+                                <Form.Select aria-label="Default select example" onChange={(e) => setSleeve(e.target.value)}>
+                                <option value="Corta">Corta</option>
+                                <option value="Larga">Larga</option>
+                            </Form.Select>
+                            </Form.Group>
                             
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Cantidad</Form.Label>
@@ -101,18 +120,7 @@ const onBuyClick = async(body) => {
           "Content-Type": "application/json",
         },
       };
-    
-      const cart_url = 'http://127.0.0.1:8000/' + "store/cart/";
-      axios
-        .post(cart_url, body,config)
-        .then(async (res) => {
-          const result = await res.data;
-          router.push('/')
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-} 
+}
 
 
 

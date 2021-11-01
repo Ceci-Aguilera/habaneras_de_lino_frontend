@@ -1,0 +1,16 @@
+.OrderSuccessfullyMadeContainer{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.card{
+    background-color: #efdecd;
+    color: #e97451;;
+    border: 1px solid white;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.card_body{
+    text-align: center;
+}

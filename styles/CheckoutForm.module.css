@@ -75,9 +75,9 @@
 .orderNowButton:hover,
 .orderNowButton:focus,
 .orderNowButton:after{
-    background-color: crimson;
+    background-color: #fe7451;
     color:white;
-    border-color: black;
+    border-color: #fe7451;
     border-radius: 0px;
     font-size: 18px;
 }

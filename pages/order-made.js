@@ -1,15 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCart } from '../context/CartContext'
+import OrderSuccessfullyMade from '../components/OrderSuccessfullyMade'
 
 export default function OderMade() {
 
-  const {cart} = useCart()
-  
-    console.log(cart)
+  const { cart } = useCart()
+
+  console.log(cart)
   return (
     <div className={styles.container}>
       <Head>
@@ -19,11 +20,11 @@ export default function OderMade() {
       </Head>
 
       <main className={styles.main}>
-        Order Successfully made
+        <OrderSuccessfullyMade />
       </main>
 
       <footer className={styles.footer}>
-        
+
       </footer>
     </div>
   )
