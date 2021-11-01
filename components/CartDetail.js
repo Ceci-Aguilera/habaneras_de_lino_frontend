@@ -23,12 +23,17 @@ import { useCart } from "../context/CartContext";
 
 const CartDetail = () => {
 
-    const {cart, delete_product} = useCart()
+    const {cart, delete_product, delete_cart} = useCart()
 
     const onDeleteClickHandler = async(e, index) =>{
         e.preventDefault();
         const product = cart.products[index]
         await delete_product(product.id)
+    }
+
+    const onDeleteCartHandler = async(e) => {
+        e.preventDefault();
+        await delete_cart()
     }
 
     return cart == null ? (
@@ -75,6 +80,24 @@ const CartDetail = () => {
                                         </Row>
                                     </Col>
                                 </Row>
+                                <Row>
+                                            <p>Precio Total: {cart.cost}</p>
+                                        </Row>
+ 
+                                        <Row>
+                                            <Col xs={12} sm={12} md={6} lg={6}>
+                                                <Link href={`/order/`}>
+                                                <Button>
+                                                  Hacer Compra  
+                                                </Button>
+                                                </Link>
+                                            </Col>
+                                            <Col xs={12} sm={12} md={6} lg={6}>
+                                                <Button onClick={(e) => onDeleteCartHandler(e)}>
+                                                  Delete  
+                                                </Button>
+                                                </Col>
+                                        </Row>
                             </Card>
 
                         )
@@ -86,7 +109,6 @@ const CartDetail = () => {
         </Container>
     );
 };
-
 
 
 
