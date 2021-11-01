@@ -19,8 +19,11 @@ import {
 import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
+import { useCart } from "../context/CartContext";
 
 const ProductDetail = ({ product }) => {
+
+    const {cart, add_product} = useCart()
 
     const [cant, setCant] = useState(1);
     const [clothing_s, setClothingS] = useState('S');
@@ -36,7 +39,8 @@ const ProductDetail = ({ product }) => {
     const onBuyClickedHandler = async(e) => {
         e.preventDefault();
         if(cant > 0){
-            await onBuyClick(body)
+            add_product(body)
+            // await onBuyClick(body)
         }
     } 
 
@@ -103,7 +107,7 @@ const onBuyClick = async(body) => {
         .post(cart_url, body,config)
         .then(async (res) => {
           const result = await res.data;
-          console.log(result);
+          router.push('/')
         })
         .catch((error) => {
           console.log(error);

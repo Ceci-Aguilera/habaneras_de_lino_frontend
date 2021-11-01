@@ -111,7 +111,7 @@ const onSaveClick = async(id, body) => {
         .post(cart_url, body,config)
         .then(async (res) => {
           const result = await res.data;
-          console.log(result);
+          router.push('/')
         })
         .catch((error) => {
           console.log(error);

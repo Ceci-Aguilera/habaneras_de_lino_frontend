@@ -50,11 +50,8 @@ const NextNavbar = () => {
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className={styles.navbar_nav} className="m-auto">
-            <Nav.Link className={styles.linkItem} href="/how-to">
-              HOW TO
-            </Nav.Link>
             <Nav.Link className={styles.linkItem} href="/">
-              GET A SIGN
+              About Us
             </Nav.Link>
             <Navbar.Brand
               className={`d-none d-lg-block ${styles.brand}`}
@@ -72,7 +69,7 @@ const NextNavbar = () => {
               Cart {(cart==null)?0:cart.products.length}
             </Nav.Link>
             <Nav.Link className={styles.linkItem} href="#footer">
-              CONTACT US
+              Contact Us
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
