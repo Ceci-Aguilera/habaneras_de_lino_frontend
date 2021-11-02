@@ -21,6 +21,12 @@ import axios from "axios";
 import router from "next/router";
 import { useCart } from "../context/CartContext";
 
+
+
+const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
+
+
+
 const CheckoutForm = () => {
 
     const { cart } = useCart()
@@ -223,7 +229,7 @@ const makePayment = async(body) => {
         },
       };
     
-      const order_url = 'http://127.0.0.1:8000/' + `store/order/`;
+      const order_url = domain + `store/order/`;
       axios
         .post(order_url, body,config)
         .then(async (res) => {

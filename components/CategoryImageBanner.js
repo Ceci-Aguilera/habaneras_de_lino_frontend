@@ -28,7 +28,7 @@ const CategoryImageBanner = ({ category_title, category_image }) => {
         <Container className={styles.containerImageBanner}>
             <Row>
                 <Col xs={12} sm={12} md={12} lg={6}>
-            <img src={category_image} className={styles.imageBanner} />
+            <img alt={category_title} src={category_image} className={styles.imageBanner} />
 
                 </Col>
                 <Col xs={12} sm={12} md={12} lg={6}>

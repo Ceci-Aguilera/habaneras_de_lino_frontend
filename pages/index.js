@@ -6,6 +6,8 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 import { useCart } from '../context/CartContext'
 
+const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
+
 export default function Home() {
 
   const {cart} = useCart()
@@ -16,7 +18,6 @@ export default function Home() {
        getCategories(setCategories);
     }, []);
   
-    console.log(cart)
   return (
     <div className={styles.container}>
       <Head>
@@ -37,13 +38,14 @@ export default function Home() {
 }
 
 const getCategories = (setCategories) => {
+
   const config = {
     headers: {
       "Content-Type": "application/json",
     },
   };
 
-  const categories_url = 'http://127.0.0.1:8000/' + "store/categories/";
+  const categories_url = domain + "store/categories/";
   axios
     .get(categories_url, config)
     .then(async (res) => {

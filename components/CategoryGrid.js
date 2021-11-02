@@ -22,7 +22,6 @@ import router from "next/router";
 
 const CategoryGrid = ({ categories }) => {
 
-    console.log(categories)
     return categories == null ? (
         <div></div>
     ) : (

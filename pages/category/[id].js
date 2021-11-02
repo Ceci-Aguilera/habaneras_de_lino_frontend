@@ -7,7 +7,7 @@ import CategoryImageBanner from '../../components/CategoryImageBanner';
 import ProductsGrid from '../../components/ProductsGrid';
 
 
-
+const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 
 const config = {
@@ -18,7 +18,7 @@ const config = {
 
 export const getStaticPaths = async () => {
 
-  const res = await axios.get('http://127.0.0.1:8000/store/categories/', config);
+  const res = await axios.get(domain +'store/categories/', config);
   const paths = await res.data.map((category) => ({
     params: { id: category.id.toString() },
   }));
@@ -34,7 +34,7 @@ export const getStaticProps = async (ctx) => {
 
   const category_id = ctx.params?.id;
     
-  const response = await axios.get(`http://127.0.0.1:8000/store/categories/${category_id}/`, config);
+  const response = await axios.get(domain + `store/categories/${category_id}/`, config);
 
   return {
     props: {

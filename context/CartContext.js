@@ -3,6 +3,10 @@ import { createContext } from "react";
 import router from "next/router";
 import { useEffect, useState, useContext } from "react";
 
+
+const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
+
+
 const CartContext = createContext();
 
 export const getCart = async () => {
@@ -13,12 +17,10 @@ export const getCart = async () => {
         },
       };
     
-      const cart_url = 'http://127.0.0.1:8000/' + "store/cart/";
+      const cart_url = domain + "store/cart/";
       return await axios
         .get(cart_url, config)
         .then(async (res) => {
-            // console.log("In context")
-            // console.log(res.data)
             if(res.data){
                 const result = await res.data;
                 return {status: "Cart not null", cart: result}   ;   
@@ -54,7 +56,7 @@ export const CartProvider = ({ children }) => {
         },
       };
     
-      const cart_url = 'http://127.0.0.1:8000/' + "store/cart/";
+      const cart_url = domain + "store/cart/";
 
     return await axios
       .post(cart_url, body, config)
@@ -80,7 +82,7 @@ export const CartProvider = ({ children }) => {
       },
     };
   
-    const cart_url = 'http://127.0.0.1:8000/' + `store/cart/delete-product/${id}/`;
+    const cart_url = domain + `store/cart/delete-product/${id}/`;
     
     return await axios.delete(cart_url, config).then(async(response) => {
       const res = await response.data;
@@ -105,7 +107,7 @@ export const CartProvider = ({ children }) => {
       },
     };
   
-    const cart_url = 'http://127.0.0.1:8000/' + `store/cart/`;
+    const cart_url = domain  + `store/cart/`;
     
     return await axios.delete(cart_url, config).then(async(response) => {
       const res = await response.data;
@@ -130,7 +132,7 @@ export const CartProvider = ({ children }) => {
       },
     };
   
-    const cart_url = 'http://127.0.0.1:8000/' + `store/custom-products/${id}/`;
+    const cart_url = domain + `store/custom-products/${id}/`;
     
     return await axios.post(cart_url, body, config).then(async(response) => {
       const res = await response.data;

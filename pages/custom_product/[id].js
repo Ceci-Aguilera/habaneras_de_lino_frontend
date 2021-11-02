@@ -6,7 +6,7 @@ import axios from 'axios'
 import CustomProductDetail from '../../components/CustomProductDetail';
 
 
-
+const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 
 const config = {
@@ -17,7 +17,7 @@ const config = {
 
 export const getStaticPaths = async () => {
 
-  const res = await axios.get('http://127.0.0.1:8000/store/custom-products/', config);
+  const res = await axios.get(domain + 'store/custom-products/', config);
   const paths = await res.data.map((product) => ({
     params: { id: product.id.toString() },
   }));
@@ -33,7 +33,7 @@ export const getStaticProps = async (ctx) => {
 
   const product_id = ctx.params?.id;
     
-  const response = await axios.get(`http://127.0.0.1:8000/store/custom-products/${product_id}/`, config);
+  const response = await axios.get(domain + `store/custom-products/${product_id}/`, config);
 
   return {
     props: {

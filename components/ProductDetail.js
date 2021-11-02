@@ -114,14 +114,6 @@ const ProductDetail = ({ product }) => {
 };
 
 
-const onBuyClick = async(body) => {
-    const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-}
-
 
 
 export default ProductDetail;
