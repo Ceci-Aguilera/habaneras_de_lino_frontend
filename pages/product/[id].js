@@ -47,7 +47,6 @@ export default function ProductDetailFunction({product}) {
 
   const router = useRouter();
 
-  console.log(product)
 
   return (product == undefined)?<div></div>:(
     <div className={styles.container}>

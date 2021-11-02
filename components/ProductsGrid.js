@@ -22,7 +22,6 @@ import router from "next/router";
 
 const ProductsGrid = ({ products }) => {
 
-    console.log(products)
     return products == null ? (
         <div></div>
     ) : (

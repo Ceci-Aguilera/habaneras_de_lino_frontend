@@ -48,8 +48,6 @@ export default function CategoryDetailFunction({category}) {
 
   const router = useRouter();
 
-  console.log(category)
-
   return (category == undefined)?<div></div>:(
     <div className={styles.container}>
       <Head>

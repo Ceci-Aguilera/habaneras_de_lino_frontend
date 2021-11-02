@@ -58,7 +58,7 @@ const CheckoutForm = () => {
       });
     
       const makePaymentHandler = async () => {
-          await makePayment(body)
+          await makePayment(body, cart.token)
       };
 
     return cart == null ? (
@@ -222,14 +222,14 @@ const CheckoutForm = () => {
 };
 
 
-const makePayment = async(body) => {
+const makePayment = async(body, cart_token) => {
     const config = {
         headers: {
           "Content-Type": "application/json",
         },
       };
     
-      const order_url = domain + `store/order/`;
+      const order_url = domain + `store/order/${cart_token}/`;
       axios
         .post(order_url, body,config)
         .then(async (res) => {

@@ -15,7 +15,6 @@ export default function OrderCheckout() {
 
   const {cart} = useCart()
   
-    console.log(cart)
   return (
     <div className={styles.container}>
       <Head>
