@@ -8,6 +8,10 @@
     margin-top: 50px;
 }
 
+.card_image {
+    height: 400px;
+  }
+
 .card_footer{
     background-color: #e97451;
     color: white;
@@ -15,3 +19,17 @@
     text-align: center;
     font-weight: lighter;
 }
+
+@media screen and (max-width: 758px) {
+    .categoryGridContainer {
+      margin-top: 50 !important;
+    }
+  
+    .card_image {
+      max-height: 300px;
+    }
+    .productCol {
+      margin-top: 20px;
+    }
+  }
+  
