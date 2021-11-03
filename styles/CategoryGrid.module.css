@@ -1,5 +1,5 @@
 .categoryGridContainer {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
 }
 
@@ -10,7 +10,12 @@
 }
 
 .card {
+  margin-top: 50px;
   border: 1px solid white;
+}
+
+.card_image {
+  height: 500px;
 }
 
 .card_footer {

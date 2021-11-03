@@ -66,7 +66,10 @@ export const CartProvider = ({ children }) => {
       };
 
       if(cart !== null&& cart !== undefined){
-        const cart_url = domain + `store/cart/${token}`;
+        
+        const token = cart.token
+
+        const cart_url = domain + `store/cart/${token}/`;
         return await axios
       .post(cart_url, body, config)
       .then(async (response) => {

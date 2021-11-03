@@ -56,7 +56,7 @@ export default function CustomProductDetailFunction({product}) {
       </Head>
 
       <main className={styles.main}>
-        <CustomProductDetail product={product} />
+        <CustomProductDetail product={product} original_product={product.product} />
       </main>
     </div>
   )

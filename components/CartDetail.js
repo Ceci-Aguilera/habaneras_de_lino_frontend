@@ -58,8 +58,12 @@ const CartDetail = () => {
                                             <Col xs={6} sm={6} md={6} lg={6}>
 
                                             <p> Talla de Ropa: {prod.clothing_s}</p>
+                                            {prod.product.subtag === "ARRIBA" ? (
+                                                <>
                                             <p> Largo de Manga: {prod.size_of_sleeve}</p>
                                             <p> Corte: {prod.fit}</p>
+                                            </>
+                                            ):<div></div>}
                                             </Col>
                                             <Col xs={6} sm={6} md={6} lg={6}>
 
