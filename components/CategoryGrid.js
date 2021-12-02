@@ -25,7 +25,8 @@ const CategoryGrid = ({ categories }) => {
     return categories == null ? (
         <div></div>
     ) : (
-        <Container className={styles.categoryGridContainer}>
+        <Container className={`${styles.categoryGridContainer}`}>
+            <h2 className={styles.about_title}><span className={styles.about_title_span}>Categories</span></h2>
             <Row className={styles.row}>
                 {categories.map((cat, index) => {
                     return (

@@ -1,5 +1,5 @@
 .productsGridContainer{
-    /* margin-top: 50px; */
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 
@@ -13,10 +13,12 @@
   }
 
 .card_footer{
-    background-color: #e97451;
+    background-color: #244c77;
     color: white;
     border-top: 1px solid white;
     text-align: center;
+    font-family: "Indie Flower";
+    font-size: 30px;
     font-weight: lighter;
 }
 

@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #efdecd !important;
+  background-color: white !important;
   }
 
 a {
@@ -14,4 +14,20 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Comforter";
+  src: url("/fonts/Comforter/Comforter-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Indie Flower";
+  src: url("/fonts/Indie Flower/IndieFlower-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }

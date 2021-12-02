@@ -1,0 +1,29 @@
+.about_div {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.about_title {
+  font-family: "Comforter", cursive;
+  font-size: 60px;
+  color: darkred;
+  width:1000px;
+  text-align: center;
+  border-bottom: 1px solid darkred;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.about_title_span{
+    background:#fff; 
+    padding:0 10px; 
+}
+
+  .about_section{
+      color: black !important;
+      margin-top: 200px;
+      margin-bottom: 200px;
+  }
+  

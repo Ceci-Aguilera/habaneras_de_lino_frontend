@@ -1,20 +1,22 @@
 .cartDetailContainer{
     font-weight: lighter;
-    background-color: #efdecd !important;
+    /* background-color: #244c77 !important; */
 }
 
 .card_main{
     margin-top: 50px;
     margin-bottom: 100px;
-    background-color: #efdecd !important;
+    background-color: white !important;
     border: 1px solid white;
-    color: #e97451;
+    color: darkred;
+    font-family: "Indie Flower";
+    font-size:20px;
 }
 
 .card_main_header{
-    text-align: center;
+    /* text-align: center; */
     border-bottom: 1px solid white;
-    font-size: 24px;
+    /* font-size: 24px; */
 }
 
 .card_image{
@@ -41,9 +43,9 @@
 
 .button_main{
     width: 60%;
-    background-color: #e97451;
+    background-color: #244c77;
     color:white;
-    border-color: #e97451;
+    border-color: #244c77;
 }
 
 .button_main:active,
@@ -51,9 +53,9 @@
 .button_main:focus,
 .button_main:hover{
     width: 60%;
-    background-color: #fe7451;
+    background-color: #244caa;
     color:white;
-    border-color: #e97451;
+    border-color: #244caa;
 }
 
 .product_card{
@@ -72,6 +74,24 @@
 .row_final_buttons{
     text-align: center;
 }
+
+.about_title {
+    font-family: "Comforter", cursive;
+    font-size: 60px;
+    color: darkred;
+    width:1000px;
+    text-align: center;
+    border-bottom: 1px solid darkred;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .about_title_span{
+      background:#fff; 
+      padding:0 10px; 
+  }
 
 @media screen and (max-width: 758px) {
     .image_col{

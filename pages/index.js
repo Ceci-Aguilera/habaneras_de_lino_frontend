@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 import { useCart } from '../context/CartContext'
+import NextCarousel from '../components/Carousel'
+import About from '../components/About'
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -27,6 +29,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <NextCarousel />
+        <About />
         <CategoryGrid categories={categories} />
       </main>
 

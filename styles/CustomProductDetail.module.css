@@ -5,33 +5,33 @@
 }
 
 .card{
-    background-color: #efdecd;
-    color: #e97451;;
+    background-color: white;
+    color: darkred;;
     border: 1px solid white;
     font-weight: lighter;
     font-size: 24px;
 }
 
 .card_footer{
-    background-color: #efdecd;
+    background-color: white;
     border-top: 1px solid white;
     text-align: center;
 }
 
 .button{
     width:30%;
-    background-color: #e97451 !important;
+    background-color: #244c77 !important;
     color: white;
-    border-color: #e97451;
+    border-color: #244c77;
 }
 
 .button:hover,
 .button:focus,
 .button:after,
 .button:active{
-    background-color: #fe7451 !important;
+    background-color: #244caa !important;
     color: white;
-    border-color: #e97451;
+    border-color: #244caa;
 }
 
 @media screen and (max-width: 758px) {

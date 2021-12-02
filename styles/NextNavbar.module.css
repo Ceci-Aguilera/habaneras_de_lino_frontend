@@ -1,11 +1,38 @@
 .navbar {
-  font-weight: lighter;
-  color: white !important;
-  background-color: #e97451 !important;
+  /* font-weight: lighter; */
+  /* background-color: #244c77 !important; */
   border-bottom: 1px solid white;
+  height: 100px;
+  font-family: 'Comforter', cursive;
+}
+
+.linkItem{
+  padding-left: 200px !important;
+  padding-right: 200px !important;
+  padding-top: 50px !important;
+  width: max-content ! important;
+  display:block !important;
+}
+
+.linkItem > p{
+  width:max-content;
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.brand{
+  font-size: 45px;
+  padding-top: 30px !important;
 }
 
 .linkItemFakish {
   color: transparent !important;
   font-size: 1.2rem;
+}
+
+.shoppingCartp{
+  display:flex !important;
+  flex-direction: row !important;
+  width: 50px !important;
+  font-size: 20px !important;
 }

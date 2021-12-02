@@ -10,20 +10,41 @@
 }
 
 .card {
-  margin-top: 50px;
-  border: 1px solid white;
+  margin-top: 100px;
+  width: 250px;
+  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
 }
 
 .card_image {
-  height: 400px;
+  height: 300px;
+  width: 250px;
 }
 
 .card_footer {
-  border-top: 1px solid white;
-  background-color: #e97451;
+  background-color: #244c77;
   font-weight: lighter;
   text-align: center;
   color: white;
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.about_title {
+  font-family: "Comforter", cursive;
+  font-size: 60px;
+  color: darkred;
+  width:1000px;
+  text-align: center;
+  border-bottom: 1px solid darkred;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.about_title_span{
+    background:#fff; 
+    padding:0 10px; 
 }
 
 @media screen and (max-width: 758px) {

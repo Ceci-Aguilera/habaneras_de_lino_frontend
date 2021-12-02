@@ -5,15 +5,16 @@
 }
 
 .card{
-    background-color: #efdecd;
-    color: #e97451;
+    background-color: white;
+    color: darkred;
     border: 1px solid white;
 }
 
 .card_header{
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
     border-bottom: 1px solid white;
+    font-family: "Indie Flower"
 }
 
 .form{
@@ -33,7 +34,7 @@
 }
 
 .formControl{
-    border-color:#e97451;
+    border-color:darkred;
     font-size:20px;
     border-radius: 20px;
     font-weight: 300 !important;
@@ -64,22 +65,22 @@
 }
 
 .orderNowButton{
-    background-color: #e97451;
+    background-color: #244c77;
     color:white;
-    border-color: #e97451;
+    border-color: #244c77;
     /* border-radius: 0px; */
     font-size: 18px;
-    width: 60%;
+    width: 200px;
+    font-family: "Indie Flower";
+    font-size: 20px;
 }
 
 .orderNowButton:hover,
 .orderNowButton:focus,
 .orderNowButton:after{
-    background-color: #fe7451;
+    background-color: #244caa;
     color:white;
-    border-color: #fe7451;
-    border-radius: 0px;
-    font-size: 18px;
+    border-color: #244caa;
 }
 
 .priceP{

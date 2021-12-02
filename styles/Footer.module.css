@@ -1,5 +1,5 @@
 .footer {
-    background-color: #e97451;
+    background-color: #244c77;
         color: white !important;
     font-weight: 300 !important;
     text-align: center;
@@ -9,7 +9,7 @@
     margin-left: 0px !important;
     margin-right: 0px !important;
     padding: 0px;
-    border-top: 1px solid #e97451;
+    font-family: 'Indie Flower', cursive;
   }
   
   .footerWrapper {
@@ -33,7 +33,7 @@
     }
   
     .footer {
-      background-color: #e97451;
+      background-color: #244c77;
           color: white !important;
       font-weight: 300 !important;
       text-align: center;

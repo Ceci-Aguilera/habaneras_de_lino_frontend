@@ -1,0 +1,17 @@
+
+.pcolor{
+    color: crimson !important;
+  }
+  
+  .scolor{
+    background-color: #244c77 !important;
+    color: white !important;
+  }
+  
+  .itshape{
+    font-weight: lighter;
+  }
+
+  .shoppingCartp{
+      display: flex !important;
+  }

@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import axios from 'axios'
 import CategoryImageBanner from '../../components/CategoryImageBanner';
 import ProductsGrid from '../../components/ProductsGrid';
+import stylesT from '../../styles/CategoryID.module.css'
 
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
@@ -57,7 +58,7 @@ export default function CategoryDetailFunction({category}) {
       </Head>
 
       <main className={styles.main}>
-          <CategoryImageBanner category_title={category.title} category_image={category.image}/>
+        <h2 className={stylesT.about_title}><span className={stylesT.about_title_span}>{category.title}</span></h2>
           <ProductsGrid products={category.products}/>
       </main>
     </div>

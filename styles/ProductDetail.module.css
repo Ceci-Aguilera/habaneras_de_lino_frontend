@@ -5,32 +5,35 @@
 }
 
 .card{
-    background-color: #efdecd;
-    color: #e97451;;
-    border: 1px solid white;
+    background-color: white;
+    color: darkred;;
+    border: 1px solid darkred;
     font-weight: lighter;
     font-size: 24px;
 }
 
 .card_footer{
-    background-color: #efdecd;
-    border-top: 1px solid white;
+    background-color: white;
+    border-top: 1px solid darkred;
     text-align: center;
 }
 
 .button{
-    background-color: #e97451 !important;
+    background-color: #244c77 !important;
     color: white;
-    border-color: #e97451;
+    border-color: #244c77;
+    font-family: "Indie Flower";
+    font-size: 30px;
+    min-width: 200px;
 }
 
 .button:hover,
 .button:focus,
 .button:after,
 .button:active{
-    background-color: #fe7451 !important;
+    background-color: #244caa !important;
     color: white;
-    border-color: #e97451;
+    border-color: #244caa;
 }
 
 @media screen and (max-width: 758px) {

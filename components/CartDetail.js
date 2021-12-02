@@ -41,7 +41,9 @@ const CartDetail = () => {
     ) : (
         <Container className={styles.cartDetailContainer}>
             <Card className={styles.card_main}>
-                <Card.Header className={styles.card_main_header}>Cart</Card.Header>
+                <Card.Header className={styles.card_main_header}>
+                    <h2 className={styles.about_title}><span className={styles.about_title_span}>Cart</span></h2>
+                </Card.Header>
                 <Card.Body>
 
                     {cart.products.map((prod, index) => {
@@ -57,18 +59,18 @@ const CartDetail = () => {
                                         <Row className={styles.row_product_vars}>
                                             <Col xs={6} sm={6} md={6} lg={6}>
 
-                                            <p> Talla de Ropa: {prod.clothing_s}</p>
-                                            {prod.product.subtag === "ARRIBA" ? (
-                                                <>
-                                            <p> Largo de Manga: {prod.size_of_sleeve}</p>
-                                            <p> Corte: {prod.fit}</p>
-                                            </>
-                                            ):<div></div>}
+                                                <p> Talla de Ropa: {prod.clothing_s}</p>
+                                                {prod.product.subtag === "ARRIBA" ? (
+                                                    <>
+                                                        <p> Largo de Manga: {prod.size_of_sleeve}</p>
+                                                        <p> Corte: {prod.fit}</p>
+                                                    </>
+                                                ) : <div></div>}
                                             </Col>
                                             <Col xs={6} sm={6} md={6} lg={6}>
 
-                                            <p>Cantidad: {prod.cant}</p>
-                                            <p>Precio: ${prod.price}</p>
+                                                <p>Cantidad: {prod.cant}</p>
+                                                <p>Precio: ${prod.price}</p>
                                             </Col>
 
                                         </Row>
@@ -82,7 +84,7 @@ const CartDetail = () => {
                                                 </Link>
                                             </Col>
                                             <Col xs={12} sm={12} md={6} lg={6}>
-                                                <Button  className={`${styles.button_main} ${styles.delete_button}`} onClick={(e) => onDeleteClickHandler(e, index)}>
+                                                <Button className={`${styles.button_main} ${styles.delete_button}`} onClick={(e) => onDeleteClickHandler(e, index)}>
                                                     Delete
                                                 </Button>
                                             </Col>
@@ -94,6 +96,8 @@ const CartDetail = () => {
 
                         )
                     })}
+
+                    <h2 className={styles.about_title}></h2>
 
                     <Row className={styles.row_final_price}>
                         <p>Precio Total: ${cart.cost}</p>
