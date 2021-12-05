@@ -70,6 +70,13 @@ const CartDetail = () => {
                                             <Col xs={6} sm={6} md={6} lg={6}>
 
                                                 <p>Cantidad: {prod.cant}</p>
+                                                {prod.color == "Default" ? <p>Color: Default</p> :
+                                                <div className={styles.color_box_wrapper}>
+                                                    <div className={styles.color_box_div}>
+                                                        <p className={styles.color_box_p}>Color: </p>
+                                                        <div style={{ backgroundColor: prod.color, height: "20px", width: '20px' }} />
+                                                    </div>
+                                                </div>}
                                                 <p>Precio: ${prod.price}</p>
                                             </Col>
 

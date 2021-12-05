@@ -93,6 +93,25 @@
       padding:0 10px; 
   }
 
+  .color_box_wrapper{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .color_box_div{
+    display: flex !important;
+    flex-direction: row !important ;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width:min-content;
+  }
+
+  .color_box_p{
+    margin-right:5px;
+  }
+
 @media screen and (max-width: 758px) {
     .image_col{
         text-align:center;

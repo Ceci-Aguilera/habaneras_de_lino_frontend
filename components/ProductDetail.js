@@ -29,7 +29,9 @@ const ProductDetail = ({ product }) => {
     const [clothing_s, setClothingS] = useState('S');
     const [sleeve, setSleeve] = useState('Corta');
     const [fit, setFit] = useState('Regular Fit');
-    const [price, setPrice] = useState(product.price)
+    const [price, setPrice] = useState(product.price);
+    const [color, setColor] = useState("Default")
+    const [changeColor, setChangeColor] = useState(false)
 
     var body = JSON.stringify({
         cant,
@@ -38,13 +40,20 @@ const ProductDetail = ({ product }) => {
         fit,
         original_product_id: product.id,
         price: product.price * cant,
+        color,
     })
 
     const onBuyClickedHandler = async (e) => {
         e.preventDefault();
+
+        var temp_color = color;
+        if (changeColor == false) {
+            temp_color = "Default"
+        }
+
         if (cant > 0) {
-            if(product.subtag === "ABAJO"){
-                if(clothing_s === "S"){
+            if (product.subtag === "ABAJO") {
+                if (clothing_s === "S") {
                     body = JSON.stringify({
                         cant,
                         clothing_s: "32",
@@ -52,11 +61,12 @@ const ProductDetail = ({ product }) => {
                         fit: "-1",
                         original_product_id: product.id,
                         price: product.price * cant,
+                        color: temp_color,
                     })
                 }
             }
 
-            else if(product.subtag !== "ARRIBA"){
+            else if (product.subtag !== "ARRIBA") {
                 body = JSON.stringify({
                     cant,
                     clothing_s,
@@ -64,11 +74,21 @@ const ProductDetail = ({ product }) => {
                     fit: "-1",
                     original_product_id: product.id,
                     price: product.price * cant,
+                    color: temp_color,
                 })
             }
-            add_product(body)
+            if (color == 'Default' && changeColor == true) {
+                alert("Select a custom color")
+            }
+            else {
+                add_product(body)
+            }
+
         }
     }
+
+
+    console.log(color)
 
     return product == null ? (
         <div></div>
@@ -134,11 +154,47 @@ const ProductDetail = ({ product }) => {
                                     </Form.Select>
                                 </Form.Group>
                             ) : <div></div>}
-                            
+
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Cantidad</Form.Label>
                                 <Form.Control type="number" onChange={(e) => setCant(e.target.value)} value={cant} />
                             </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Check
+                                    inline
+                                    name="group1"
+                                    type="checkbox"
+                                    id="checkbox_color"
+                                    checked={changeColor === true}
+                                    onChange={e => setChangeColor(e.target.checked)}
+                                />
+                                <Form.Label>
+                                    Custom Color
+                                </Form.Label>
+                            </Form.Group>
+
+
+                            {(changeColor === true) ? <div>
+                                <Row>
+                                    {product.available_colors.map((ecolor, index) => {
+                                        var sel_border = '';
+                                        if(ecolor.code == color){
+                                            sel_border = '3px solid royalblue'
+                                        }
+                                        else{
+                                            sel_border = '1px solid black'
+                                        }
+                                        return (
+                                            <Col key={index} xs={4} sm={4} md={3} lg={2}>
+                                                <div style={{}}>
+                                                    <div onClick={e => setColor(ecolor.code)} key={index} style={{ backgroundColor: ecolor.code, height: '20px', width: '20px', border: sel_border}} />
+                                                </div>
+                                            </Col>
+                                        )
+                                    })}
+                                </Row>
+                            </div> : <div></div>}
 
 
                         </Card.Body>
