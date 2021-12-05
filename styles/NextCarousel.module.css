@@ -10,3 +10,7 @@
 .caption{
     color:darkred !important;
 }
+
+@media screen and (max-width: 758px) {
+
+}

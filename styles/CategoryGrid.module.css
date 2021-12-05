@@ -12,7 +12,7 @@
 .card {
   margin-top: 100px;
   width: 250px;
-  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+  box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
 .card_image {
@@ -26,14 +26,14 @@
   text-align: center;
   color: white;
   font-size: 30px;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 
 .about_title {
   font-family: "Comforter", cursive;
   font-size: 60px;
   color: darkred;
-  width:1000px;
+  width: 1000px;
   text-align: center;
   border-bottom: 1px solid darkred;
   line-height: 0.1em;
@@ -42,9 +42,9 @@
   margin-right: auto !important;
 }
 
-.about_title_span{
-    background:#fff; 
-    padding:0 10px; 
+.about_title_span {
+  background: #fff;
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 758px) {
@@ -52,10 +52,23 @@
     margin-top: 50 !important;
   }
 
+  .card{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 200px;
+    margin-top: 50px;
+  }
+
   .card_image {
-    max-height: 300px;
+    height: 250px;
+    width: 200px;
   }
   .categoryCol {
     margin-top: 20px;
+  }
+
+  .about_title {
+    width: 98%;
   }
 }

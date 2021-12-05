@@ -30,9 +30,10 @@ const CollectionGrid = ({ collections }) => {
     ) : (
         <Container className={`${styles.categoryGridContainer}`}>
             <h2 className={styles.about_title}><span className={styles.about_title_span}>Collections</span></h2>
-            <Carousel className={styles.carousel}>
+            <Carousel variant="dark" className={styles.carousel}>
                 {collections.map((coll, index) => {
                     return (<Carousel.Item key={index}>
+                        <h3 className={styles.collection_title}></h3>
                         <Row className={styles.row}>
                             {coll.all_products_per_collection.map((prod_per_coll, prod_index) => {
                                 if (prod_index < 3) {
@@ -45,18 +46,18 @@ const CollectionGrid = ({ collections }) => {
                                             lg={4}
                                             className={styles.categoryCol}
                                         >
-                                            {/* <Link href={`/collection/${coll.id}/`}> */}
+                                            <Link href={`/collection/${coll.id}/`}>
                                             <Card className={styles.card}>
                                                 <Card.Img variant="top" src={prod_per_coll.image} className={styles.card_coll_image} />
                                             </Card>
-                                            {/* </Link> */}
+                                            </Link>
                                         </Col>
                                     );
                                 }
                             })}
                         </Row>
                         <h3 className={styles.collection_title}>
-                            {coll.title}
+                            <span className={styles.collection_title_span}>{coll.title}</span>
                         </h3>
                         <Carousel.Caption>
                             {/* <h3>{coll.title}</h3>

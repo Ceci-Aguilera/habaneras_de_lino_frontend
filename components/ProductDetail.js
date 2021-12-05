@@ -111,7 +111,7 @@ const ProductDetail = ({ product }) => {
                     className={styles.productCol}
                 >
                     <Row>
-                        <Col xs={3} sm={3} md={3} lg={3}>
+                        <Col xs={12} sm={12} md={3} lg={3}>
                             <Card className={styles.s_images_card}>
 
                                 {images.map((image, index) => {
@@ -124,8 +124,8 @@ const ProductDetail = ({ product }) => {
                             </Card>
                         </Col>
 
-                        <Col xs={9} sm={9} md={9} lg={9}>
-                            <Card>
+                        <Col xs={12} sm={12} md={9} lg={9}>
+                            <Card className={styles.card_image_mcard}>
                                 <Card.Img variant="top" src={currentImage} className={styles.card_image} />
                             </Card>
                         </Col>

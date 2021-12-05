@@ -25,22 +25,10 @@ const NextCarousel = () => {
             alt="First slide"
           />
           <Carousel.Caption className={styles.caption}>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            {/* <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
-        {/* <Carousel.Item  className={`${styles.slide}`}>
-        <Image
-          className={`d-block w-100 ${styles.slideImage}`}
-          src={Slide2}
-          alt="First slide"
-        />
-
-        <Carousel.Caption className={styles.caption}>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item> */}
         <Carousel.Item className={`${styles.slide}`}>
           <Image
             className={`d-block w-100 ${styles.slideImage}`}
@@ -49,8 +37,8 @@ const NextCarousel = () => {
           />
 
           <Carousel.Caption className={styles.caption}>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            {/* <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={`${styles.slide}`}>
@@ -61,8 +49,8 @@ const NextCarousel = () => {
           />
 
           <Carousel.Caption className={styles.caption}>
-            <h3>Fourth slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            {/* <h3>Fourth slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={`${styles.slide}`}>
@@ -73,8 +61,8 @@ const NextCarousel = () => {
           />
 
           <Carousel.Caption className={styles.caption}>
-            <h3>Fifth slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            {/* <h3>Fifth slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={`${styles.slide}`}>
@@ -85,8 +73,8 @@ const NextCarousel = () => {
           />
 
           <Carousel.Caption className={styles.caption}>
-            <h3>Sixth slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            {/* <h3>Sixth slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

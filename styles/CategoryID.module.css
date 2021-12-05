@@ -16,3 +16,9 @@
       background:#fff; 
       padding:0 10px; 
   }
+
+  @media screen and (max-width: 758px) {
+    .about_title {
+        width:98%;
+      }
+  }

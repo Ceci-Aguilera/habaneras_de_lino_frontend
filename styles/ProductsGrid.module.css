@@ -43,10 +43,20 @@
     .categoryGridContainer {
       margin-top: 50 !important;
     }
-  
-    .card_image {
-      max-height: 300px;
+
+    .card {
+      width: 250px;
+      height: 300px;
+      margin-left:auto !important;
+      margin-right: auto !important;
+      margin-bottom: 50px;
     }
+
+    .card_image {
+      width: 250px;
+      height: 300px;
+    }
+
     .productCol {
       margin-top: 20px;
     }

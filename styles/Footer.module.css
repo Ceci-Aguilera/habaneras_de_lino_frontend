@@ -1,11 +1,11 @@
 .footer {
     background-color: #244c77;
-        color: white !important;
+    color: white !important;
     font-weight: 300 !important;
     text-align: center;
     margin-top: 50px;
     height: 200px;
-    width: 100vw !important;
+    width: 100% !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
     padding: 0px;
@@ -13,19 +13,20 @@
   }
   
   .footerWrapper {
-        color: white !important;
+    color: white !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     margin: 0px;
     padding: 0px;
   }
   
   @media screen and (max-width: 758px) {
     .footerWrapper {
-            color: white !important;
+      color: white !important;
       display: flex;
+      width: 100%;
       flex-direction: column;
       margin-left: auto !important;
       margin-right: auto !important;
@@ -39,7 +40,7 @@
       text-align: center;
       margin-top: 50px;
       height: 300px;
-      width: 100vw !important;
+      width: 100% !important;
       position: relative;
       bottom: 0;
       margin-left: 0px !important;

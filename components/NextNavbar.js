@@ -29,6 +29,7 @@ const NextNavbar = () => {
   const { cart } = useCart()
 
   return (
+    <>
     <Navbar
       collapseOnSelect
       expand="lg"
@@ -46,16 +47,14 @@ const NextNavbar = () => {
           Habaneras de Lino
         </Navbar.Brand>
 
-        <Navbar.Collapse id="responsive-navbar-nav scolor">
+        <Navbar.Collapse id="responsive-navbar-nav" className={`${mstyles.scolor} ${mstyles.itshape} ${styles.nav_res}`}>
           <>
-            <Nav className="ml-auto">
-              <p className={styles.linkItemFakish}>
-                Cart 0
-              </p>
-            </Nav>
             <Nav className={`${styles.navbar_nav} mx-auto order-0`}>
               <Nav.Link className={styles.linkItem} href="#about">
                 <p>About Us</p>
+              </Nav.Link>
+              <Nav.Link className={styles.linkItem} href="#cat">
+                <p>Categories</p>
               </Nav.Link>
               <Navbar.Brand
                 className={`d-none d-lg-block mx-auto ${styles.brand}`}
@@ -63,6 +62,10 @@ const NextNavbar = () => {
               >
                 Habaneras de Lino
               </Navbar.Brand>
+
+              <Nav.Link className={styles.linkItem} href="#coll">
+                <p>Collections</p>
+              </Nav.Link>
 
               <Nav.Link className={styles.linkItem} href="#footer">
                 <p>Contact Us</p>
@@ -79,7 +82,8 @@ const NextNavbar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
+    <h3 className={styles.br_sty}></h3>
+</>
   );
 };
 

@@ -7,8 +7,8 @@
 }
 
 .linkItem{
-  padding-left: 200px !important;
-  padding-right: 200px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
   padding-top: 50px !important;
   width: max-content ! important;
   display:block !important;
@@ -35,4 +35,22 @@
   flex-direction: row !important;
   width: 50px !important;
   font-size: 20px !important;
+}
+
+.br_sty{
+  text-align: center !important;
+  color: #244c77;
+  font-size: 40px;
+  font-family: "Indie Flower";
+  line-height: 0.1em;
+  margin: 10px 0 0 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-bottom: 5px solid crimson;
+  width: 100%;
+  text-align: center;
+}
+
+.nav_res{
+  z-index: 99999;
 }
