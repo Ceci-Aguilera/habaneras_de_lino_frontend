@@ -35,22 +35,24 @@ const CollectionGrid = ({ collections }) => {
                     return (<Carousel.Item key={index}>
                         <Row className={styles.row}>
                             {coll.all_products_per_collection.map((prod_per_coll, prod_index) => {
-                                return (
-                                    <Col
-                                        key={prod_index}
-                                        xs={12}
-                                        sm={12}
-                                        md={4}
-                                        lg={4}
-                                        className={styles.categoryCol}
-                                    >
-                                        {/* <Link href={`/collection/${coll.id}/`}> */}
-                                        <Card className={styles.card}>
-                                            <Card.Img variant="top" src={prod_per_coll.image} className={styles.card_coll_image} />
-                                        </Card>
-                                        {/* </Link> */}
-                                    </Col>
-                                );
+                                if (prod_index < 3) {
+                                    return (
+                                        <Col
+                                            key={prod_index}
+                                            xs={12}
+                                            sm={12}
+                                            md={4}
+                                            lg={4}
+                                            className={styles.categoryCol}
+                                        >
+                                            {/* <Link href={`/collection/${coll.id}/`}> */}
+                                            <Card className={styles.card}>
+                                                <Card.Img variant="top" src={prod_per_coll.image} className={styles.card_coll_image} />
+                                            </Card>
+                                            {/* </Link> */}
+                                        </Col>
+                                    );
+                                }
                             })}
                         </Row>
                         <h3 className={styles.collection_title}>
