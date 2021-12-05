@@ -22,7 +22,9 @@
 
 .card_coll_image {
   height: 350px;
-  width: 300px;
+  width: 250px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .carousel{
