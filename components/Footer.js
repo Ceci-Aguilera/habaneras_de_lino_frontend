@@ -25,7 +25,7 @@ const Footer = () => {
         <Row className={styles.footerWrapper}>
       <Container className={styles.footerWrapper}>
           <p className={styles.p}>
-            Copyright &copy; 2021 HabanerasDeHilo All Rights Reserved
+            Copyright &copy; 2021 HabanerasDeLino All Rights Reserved
           </p>
           <Link href="/">
             <a className={styles.footerLink}>Privacy Policy</a>
@@ -37,7 +37,7 @@ const Footer = () => {
         </Row>
         <Row className={styles.contactUsRow}>
           <p className={styles.contactUsP}>
-            Contact us at habanerasdehilo@gmail.com
+            Contact us at habanerasdelino@gmail.com
           </p>
         </Row>
     </footer>

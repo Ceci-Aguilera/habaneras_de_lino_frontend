@@ -71,7 +71,7 @@
   .footerLink:focus,
   .footerLink:active {
         color: white !important;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-decoration: none;
   }
   
@@ -79,7 +79,7 @@
         color: white !important;
     text-decoration: none;
     margin-top: 30px;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
   
   .contactUsRow {

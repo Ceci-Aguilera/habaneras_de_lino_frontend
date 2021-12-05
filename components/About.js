@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div className={styles.about_div} id='about'>
         <h2 className={styles.about_title}><span className={styles.about_title_span}>About Us</span></h2>
-        <p className={styles.about_section}>Habaneras de Hilo es una tienda virtual para vender ropa de hilo bla bla bla o_o</p>
+        <p className={styles.about_section}>Habaneras de Lino es una tienda virtual para vender ropa de hilo bla bla bla o_o</p>
         
     </div>
 

@@ -4,12 +4,39 @@
     /* background-color:white; */
 }
 
+.card_div{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+}
+
 .card{
     background-color: white;
     color: darkred;;
     border: 1px solid darkred;
     font-weight: lighter;
     font-size: 24px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    width: 80%;
+    min-height: 600px;
+}
+.card_image{
+    width: 500px;
+    height: 600px;
+    border: 1px solid #244c77;
+}
+
+.card_s_image{
+    min-width: 100px;
+    max-height: 150px;
+    margin-bottom: 10px;
+    border: 1px solid #244c77;
+}
+
+.s_images_card{
+    border: 1px solid transparent !important;
 }
 
 .card_footer{

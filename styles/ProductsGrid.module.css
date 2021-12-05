@@ -8,8 +8,25 @@
     margin-top: 50px;
 }
 
+.img_container{
+  position: relative !important;
+}
+
 .card_image {
     height: 400px;
+  }
+
+  .card_image_s {
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+
+  .card_image_s:hover {
+    opacity: 1;
   }
 
 .card_footer{

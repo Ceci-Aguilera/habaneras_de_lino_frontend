@@ -43,7 +43,7 @@ const NextNavbar = () => {
           className={`navbar-brand d-lg-none ${styles.smallBrand}`}
           href="/"
         >
-          Habaneras de Hilo
+          Habaneras de Lino
         </Navbar.Brand>
 
         <Navbar.Collapse id="responsive-navbar-nav scolor">
@@ -61,7 +61,7 @@ const NextNavbar = () => {
                 className={`d-none d-lg-block mx-auto ${styles.brand}`}
                 href="/"
               >
-                Habaneras de Hilo
+                Habaneras de Lino
               </Navbar.Brand>
 
               <Nav.Link className={styles.linkItem} href="#footer">

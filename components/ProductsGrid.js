@@ -22,6 +22,8 @@ import router from "next/router";
 
 const ProductsGrid = ({ products }) => {
 
+console.log(products)
+
     return products == null ? (
         <div></div>
     ) : (
@@ -39,7 +41,11 @@ const ProductsGrid = ({ products }) => {
                         >
                             <Link href={`/product/${prod.id}/`}>
                                 <Card className={styles.card}>
-                                <Card.Img variant="top" src={prod.image} className={styles.card_image}/>
+                                    <div className={styles.img_container}>
+                                    <Card.Img variant="top" src={prod.image} className={styles.card_image}/>
+                                    <Card.Img variant="top" src={prod.s_image} className={styles.card_image_s}/>
+                                    </div>
+                               
                                     <Card.Footer className={styles.card_footer}>
                                         ${prod.price}
                                     </Card.Footer>

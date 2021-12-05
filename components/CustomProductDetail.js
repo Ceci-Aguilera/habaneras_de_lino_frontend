@@ -199,17 +199,17 @@ const CustomProductDetail = ({ product, original_product }) => {
                             {(changeColor === true) ? <div>
                                 <Row>
                                     {original_product.available_colors.map((ecolor, index) => {
-                                        var sel_border = '';
+                                        var sel_outline = '';
                                         if(ecolor.code == color){
-                                            sel_border = '3px solid royalblue'
+                                            sel_outline = '3px solid royalblue'
                                         }
                                         else{
-                                            sel_border = '1px solid black'
+                                            sel_outline = '1px solid white'
                                         }
                                         return (
                                             <Col key={index} xs={4} sm={4} md={3} lg={2}>
                                                 <div style={{}}>
-                                                    <div onClick={e => setColor(ecolor.code)} key={index} style={{ backgroundColor: ecolor.code, height: '20px', width: '20px', border: sel_border}} />
+                                                    <div onClick={e => setColor(ecolor.code)} key={index} style={{ backgroundColor: ecolor.code, height: '25px', width: '25px', border: "1px solid white", borderRadius: "30px", outline:sel_outline}} />
                                                 </div>
                                             </Col>
                                         )

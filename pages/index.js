@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useCart } from '../context/CartContext'
 import NextCarousel from '../components/Carousel'
 import About from '../components/About'
+import CollectionGrid from '../components/CollectionGrid'
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -15,9 +16,11 @@ export default function Home() {
   const {cart} = useCart()
 
   const [categories, setCategories] = useState(null);
+  const [collections, setCollections] = useState(null);
 
     useEffect(async () => {
-       getCategories(setCategories);
+      await getCategories(setCategories);
+       await getCollections(setCollections);
     }, []);
   
   return (
@@ -32,6 +35,7 @@ export default function Home() {
         <NextCarousel />
         <About />
         <CategoryGrid categories={categories} />
+        <CollectionGrid collections={collections} />
       </main>
 
       <footer className={styles.footer}>
@@ -55,6 +59,27 @@ const getCategories = (setCategories) => {
     .then(async (res) => {
       const result = await res.data;
       setCategories(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+
+const getCollections = (setCollections) => {
+
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  const collections_url = domain + "store/collections/";
+  axios
+    .get(collections_url, config)
+    .then(async (res) => {
+      const result = await res.data;
+      setCollections(result);
     })
     .catch((error) => {
       console.log(error);
