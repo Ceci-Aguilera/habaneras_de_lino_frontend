@@ -50,10 +50,10 @@ const NextNavbar = () => {
         <Navbar.Collapse id="responsive-navbar-nav" className={`${mstyles.scolor} ${mstyles.itshape} ${styles.nav_res}`}>
           <>
             <Nav className={`${styles.navbar_nav} mx-auto order-0`}>
-              <Nav.Link className={styles.linkItem} href="#about">
+              <Nav.Link className={styles.linkItem} href="/#about">
                 <p>About Us</p>
               </Nav.Link>
-              <Nav.Link className={styles.linkItem} href="#cat">
+              <Nav.Link className={styles.linkItem} href="/#cat">
                 <p>Categories</p>
               </Nav.Link>
               <Navbar.Brand
@@ -63,11 +63,11 @@ const NextNavbar = () => {
                 Habaneras de Lino
               </Navbar.Brand>
 
-              <Nav.Link className={styles.linkItem} href="#coll">
+              <Nav.Link className={styles.linkItem} href="/#coll">
                 <p>Collections</p>
               </Nav.Link>
 
-              <Nav.Link className={styles.linkItem} href="#footer">
+              <Nav.Link className={styles.linkItem} href="/#footer">
                 <p>Contact Us</p>
               </Nav.Link>
             </Nav>
