@@ -50,22 +50,40 @@
 @media screen and (max-width: 758px) {
   .categoryGridContainer {
     margin-top: 50 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 100%;  
+  }
+
+  .row{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 100%; 
   }
 
   .card{
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
-    width: 200px;
+    width: 250px;
     margin-top: 50px;
   }
 
   .card_image {
-    height: 250px;
-    width: 200px;
+    height: 300px;
+    width: 250px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
   }
   .categoryCol {
     margin-top: 20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 100%;  
   }
 
   .about_title {

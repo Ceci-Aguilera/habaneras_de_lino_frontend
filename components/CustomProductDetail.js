@@ -21,6 +21,8 @@ import axios from "axios";
 import router from "next/router";
 import { useCart } from "../context/CartContext";
 
+const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
+
 const CustomProductDetail = ({ product, original_product }) => {
 
     const {cart, update_product} = useCart()
@@ -32,6 +34,8 @@ const CustomProductDetail = ({ product, original_product }) => {
     const [price, setPrice] = useState(product.price)
     const [color, setColor] = useState("Default")
     const [changeColor, setChangeColor] = useState(false)
+    const [images, setImages] = useState(null)
+    const [currentImage, setCurrentImage] = useState(original_product.image)
 
     useEffect(async()=>{
         setCant(product.cant)
@@ -41,6 +45,7 @@ const CustomProductDetail = ({ product, original_product }) => {
         setColor(product.color)
         var changeColorTemp = (product.color == "Default")?false:true;
         setChangeColor(changeColorTemp)
+        await getImages(setImages, original_product.id)
     },[])
 
     var body = JSON.stringify({
@@ -108,21 +113,38 @@ const CustomProductDetail = ({ product, original_product }) => {
         
     } 
 
-    return product == null ? (
+    return product == null || images==null? (
         <div></div>
     ) : (
         <Container className={styles.customProductsDetailContainer}>
             <Row className={styles.row}>
-                <Col
+            <Col
                     xs={12}
                     sm={12}
                     md={6}
                     lg={6}
                     className={styles.productCol}
                 >
-                    <Card>
-                        <Card.Img variant="top" src={product.product.image} className={styles.card_image} />
-                    </Card>
+                    <Row>
+                        <Col xs={12} sm={12} md={3} lg={3}>
+                            <Card className={styles.s_images_card}>
+
+                                {images.map((image, index) => {
+                                    return (
+                                        <div key={index} className={styles.s_images_div}>
+                                            <Card.Img src={image.image} onMouseOver={e => setCurrentImage(e.target.src)} className={styles.card_s_image} alt='Image of product' />
+                                        </div>
+                                    )
+                                })}
+                            </Card>
+                        </Col>
+
+                        <Col xs={12} sm={12} md={9} lg={9}>
+                            <Card className={styles.card_image_mcard}>
+                                <Card.Img variant="top" src={currentImage} className={styles.card_image} />
+                            </Card>
+                        </Col>
+                    </Row>
                 </Col>
                 <Col
                     xs={12}
@@ -228,6 +250,25 @@ const CustomProductDetail = ({ product, original_product }) => {
     );
 };
 
+
+const getImages = (setImages, id) => {
+    const config = {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
+
+    const prod_images_url = domain + `store/product-images/${id}/`;
+    axios
+        .get(prod_images_url, config)
+        .then(async (res) => {
+            const result = await res.data['Images'];
+            setImages(result);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
 
 
 export default CustomProductDetail;

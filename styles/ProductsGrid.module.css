@@ -57,6 +57,20 @@
       height: 300px;
     }
 
+    .card_image_s {
+      width: 250px;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 1s;
+      opacity: 0;
+    }
+  
+    .card_image_s:hover {
+      opacity: 1;
+    }
+
     .productCol {
       margin-top: 20px;
     }

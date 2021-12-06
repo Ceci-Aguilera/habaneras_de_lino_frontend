@@ -66,8 +66,8 @@
 @media screen and (max-width: 758px) {
 
     .card_image{
-        width: 250px;
-        height: 300px;
+        width: 300px;
+        height: 350px;
         border: 1px solid #244c77;
         margin-left:auto !important;
         margin-right:auto !important;
@@ -93,21 +93,24 @@
         width:100%;
         margin-left:auto !important;
         margin-right:auto !important;
+        border: 1px solid transparent;
     }
 
     .card_s_image{
         width: 100px;
         height: 100px;
         margin-bottom: 10px;
-        border: 1px solid #244c77;
+        border: 1px solid #244c77;;
     }
 
     .s_images_card{
-        display: flex !important;
+        display: inline-flex !important;
         flex-direction: row !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: center;
+        flex-wrap: wrap !important;
+    }
+
+    .s_images_div{
+        margin: 6px !important;
     }
 
     .card_image_mcard{

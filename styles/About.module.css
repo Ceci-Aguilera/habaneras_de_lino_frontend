@@ -7,7 +7,7 @@
   font-family: "Comforter", cursive;
   font-size: 60px;
   color: darkred;
-  width:1000px;
+  width: 1000px;
   text-align: center;
   border-bottom: 1px solid darkred;
   line-height: 0.1em;
@@ -16,20 +16,53 @@
   margin-right: auto !important;
 }
 
-.about_title_span{
-    background:#fff; 
-    padding:0 10px; 
+.about_title_span {
+  background: #fff;
+  padding: 0 10px;
 }
 
-  .about_section{
-      color: black !important;
-      margin-top: 200px;
-      margin-bottom: 200px;
+.about_section {
+  color: black !important;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.about_p_div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 90%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+.button_div {
+  margin-top: 50px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+.button {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background-color: #244c77 !important;
+  border: 1px solid #244c77 !important;
+}
+
+.tallas_image{
+  width: 800px !important;
+  height: 800px !important;
+}
+
+@media screen and (max-width: 758px) {
+  .about_title {
+    width: 98%;
   }
-  
-  @media screen and (max-width: 758px) {
-    .about_title {
-      width: 98%;
-    }
-  
-  }
+
+.tallas_image{
+  width: 300px;
+  height: 500px;
+}
+
+}

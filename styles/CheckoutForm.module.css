@@ -14,7 +14,8 @@
     font-size: 30px;
     text-align: center;
     border-bottom: 1px solid white;
-    font-family: "Indie Flower"
+    font-family: "Indie Flower";
+    background-color: white;
 }
 
 .form{

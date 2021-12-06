@@ -84,11 +84,17 @@
   .card {
     height: 250px;
     width: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
   }
 
   .card_coll_image {
-    height: 250px;
+    height: 300px;
     width: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
   }
   .categoryCol {
     margin-top: 20px;
@@ -100,6 +106,9 @@
 
   .carousel{
     min-height: 1100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
   }
 
   .collection_title {

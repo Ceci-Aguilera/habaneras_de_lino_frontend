@@ -1,27 +1,54 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Card
+  Card,
+  Button,
+  Modal
 } from "react-bootstrap";
+
+import {useEffect, useState} from 'react'
 
 import styles from "../styles/About.module.css";
 
-import Slide1 from '../public/images/Slide1.jpg'
-import Slide2 from '../public/images/Slide2.jpg'
-import Slide3 from '../public/images/Slide3.jpg'
-import Slide4 from '../public/images/Slide4.jpg'
-import Slide5 from '../public/images/Slide5.jpg'
-import Slide6 from '../public/images/Slide6.jpg'
+import tallas from '../public/images/tallas.jpeg'
 
 const About = () => {
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
+    <>
     <div className={styles.about_div} id='about'>
-        <h2 className={styles.about_title}><span className={styles.about_title_span}>About Us</span></h2>
-        <p className={styles.about_section}>Habaneras de Lino es una tienda virtual para vender ropa de hilo bla bla bla o_o</p>
-        
+      <h2 className={styles.about_title}><span className={styles.about_title_span}>About Us</span></h2>
+      <div className={styles.about_p_div}>
+        <p className={styles.about_p}>
+          Habaneras de Lino es una tienda online que se especializa en ropa de Lino.
+        </p>
+        <div className={styles.button_div}>
+          <Button className={styles.button} onClick={handleShow}>
+            Econtrar Talla
+          </Button>
+        </div>
+      </div>
     </div>
 
+    <Modal show={show} onHide={handleClose} className={styles.modal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Talla</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Image src={tallas} className={styles.tallas_image} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+</>
   );
 
 };
