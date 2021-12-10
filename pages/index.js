@@ -15,6 +15,9 @@ import CollectionCarousel from '../components/CollectionCarousel'
 
 import { Row, Col } from 'react-bootstrap'
 
+import enzo_men_image from "../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg"
+import enzo_women_image from "../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png"
+
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 export default function Home() {
@@ -52,7 +55,7 @@ export default function Home() {
 //                 srcset="
 // /../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_200.jpg 200w,
 // /../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg 600w"
-                src="/../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg"
+                src={enzo_men_image}
                 alt='Enzo Men Clothes Image'
                 width="90%"
                 height="100%"
@@ -69,7 +72,7 @@ export default function Home() {
 //                 srcset="
 // /../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_200 200w,
 // /../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png 256w"
-                src="/../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png"
+                src={enzo_women_image}
                 alt='Enzo Women Clothes Image'
                 width="90%"
                 height="100%"
