@@ -209,7 +209,7 @@ const ProductDetail = ({ product }) => {
                                                 sel_outline = '3px solid royalblue'
                                             }
                                             else {
-                                                sel_outline = '1px solid white'
+                                                sel_outline = '1px solid black'
                                             }
                                             return (
                                                 <Col key={index} xs={4} sm={4} md={3} lg={2}>
