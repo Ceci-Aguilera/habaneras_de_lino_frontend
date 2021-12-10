@@ -93,7 +93,7 @@ const CollectionCarousel = ({ collection }) => {
                     return (
                         <div key={prod_index} className={styles.carousel_item_div}>
 
-                            <Link href={`/product/${prod.id}/`}>
+                            <Link href={`/collection/${collectionInfo.id}/`}>
                                 <Card className={styles.card}>
                                     <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
                                 </Card>
@@ -128,7 +128,7 @@ const CollectionCarousel = ({ collection }) => {
                     return (
                         <div key={prod_index} className={styles.carousel_item_div}>
 
-                            <Link href={`/product/${prod.id}/`}>
+                            <Link href={`/collection/${collectionInfo.id}/`}>
                                 <Card className={styles.card}>
                                     <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
                                 </Card>
