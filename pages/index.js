@@ -49,9 +49,9 @@ export default function Home() {
             <div className={stylesi.enzo_men_div}>
               <Image
                 sizes="(max-width: 600px) 100vw, 600px"
-                srcset="
-/../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_200.jpg 200w,
-/../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg 600w"
+//                 srcset="
+// /../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_200.jpg 200w,
+// /../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg 600w"
                 src="/../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg"
                 alt='Enzo Men Clothes Image'
                 width="90%"
@@ -66,9 +66,9 @@ export default function Home() {
             <div className={stylesi.enzo_women_div}>
             <Image
                 sizes="(max-width: 259px) 100vw, 259px"
-                srcset="
-/../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_200 200w,
-/../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png 256w"
+//                 srcset="
+// /../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_200 200w,
+// /../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png 256w"
                 src="/../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png"
                 alt='Enzo Women Clothes Image'
                 width="90%"
