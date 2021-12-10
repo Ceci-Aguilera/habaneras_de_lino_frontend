@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 import { useRouter } from "next/router";
 import axios from 'axios'
-import CategoryImageBanner from '../../components/CategoryImageBanner';
 import ProductsGrid from '../../components/ProductsGrid';
 import stylesT from '../../styles/CategoryID.module.css'
 

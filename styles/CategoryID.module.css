@@ -1,11 +1,11 @@
 .about_title {
     padding-top: 100px;
     font-family: "Comforter", cursive;
-    font-size: 60px;
-    color: darkred;
+    font-size: 150px;
+    color: crimson;
     width:1000px;
     text-align: center;
-    border-bottom: 1px solid darkred;
+    border-bottom: 1px solid crimson;
     line-height: 0.1em;
     margin: 10px 0 20px;
     margin-left: auto !important;
@@ -20,5 +20,6 @@
   @media screen and (max-width: 758px) {
     .about_title {
         width:98%;
+        font-size: 100px;
       }
   }

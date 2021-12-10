@@ -20,7 +20,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
 
-const CategoryGrid = ({ categories }) => {
+const CategoryGrid = ({ categories, tag='a' }) => {
 
     return categories == null ? (
         <div></div>
@@ -38,6 +38,7 @@ const CategoryGrid = ({ categories }) => {
                             lg={4}
                             className={styles.categoryCol}
                         >
+                        {tag == 'a'?(
                             <Link href={`/category/${cat.id}/`}>
                                 <Card className={styles.card}>
                                 <Card.Img variant="top" src={cat.image} className={styles.card_image}/>
@@ -46,6 +47,27 @@ const CategoryGrid = ({ categories }) => {
                                     </Card.Footer>
                                 </Card>
                             </Link>
+                        ):<div></div>}
+                        {tag == 'w'?(
+                            <Link href={`/category/enzo-woman/${cat.id}/`}>
+                                <Card className={styles.card}>
+                                <Card.Img variant="top" src={cat.image} className={styles.card_image}/>
+                                    <Card.Footer className={styles.card_footer}>
+                                        {cat.title}
+                                    </Card.Footer>
+                                </Card>
+                            </Link>
+                        ):<div></div>}
+                        {tag == 'm'?(
+                            <Link href={`/category/enzo-men/${cat.id}/`}>
+                                <Card className={styles.card}>
+                                <Card.Img variant="top" src={cat.image} className={styles.card_image}/>
+                                    <Card.Footer className={styles.card_footer}>
+                                        {cat.title}
+                                    </Card.Footer>
+                                </Card>
+                            </Link>
+                        ):<div></div>}
                         </Col>
                     );
                 })}

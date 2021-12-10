@@ -6,8 +6,8 @@
 
 .card{
     background-color: white;
-    color: darkred;
-    border: 1px solid darkred;
+    color: crimson;
+    border: 1px solid crimson;
     font-size: 26px;
     font-family: "Indie Flower"
 }
@@ -15,7 +15,7 @@
 .card_header{
     font-size: 30px;
     text-align: center;
-    border-bottom: 1px solid darkred;
+    border-bottom: 1px solid crimson;
     font-family: "Indie Flower";
     background-color: white;
 }

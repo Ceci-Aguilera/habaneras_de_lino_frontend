@@ -12,8 +12,8 @@
 
 .card{
     background-color: white;
-    color: darkred;;
-    border: 1px solid darkred;
+    color: crimson;;
+    border: 1px solid crimson;
     font-weight: lighter;
     font-size: 24px;
     margin-left: auto !important;
@@ -25,14 +25,14 @@
 .card_image{
     width: 500px;
     height: 600px;
-    border: 1px solid #244c77;
+    border: 1px solid lightsteelblue;
 }
 
 .card_s_image{
     min-width: 100px;
     max-height: 150px;
     margin-bottom: 10px;
-    border: 1px solid #244c77;
+    border: 1px solid lightsteelblue;
 }
 
 .s_images_card{
@@ -41,14 +41,14 @@
 
 .card_footer{
     background-color: white;
-    border-top: 1px solid darkred;
+    border-top: 1px solid crimson;
     text-align: center;
 }
 
 .button{
-    background-color: #244c77 !important;
+    background-color: steelblue !important;
     color: white;
-    border-color: #244c77;
+    border-color: steelblue;
     font-family: "Indie Flower";
     font-size: 30px;
     min-width: 200px;
@@ -58,9 +58,9 @@
 .button:focus,
 .button:after,
 .button:active{
-    background-color: #244caa !important;
+    background-color: lightsteelblue !important;
     color: white;
-    border-color: #244caa;
+    border-color: lightsteelblue;
 }
 
 @media screen and (max-width: 758px) {
@@ -68,7 +68,7 @@
     .card_image{
         width: 300px;
         height: 350px;
-        border: 1px solid #244c77;
+        border: 1px solid lightsteelblue;
         margin-left:auto !important;
         margin-right:auto !important;
     }
@@ -100,7 +100,7 @@
         width: 100px;
         height: 100px;
         margin-bottom: 10px;
-        border: 1px solid #244c77;;
+        border: 1px solid lightsteelblue;
     }
 
     .s_images_card{

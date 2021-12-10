@@ -1,0 +1,58 @@
+.tag_div{
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex;
+    flex-direction: wrap;
+    align-content: space-between !important;
+}
+
+
+.enzo_men_div{
+    margin-top: 50px;
+    max-height: 600px;
+    max-width: 300px;
+    min-width: 250px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: transparent !important;
+}
+
+.enzo_women_div{
+    margin-top: 50px;
+    max-height: 600px;
+    max-width: 300px;
+    min-width: 250px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: transparent !important;
+}
+
+
+@media screen and (min-width: 992px) { 
+
+    .tag_div{
+        margin-top: 150px;
+    }
+
+    .enzo_men_div{
+        max-height: 700px;
+        min-height: 700px;
+        max-width: 600px;
+        min-width: 500px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        cursor: pointer;
+    }
+    
+    .enzo_women_div{
+        max-height: 700px;
+        min-height: 700px;
+        max-width: 600px;
+        min-width: 500px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        cursor: pointer;
+    }
+}

@@ -30,7 +30,7 @@
   }
 
 .card_footer{
-    background-color: #244c77;
+  background-color: lightsteelblue !important;
     color: white;
     border-top: 1px solid white;
     text-align: center;

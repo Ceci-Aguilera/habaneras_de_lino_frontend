@@ -31,7 +31,7 @@
 }
 
 .card_footer {
-  background-color: #244c77;
+  background-color: lightsteelblue;
   font-weight: lighter;
   text-align: center;
   color: white;
@@ -41,13 +41,9 @@
 
 .about_title {
   font-family: "Comforter", cursive;
-  font-size: 60px;
-  color: darkred;
-  width: 1000px;
+  font-size: 100px;
+  color: crimson;
   text-align: center;
-  border-bottom: 1px solid darkred;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -59,14 +55,14 @@
 
 .collection_title {
   text-align: center !important;
-  color: #244c77;
+  color: lightsteelblue;
   font-size: 40px;
   font-family: "Indie Flower";
   line-height: 0.1em;
   margin: 50px 0 20px;
   margin-left: auto !important;
   margin-right: auto !important;
-  border-bottom: 1px solid #244c77;
+  border-bottom: 1px solid lightsteelblue;
   width: 400px;
   text-align: center;
 }

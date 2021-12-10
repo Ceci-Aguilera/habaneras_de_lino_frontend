@@ -20,7 +20,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
 
-const ProductsGrid = ({ products }) => {
+const ProductsGrid = ({ products, tag='a' }) => {
 
 console.log(products)
 
@@ -30,6 +30,7 @@ console.log(products)
         <Container className={styles.productsGridContainer}>
             <Row className={styles.row}>
                 {products.map((prod, index) => {
+                    if(tag=='a'){
                     return (
                         <Col
                             key={index}
@@ -53,6 +54,58 @@ console.log(products)
                             </Link>
                         </Col>
                     );
+                    }
+                    else if(tag == 'w' && prod.extra_tag == 'WOMEN'){
+                        return (
+                        <Col
+                            key={index}
+                            xs={12}
+                            sm={12}
+                            md={4}
+                            lg={3}
+                            className={styles.productCol}
+                        >
+                            <Link href={`/product/${prod.id}/`}>
+                                <Card className={styles.card}>
+                                    <div className={styles.img_container}>
+                                    <Card.Img variant="top" src={prod.image} className={styles.card_image}/>
+                                    <Card.Img variant="top" src={prod.s_image} className={styles.card_image_s}/>
+                                    </div>
+                               
+                                    <Card.Footer className={styles.card_footer}>
+                                        ${prod.price}
+                                    </Card.Footer>
+                                </Card>
+                            </Link>
+                        </Col>
+                    );
+                    }
+
+                    else if(tag == 'm' && prod.extra_tag == 'MEN'){
+                        return (
+                        <Col
+                            key={index}
+                            xs={12}
+                            sm={12}
+                            md={4}
+                            lg={3}
+                            className={styles.productCol}
+                        >
+                            <Link href={`/product/${prod.id}/`}>
+                                <Card className={styles.card}>
+                                    <div className={styles.img_container}>
+                                    <Card.Img variant="top" src={prod.image} className={styles.card_image}/>
+                                    <Card.Img variant="top" src={prod.s_image} className={styles.card_image_s}/>
+                                    </div>
+                               
+                                    <Card.Footer className={styles.card_footer}>
+                                        ${prod.price}
+                                    </Card.Footer>
+                                </Card>
+                            </Link>
+                        </Col>
+                    );
+                    }
                 })}
             </Row>
         </Container>

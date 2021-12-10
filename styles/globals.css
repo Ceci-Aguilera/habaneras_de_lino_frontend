@@ -18,16 +18,24 @@ a {
 
 @font-face {
   font-family: "Comforter";
-  src: url("/fonts/Comforter/Comforter-Regular.ttf");
+  src: url("/fonts/Corinthia/Corinthia-Regular.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Indie Flower";
-  src: url("/fonts/Indie Flower/IndieFlower-Regular.ttf");
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Regular.ttf");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Light.ttf");
+  font-style: lighter;
+  font-weight: 300;
   font-display: swap;
 }

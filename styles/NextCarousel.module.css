@@ -1,5 +1,5 @@
 .carousel_div{
-    margin-top: 50px;
+    margin-top: 0px;
     font-family: "Comforter", cursive;
 }
 
@@ -8,9 +8,23 @@
 }
 
 .caption{
-    color:darkred !important;
+    color:crimson !important;
+}
+
+.image_div{
+    width: 500px !important;
+    height: 800px !important;
 }
 
 @media screen and (max-width: 758px) {
+    .carousel{
+        display: none;
+    }
+}
 
+@media screen and (min-width: 1400px) { 
+    .image_div{
+        width: 500px !important;
+        height: 80vh !important;
+    }
 }

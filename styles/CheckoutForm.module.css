@@ -6,7 +6,7 @@
 
 .card{
     background-color: white;
-    color: darkred;
+    color: crimson;
     border: 1px solid white;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .formControl{
-    border-color:darkred;
+    border-color:lightsteelblue;
     font-size:20px;
     border-radius: 20px;
     font-weight: 300 !important;
@@ -66,9 +66,9 @@
 }
 
 .orderNowButton{
-    background-color: #244c77;
+    background-color: steelblue;
     color:white;
-    border-color: #244c77;
+    border-color: steelblue;
     /* border-radius: 0px; */
     font-size: 18px;
     width: 200px;
@@ -79,9 +79,9 @@
 .orderNowButton:hover,
 .orderNowButton:focus,
 .orderNowButton:after{
-    background-color: #244caa;
+    background-color: lightsteelblue;
     color:white;
-    border-color: #244caa;
+    border-color: lightsteelblue;
 }
 
 .priceP{

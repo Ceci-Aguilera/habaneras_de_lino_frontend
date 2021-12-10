@@ -1,28 +1,34 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import CategoryGrid from '../components/CategoryGrid'
 import styles from '../styles/Home.module.css'
-import {useEffect, useState} from 'react'
+import stylesi from '../styles/index.module.css'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCart } from '../context/CartContext'
 import NextCarousel from '../components/Carousel'
 import About from '../components/About'
 import CollectionGrid from '../components/CollectionGrid'
+import SecondaryNavbar from '../components/SecondaryNavbar'
+import CollectionCarousel from '../components/CollectionCarousel'
+
+import { Row, Col } from 'react-bootstrap'
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 export default function Home() {
 
-  const {cart} = useCart()
+  const { cart } = useCart()
 
   const [categories, setCategories] = useState(null);
   const [collections, setCollections] = useState(null);
 
-    useEffect(async () => {
-      await getCategories(setCategories);
-       await getCollections(setCollections);
-    }, []);
-  
+  useEffect(async () => {
+    await getCategories(setCategories);
+    await getCollections(setCollections);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -31,15 +37,66 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <SecondaryNavbar />
+
       <main className={styles.main}>
         <NextCarousel />
+
+        <Row className={stylesi.tag_div}
+        >
+          <Col xs={12} sm={12} md={6} lg={6}>
+          <Link href={`/enzo-men/`}>
+            <div className={stylesi.enzo_men_div}>
+              <Image
+                sizes="(max-width: 600px) 100vw, 600px"
+                srcset="
+/../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_200.jpg 200w,
+/../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg 600w"
+                src="/../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg"
+                alt='Enzo Men Clothes Image'
+                width="90%"
+                height="100%"
+              />
+            </div>
+            </Link>
+          </Col>
+
+          <Col xs={12} sm={12} md={6} lg={6}>
+          <Link href={`/enzo-women/`}>
+            <div className={stylesi.enzo_women_div}>
+            <Image
+                sizes="(max-width: 259px) 100vw, 259px"
+                srcset="
+/../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_200 200w,
+/../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png 256w"
+                src="/../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png"
+                alt='Enzo Women Clothes Image'
+                width="90%"
+                height="100%"
+              />
+            </div>
+            </Link>
+          </Col>
+
+
+
+
+        </Row>
+
+        <CollectionCarousel collection={'Luxury'} />
+        <CollectionCarousel collection={'Etink'} />
+        <CollectionCarousel collection={'Cittadino'} />
+
+        <CollectionCarousel collection={'Navy'} />
+        <CollectionCarousel collection={'Romance'} />
+        <CollectionCarousel collection={'Turquesa'} />
+
+
         <About />
-        <CategoryGrid categories={categories} />
-        <CollectionGrid collections={collections} />
       </main>
 
       <footer className={styles.footer}>
-        
+
       </footer>
     </div>
   )
