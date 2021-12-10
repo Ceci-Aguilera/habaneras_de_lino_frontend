@@ -78,7 +78,7 @@ const CollectionCarousel = ({ collection }) => {
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={2000}
+                autoPlaySpeed={5000}
                 keyBoardControl={true}
                 customTransition="all .5"
                 transitionDuration={500}
