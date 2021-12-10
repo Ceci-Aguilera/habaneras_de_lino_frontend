@@ -87,7 +87,7 @@ export default function Home() {
         </Row>
 
         <CollectionCarousel collection={'Luxury'} />
-        <CollectionCarousel collection={'Etink'} />
+        <CollectionCarousel collection={'Etnik'} />
         <CollectionCarousel collection={'Cittadino'} />
 
         <CollectionCarousel collection={'Navy'} />
