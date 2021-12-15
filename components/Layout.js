@@ -7,6 +7,9 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
+      <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+      </meta>
         <link
           rel="preload"
           href="/fonts/Comforter/Corinthia-Regular.ttf"

@@ -10,6 +10,7 @@ import slide_3 from "../public/images/Slide 3 Resolutions/Slide_3_2019_smxmoz_c_
 import slide_4 from "../public/images/Slide 4 Resolutions/Slide_4_2019_pzbrwt_c_scale,w_1400.jpg"
 import slide_5 from "../public/images/Slide 5 Resolutions/Slide_5_2019_qhgyog_c_scale,w_1400.jpg"
 import slide_6 from "../public/images/Slide 6 Resolutions/Slide_6_2019_jlesrs_c_scale,w_1400.jpg"
+import etnik_img from "../public/images/etnik.jpg"
 
 const NextCarousel = () => {
 
