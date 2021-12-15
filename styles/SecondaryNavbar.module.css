@@ -2,6 +2,7 @@
   background-color: #244c77 !important;
   min-height: 50px;
   font-family: "Montserrat", sans-serif;
+  z-index: 999998;
 }
 
 .navbar_navdropdown{

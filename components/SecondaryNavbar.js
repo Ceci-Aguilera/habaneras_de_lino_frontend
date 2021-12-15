@@ -51,9 +51,7 @@ const SecondaryNavbar = () => {
     await getDropDownInfo(setDropDownInfo);
   }, []);
 
-  return dropDownInfo == null ? (
-    <div></div>
-  ) : (
+  return (
     <>
       <Navbar
         collapseOnSelect
