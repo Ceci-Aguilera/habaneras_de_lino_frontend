@@ -1,5 +1,5 @@
 .footer {
-    background-color: lightsteelblue;
+    background-color: #244c77;
     color: white !important;
     font-weight: 300 !important;
     text-align: center;
@@ -9,7 +9,7 @@
     margin-left: 0px !important;
     margin-right: 0px !important;
     padding: 0px;
-    font-family: 'Indie Flower', cursive;
+    font-family: "Montserrat", sans-serif;
   }
   
   .footerWrapper {

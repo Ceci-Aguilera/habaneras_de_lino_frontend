@@ -9,13 +9,31 @@ export default function Layout({ children }) {
       <Head>
         <link
           rel="preload"
-          href="/fonts/Comforter/Comforter-Regular.ttf"
+          href="/fonts/Comforter/Corinthia-Regular.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/Indie Flower/IndieFlower-Regular.ttf"
+          href="/fonts/Comforter/Corinthia-Bold.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Indie Flower/Montserrat-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Indie Flower/Montserrat-Light.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Indie Flower/Montserrat-Bold.ttf"
           as="font"
           crossOrigin=""
         />

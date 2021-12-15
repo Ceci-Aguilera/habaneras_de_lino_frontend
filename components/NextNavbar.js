@@ -30,9 +30,29 @@ import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
 import tallas from '../public/images/tallas.jpeg'
 
 
+
+const SvgComponent = (props) => (
+  <svg
+    aria-hidden="true"
+    data-prefix="fas"
+    data-icon="shopping-cart"
+    className="svg-inline--fa fa-shopping-cart fa-w-18"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 576 512"
+    {...props}
+  >
+    <path
+      fill="#244c77"
+      d="m528.12 301.319 47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"
+    />
+  </svg>
+)
+
+
+
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
-const NextNavbar = ({show_second_navbar=false}) => {
+const NextNavbar = ({ show_second_navbar = false }) => {
   const { cart } = useCart()
 
 
@@ -41,75 +61,61 @@ const NextNavbar = ({show_second_navbar=false}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
-  return(
+  console.log(cart)
+  return (
     <>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="dark"
-        variant="dark"
-        className={`${styles.navbar} ${mstyles.scolor} ${mstyles.itshape}`}
-      >
-        <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <div className={styles.navbar_wrapper}>
+        <div className={styles.top_navbar_border}></div>
+        <Navbar
+          collapseOnSelect
+          expand="md"
+          bg="light"
+          variant="light"
+          className={`${styles.navbar}`}
+        >
+          <Container>
 
-          <Navbar.Brand
-            className={`navbar-brand d-lg-none ${styles.smallBrand}`}
-            href="/"
-          >
-            Habaneras de Lino
-          </Navbar.Brand>
+            {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
 
-          <Navbar.Collapse id="responsive-navbar-nav" className={`${mstyles.scolor} ${mstyles.itshape} ${styles.nav_res}`}>
-            <>
-              <Nav className={`${styles.navbar_nav} mx-auto order-0`}>
-                <Nav.Link className={styles.linkItem} href="/#about">
-                  <p>About Us</p>
-                </Nav.Link>
+            <Navbar.Brand
+              className={`navbar-brand d-md-none ${styles.brand_small}`}
+              href="/"
+            >
+              Habaneras de Lino
+            </Navbar.Brand>
+
+            <Nav.Link className={`d-md-none  ${styles.navbar_link_item}`} href="/cart">
+              <SvgComponent className={styles.navbar_cart_svg} width={50} height={50} />
+              <span className={styles.cart_count}>+</span>
+            </Nav.Link>
+
+
+
+            <Navbar.Collapse id="responsive-navbar-nav" className={`${styles.navbar_collapse}`}>
+              <Nav className={`${styles.navbar_brand_nav} mx-auto order-0`}>
 
                 <Navbar.Brand
-                  className={`d-none d-lg-block mx-auto ${styles.brand}`}
+                  className={`d-none d-md-block mx-auto ${styles.brand}`}
                   href="/"
                 >
                   Habaneras de Lino
                 </Navbar.Brand>
-
-                <Nav.Link className={styles.linkItem} href="/#footer">
-                  <p>Contact Us</p>
-                </Nav.Link>
-
-                <Nav.Item className={styles.linkItem} onClick={handleShow}>
-                  <p>Find Size</p>
-                </Nav.Item>
               </Nav>
-              <Nav className={`mr-auto ${styles.cart_nav}`}>
-                <Nav.Link className={styles.linkItem} href="/cart">
-                  <p className={`${styles.shoppingCartp}`}>
-                    <FontAwesomeIcon icon={faShoppingCart} className={`${styles.icon}`} /><small>{(cart == null) ? 0 : cart.products.length}</small>
-                  </p>
+              <Nav className={`mr-auto ${styles.navbar_cart}`}>
+                <Nav.Link className={styles.navbar_link_item} href="/cart">
+                  <SvgComponent className={styles.navbar_cart_svg} width={50} height={50} />
+                  <span className={styles.cart_count}>+</span>
                 </Nav.Link>
 
               </Nav>
-            </>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <h3 className={styles.br_sty}></h3>
 
-      <Modal show={show} onHide={handleClose} className={styles.modal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Size</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Image src={tallas} className={styles.tallas_image} />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+            </Navbar.Collapse>
+          </Container>
+
+        </Navbar>
+
+
+      </div>
     </>
   );
 };

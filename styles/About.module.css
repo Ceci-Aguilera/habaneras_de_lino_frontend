@@ -58,6 +58,19 @@
 @media screen and (max-width: 758px) {
   .about_title {
     width: 98%;
+    max-width: 300px;
+  }
+
+.tallas_image{
+  width: 300px;
+  height: 500px;
+}
+}
+
+@media screen and (max-width: 9928px) {
+  .about_title {
+    width: 98%;
+    max-width: 700px;
   }
 
 .tallas_image{

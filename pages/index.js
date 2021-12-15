@@ -57,8 +57,9 @@ export default function Home() {
 // /../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg 600w"
                 src={enzo_men_image}
                 alt='Enzo Men Clothes Image'
-                width="90%"
+                width="80%"
                 height="100%"
+                className={styles.enzo_men_img}
               />
             </div>
             </Link>
@@ -74,7 +75,7 @@ export default function Home() {
 // /../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png 256w"
                 src={enzo_women_image}
                 alt='Enzo Women Clothes Image'
-                width="90%"
+                width="80%"
                 height="100%"
               />
             </div>

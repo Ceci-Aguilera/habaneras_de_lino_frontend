@@ -17,7 +17,7 @@ a {
 }
 
 @font-face {
-  font-family: "Comforter";
+  font-family: "Corinthia";
   src: url("/fonts/Corinthia/Corinthia-Regular.ttf");
   font-style: normal;
   font-weight: 400;
@@ -25,17 +25,35 @@ a {
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Regular.ttf");
+  font-family: "Corinthia";
+  src: url("/fonts/Corinthia/Corinthia-Bold.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format('truetype');;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Light.ttf");
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Light.ttf") format('truetype');;
   font-style: lighter;
   font-weight: 300;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format('truetype');
+  font-style: medium;
+  font-weight: 700;
   font-display: swap;
 }

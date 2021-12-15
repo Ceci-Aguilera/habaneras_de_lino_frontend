@@ -1,230 +1,39 @@
-/*================================================
-    Variables that change depending on devices
+.navbar{
+  background-color: #244c77 !important;
+  min-height: 50px;
+  font-family: "Montserrat", sans-serif;
+}
 
-    Default values are for X-Small devices: 
-    portrait phones with less than 576px
- ================================================ */
+.navbar_navdropdown{
+  color: white !important;
+  text-decoration: none !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
- .linkItem > p {
-    font-size: 36px !important;
-  }
-  
-  .smallBrand{
-    font-size: 40px !important;
-  }
-  
-  .s_smallBrand{
-    font-size: 20px !important;
-  }
-  
-  .linkItem{
-    padding-top: 10px !important;
-  }
-  
-  .s_nav{
-    position: fixed;
-    background-color: crimson !important;
-    z-index: 99999 !important;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300 !important;
-  }
-  
-  .drop_button > .linkItem{
-    width:max-content;
-    color: white !important;
-    font-size: 20px !important;
-    vertical-align: middle !important;
-    padding-bottom: 30px !important;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300 !important;
-  }
-  
-  .drop_menu{
-    margin-left: 10px !important;
-    font-size: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300 !important;
-    background-color: crimson !important;
-    color: white !important;
-    opacity: 0.6;
-    border: 1px solid white;
-    width: max-content;
-  }
-  
-  .drop_item{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300 !important;
-    font-size: 20px !important;
-    color: white !important;
-  }
+.navbar_link{
+  color: white !important;
+  text-decoration: none !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-  .drop_item:hover{
-    background-color: white !important;
-    color: lightsteelblue !important;
-  }
-  
-  
-  /* =============================================== 
-  Small devices (landscape phones, 576px and up)
-  ================================================ */
-  @media screen and (min-width: 576px) {
-    .linkItem > p {
-      font-size: 50px !important;
-    }
-  
-    .linkItem{
-      padding-top: 50px !important;
-    }
+.navbar_contact_nav{
+  margin-right: 50px;
+}
 
-    .drop_linkItem{
-      padding-top: 50px !important;
-    }
-  }
-  
-  
-  
-  
-  
-  /* =============================================== 
-  Medium devices (tablets, 768px and up)
-  ================================================ */
-  
-  @media screen and (min-width: 768px) { 
-    .s_nav{
-      position: relative;
-      background-color: transparent !important;
-      z-index: 99999 !important;
-      margin-top: -20px;
-    }
-  
-    .drop_button > .linkItem{
-      width:max-content;
-      color: white !important;
-      font-size: 30px !important;
-      vertical-align: middle !important;
-      padding-bottom: 30px !important;
-    }
-  
-    .drop_menu{
-      margin-left: 10px !important;
-      font-size: 30px;
-      background: crimson !important;
-      width: 100%;
-      text-align:center;
-      opacity: 0.8;
-    }
-  
-    .drop_item{
-      color: white !important;
-    }
-  
-    .drop_item:hover{
-      background-color: white !important;
-      color: lightsteelblue !important;
-      opacity: 0.6;
-    }
+.navbar_collapse{
+  z-index: 999998;
+  background-color: #244c77;
+}
 
-    .drop_linkItem{
-      width:max-content;
-      color: white !important;
-      font-size: 30px !important;
-      vertical-align: middle !important;
-      padding-bottom: 30px !important;
-    }
-  
-  }
-  
-  
-  
-  /*========================================
-    For all devices
-  ====================================== */
-  
-  
-  
-  .navbar {
-    border-bottom: 1px solid white;
-    height: 150px;
-    font-family: 'Comforter', cursive;
-  }
-  
-  .s_navbar{
-    border-bottom: 1px solid white;
-    height: 70px;
-    background-color: crimson !important;
-    align-items: center !important;
-    vertical-align: middle !important;
-  }
-  
-  .linkItem{
-    padding-left: 50px !important;
-    padding-right: 50px !important;
-    width: max-content ! important;
-    display:block !important;
-  }
-  
-  .linkItem > p{
-    width:max-content;
-    color: white !important;
-  }
+.modal{
+  z-index: 999999;
+}
 
-  .drop_linkItem{
-    padding-left: 50px !important;
-    padding-right: 50px !important;
-    width: max-content ! important;
-    display:block !important;
-  }
-
-  .drop_linkItem > p{
-    width:max-content;
-    color: white !important;
-  }
-  
-  
-  
-  .brand{
-    font-size: 64px;
-    padding-top: 30px !important;
-  }
-  
-  .linkItemFakish {
-    color: transparent !important;
-    font-size: 1.2rem;
-  }
-  
-  .shoppingCartp{
-    display:flex !important;
-    flex-direction: row !important;
-    width: 50px !important;
-    font-size: 20px !important;
-  }
-  
-  .br_sty{
-    text-align: center !important;
-    color: lightsteelblue;
-    font-size: 40px;
-    font-family: "Indie Flower";
-    line-height: 0.1em;
-    margin: 10px 0 0 0;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-bottom: 5px solid crimson;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .nav_res{
-    z-index: 99999;
-  }
-  
-  
-  
-  .drop_button {
-    vertical-align: middle !important;
-  }
-  
-
-  .drop_divider{
-    border: 1px solid white;
-    color: white;
-  }
+.navbar_link_modal{
+  padding-top: 10px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

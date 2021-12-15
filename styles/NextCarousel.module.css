@@ -22,7 +22,14 @@
     }
 }
 
-@media screen and (min-width: 1400px) { 
+@media screen and (max-width: 992px) {
+    .image_div{
+        width: 500px !important;
+        height: 400px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) { 
     .image_div{
         width: 500px !important;
         height: 80vh !important;

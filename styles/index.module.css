@@ -17,6 +17,7 @@
     margin-left: auto !important;
     margin-right: auto !important;
     background-color: transparent !important;
+    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
 .enzo_women_div{
@@ -27,6 +28,7 @@
     margin-left: auto !important;
     margin-right: auto !important;
     background-color: transparent !important;
+    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
 
@@ -45,7 +47,7 @@
         margin-right: auto !important;
         cursor: pointer;
     }
-    
+
     .enzo_women_div{
         max-height: 700px;
         min-height: 700px;
