@@ -29,7 +29,7 @@ const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 const CheckoutForm = () => {
 
-    const { cart } = useCart()
+    const { cart, coupon } = useCart()
 
     const [first_name, setFirstName] = useState("");
     const [last_name, setLastName] = useState("");

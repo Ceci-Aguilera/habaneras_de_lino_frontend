@@ -46,6 +46,7 @@ export const getCart = async () => {
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [coupon, setCoupon] = useState(null)
 
   useEffect(async () => {
     const temp_cart = await getCart();
@@ -55,7 +56,17 @@ export const CartProvider = ({ children }) => {
     catch{
       setCart(null)
     }
+    try{
+      setCoupon(temp_cart['cart']['Coupon']);
+    }
+    catch{
+      setCoupon(null)
+    }
   }, []);
+
+  // ================================================================
+  // Add product to Cart
+ // =================================================================
 
   const add_product = async (body) => {
 
@@ -75,8 +86,10 @@ export const CartProvider = ({ children }) => {
       .then(async (response) => {
         const res = await response.data;
         const temp_cart = res["Cart"];
+        const temp_coupon = res["Coupon"]
 
         setCart(temp_cart);
+        setCoupon(temp_coupon)
 
         setLoading(false);
         router.push("/");
@@ -93,6 +106,7 @@ export const CartProvider = ({ children }) => {
       .then(async (response) => {
         const res = await response.data;
         const temp_cart = res["Cart"];
+        const temp_coupon = res["Coupon"]
 
         setCart(temp_cart);
         await window.localStorage.setItem("token", temp_cart['token'])
@@ -109,6 +123,10 @@ export const CartProvider = ({ children }) => {
     
   };
 
+  // ================================================================
+  // Delete product from Cart
+ // =================================================================
+
   const delete_product = async(id) => {
     const config = {
       headers: {
@@ -121,8 +139,10 @@ export const CartProvider = ({ children }) => {
     return await axios.delete(cart_url, config).then(async(response) => {
       const res = await response.data;
       const temp_cart = res["Cart"];
+      const temp_coupon = res["Coupon"]
 
       setCart(temp_cart);
+      setCoupon(temp_coupon)
 
       setLoading(false);
       router.push("/");
@@ -134,6 +154,10 @@ export const CartProvider = ({ children }) => {
     })
   }
 
+
+  // ================================================================
+  // Delete Cart
+ // =================================================================
   const delete_cart = async() => {
     const config = {
       headers: {
@@ -143,13 +167,15 @@ export const CartProvider = ({ children }) => {
     
     const token = cart.token
 
-    const cart_url = domain  + `store/cart/${token}`;
+    const cart_url = domain  + `store/cart/${token}/`;
     
     return await axios.delete(cart_url, config).then(async(response) => {
       const res = await response.data;
       const temp_cart = res["Cart"];
+      const temp_coupon = res["Coupon"]
 
       setCart(temp_cart);
+      setCoupon(temp_coupon)
 
       setLoading(false);
       router.push("/");
@@ -160,6 +186,10 @@ export const CartProvider = ({ children }) => {
         console.log(error);
     })
   }
+
+  // ================================================================
+  // Update product from Cart
+ // =================================================================
 
   const update_product = async(id, body) => {
     const config = {
@@ -173,8 +203,10 @@ export const CartProvider = ({ children }) => {
     return await axios.post(cart_url, body, config).then(async(response) => {
       const res = await response.data;
       const temp_cart = res["Cart"];
+      const temp_coupon = res["Coupon"]
 
       setCart(temp_cart);
+      setCoupon(temp_coupon)
 
       setLoading(false);
       router.push("/cart");
@@ -186,10 +218,49 @@ export const CartProvider = ({ children }) => {
     })
   }
 
+  // ================================================================
+  // Add product to Cart
+ // =================================================================
+
+  const addCoupon = async(user_email, code) => {
+    const body = JSON.stringify({
+      user_email,
+      code
+    })
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+  
+    const token = cart.token
+
+    const coupon_url = domain + `store/coupon/${token}/`;
+    
+    return await axios.post(coupon_url, body, config).then(async(response) => {
+      const res = await response.data;
+      const temp_cart = res["Cart"];
+      const temp_coupon = res["Coupon"]
+
+      setCart(temp_cart);
+      setCoupon(temp_coupon)
+
+      setLoading(false);
+      router.push("/");
+
+    }).catch((error)=>{
+      
+      setLoading(false);
+        console.log(error);
+    })
+
+  }
+
 
   
   return (
-    <CartContext.Provider value={{ cart, add_product, delete_product, delete_cart, update_product}}>
+    <CartContext.Provider value={{ cart, add_product, delete_product, delete_cart, update_product, coupon, addCoupon}}>
       {children}
     </CartContext.Provider>
   );

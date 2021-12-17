@@ -1,17 +1,13 @@
 .about_div {
   text-align: center;
-  margin-top: 150px;
+  /* margin-top: 300px; */
 }
 
 .about_title {
-  font-family: "Comforter", cursive;
+  font-family: "Monstserrat", sans-serif;
   font-size: 60px;
-  color: crimson;
-  width: 1000px;
+  color: #244c77;
   text-align: center;
-  border-bottom: 1px solid crimson;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -28,54 +24,23 @@
 }
 
 .about_p_div {
+  font-family: "Monstserrat", sans-serif;
   margin-top: 100px;
   margin-bottom: 100px;
+  width: 60%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: justify;
+}
+
+.br {
   width: 90%;
+  min-width: 300px;
+  height: 1px;
+  margin-top: 300px;
+  margin-bottom: 100px;
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center;
-}
-
-.button_div {
-  margin-top: 50px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center;
-}
-
-.button {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  background-color: lightsteelblue !important;
-  border: 1px solid lightsteelblue !important;
-}
-
-.tallas_image{
-  width: 800px !important;
-  height: 800px !important;
-}
-
-@media screen and (max-width: 758px) {
-  .about_title {
-    width: 98%;
-    max-width: 300px;
-  }
-
-.tallas_image{
-  width: 300px;
-  height: 500px;
-}
-}
-
-@media screen and (max-width: 9928px) {
-  .about_title {
-    width: 98%;
-    max-width: 700px;
-  }
-
-.tallas_image{
-  width: 300px;
-  height: 500px;
-}
-
+  background-color: rgba(100,100,100, 0.6) !important;
 }

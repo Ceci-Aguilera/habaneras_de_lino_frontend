@@ -54,19 +54,21 @@ const CollectionCarousel = ({ collection }) => {
 
     const [collectionInfo, setCollectionInfo] = useState(null);
 
-    useEffect(async () => {
-        await getCollection(collection, setCollectionInfo);
+    useEffect(() => {
+        getCollection(collection, setCollectionInfo);
     }, [])
 
-    console.log(collection)
+    // console.log("DSAKLJDKAJDJKAJDKJ KJSAKJD KASJDK JAJDA SK")
+    // console.log(collection)
+    // console.log(collectionInfo)
 
     return collectionInfo == null ? (
         <div></div>
     ) : (
-        <Link href={`/collection/${collectionInfo.id}/`}>
-        <Container className={`${styles.categoryGridContainer}`} id={`${collection}`}>
-            
-                <h2 className={styles.coll_name}>{collection} </h2>
+
+        <Container className={styles.collectionCarouselDiv} id={`${collection}`}>
+
+            <h2 className={styles.coll_name}>{collection} Collection</h2>
 
 
 
@@ -93,7 +95,7 @@ const CollectionCarousel = ({ collection }) => {
                     return (
                         <div key={prod_index} className={styles.carousel_item_div}>
 
-                            <Link href={`/collection/${collectionInfo.id}/`}>
+                            <Link href={`/product/${prod.id}/`}>
                                 <Card className={styles.card}>
                                     <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
                                 </Card>
@@ -123,12 +125,12 @@ const CollectionCarousel = ({ collection }) => {
 
                 className={styles.carousel}>
 
-                
+
                 {collectionInfo.all_products_per_collection.slice(collectionInfo.all_products_per_collection.length / 2, collectionInfo.all_products_per_collection.length).map((prod, prod_index) => {
                     return (
                         <div key={prod_index} className={styles.carousel_item_div}>
 
-                            <Link href={`/collection/${collectionInfo.id}/`}>
+                            <Link href={`/product/${prod.id}/`}>
                                 <Card className={styles.card}>
                                     <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
                                 </Card>
@@ -138,10 +140,15 @@ const CollectionCarousel = ({ collection }) => {
                 })}
             </Carousel>
 
+            <div className={styles.link_div}>
+                <Link className={styles.coll_link} href={`/collection/${collectionInfo.id}/`}>
+                    <Button className={styles.coll_link_button} variant='primary'>View More of {collectionInfo.title}</Button>
+                </Link>
+            </div>
 
 
         </Container>
-            </Link>
+
     );
 };
 
@@ -154,10 +161,14 @@ const getCollection = async (collection, setCollectionInfo) => {
         },
     };
 
+    console.log("debuggg")
+    console.log(collections_url)
+
     const collections_url = domain + `store/collection/title/${collection}/`;
     axios
         .get(collections_url, config)
         .then(async (res) => {
+            console.log(res)
             const result = await res.data['Collection'];
             setCollectionInfo(result);
         })

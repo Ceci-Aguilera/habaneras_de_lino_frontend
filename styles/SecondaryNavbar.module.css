@@ -19,6 +19,22 @@
   padding-right: 10px;
 }
 
+.navbar_link:after{
+  display:block;
+  content: '';
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out; 
+  padding-bottom: 3px;
+  border-bottom: 3px solid white;
+}
+
+
+.navbar_link:hover:after{
+  transform: scaleX(1);
+}
+
+
+
 .navbar_contact_nav{
   margin-right: 50px;
 }
@@ -37,4 +53,14 @@
   margin-right: 20px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.navbar_br{
+  width: 100%;
+  min-width: 300px;
+  height: 1px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  background-color: #244c77 !important;
 }

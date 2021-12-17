@@ -1,41 +1,78 @@
 .coll_name{
-    margin-top: 100px;
-    color: crimson;
+    color: #244c77;
     text-align: center;
-    font-family: "Comforter", cursive;
-    font-size: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100px !important;
     cursor: pointer;
+    margin-top: 150px !important;
 }
 
 @media screen and (min-width: 992px) { 
+
+    
     .coll_name{
-        margin-top: 100px;
-        color: crimson;
+        color: #244c77;
         text-align: center;
-        font-family: "Comforter", cursive;
+        font-family: "Montserrat", sans-serif;
         font-size: 150px;
     }
 }
 
 .card_coll_image{
-    width: 350px;
+    width: 300px;
     height: 400px;
+    border-radius: 10px;
 }
 
 .carousel_item_div{
     margin-top: 30px;
-    width: 350px;
+    width: 300px;
     height: 450px;
     margin-left: auto!important;
     margin-right: auto!important;
     text-align: center;
+    border-radius: 10px;
 }
 
 .card{
-    width: 350px;
+    width: 300px;
     height: 400px;
     margin-left: auto!important;
     margin-right: auto!important;
     text-align: center;
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+    border-radius: 10px;
+}
+
+.link_div{
+    margin-top: 20px;
+    margin-left: auto!important;
+    margin-right: auto!important;  
+    text-align:center;
+}
+
+.coll_link{
+    margin-left: auto!important;
+    margin-right: auto!important;  
+    text-align:center;
+}
+
+.coll_link_button{
+    margin-left: auto!important;
+    margin-right: auto!important;
+    font-family: "Monstserrat", sans-serif;
+    font-size: 24px !important;
+    text-align:center;
+    background-color: white !important;
+    color: #244c77 !important;
+    border-color: #244c77 !important;
+}
+
+.coll_link_button:hover,
+.coll_link_button:after,
+.coll_link_button:active,
+.coll_link_button:focus{
+    background-color: #244c77 !important;
+    color: white !important;
+    border-color: #244c77 !important;
 }

@@ -23,7 +23,7 @@ import { useCart } from "../context/CartContext";
 
 const OrderResume = () => {
 
-    const { cart } = useCart()
+    const { cart, coupon } = useCart()
 
     return cart == null ? (
         <div></div>
@@ -36,11 +36,25 @@ const OrderResume = () => {
                         Subtotal: ${cart.cost}
                     </p>
                     <p>
-                        Taxes: 0.7%
+                        Taxes: 0.07%
                     </p>
+                    {(coupon == null)?<><p>No coupon Applied</p>
                     <p>
-                        Precio total (envio + taxes): ${cart.cost + (cart.cost * 0.07)}
+                        Total Price (shipping + taxes): ${parseFloat(cart.cost + (cart.cost * 0.07)).toFixed(2)}
+                    </p></>:<div></div>}
+                    {(coupon !== null && coupon.discount_type == "POR CIENTO")?(<><p>Coupon: {coupon.discount} %</p>
+                    <p>
+                        Total Price (shipping + taxes + coupon): ${parseFloat(cart.cost - (cart.cost * coupon.discount) + ((cart.cost - (cart.cost * coupon.discount)) * 0.07) ).toFixed(2)}
                     </p>
+                    </>)
+                    :<div></div>}
+
+                    {(coupon !== null && coupon.discount_type == "FIJO")?(<><p>Coupon: ${coupon.discount}</p>
+                    <p>
+                        Total Price (shipping + taxes + coupon): ${parseFloat(cart.cost - (coupon.discount) + ((cart.cost - (coupon.discount) ) * 0.07) ).toFixed(2)}
+                    </p>
+                    </>)
+                    :<div></div>}
 
                 </Card.Body>
             </Card>

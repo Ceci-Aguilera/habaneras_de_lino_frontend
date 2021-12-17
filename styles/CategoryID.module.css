@@ -1,13 +1,9 @@
 .about_title {
     padding-top: 100px;
-    font-family: "Comforter", cursive;
-    font-size: 150px;
-    color: crimson;
-    width:1000px;
+    color: #244c77;
+    font-family: "Montserrat", sans-serif;
+    font-size: 90px;
     text-align: center;
-    border-bottom: 1px solid crimson;
-    line-height: 0.1em;
-    margin: 10px 0 20px;
     margin-left: auto !important;
     margin-right: auto !important;
   }

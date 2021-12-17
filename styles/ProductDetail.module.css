@@ -12,8 +12,9 @@
 
 .card{
     background-color: white;
-    color: crimson;;
-    border: 1px solid crimson;
+    color: #244c77;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #244c77;
     font-weight: lighter;
     font-size: 24px;
     margin-left: auto !important;
@@ -41,7 +42,7 @@
 
 .card_footer{
     background-color: white;
-    border-top: 1px solid crimson;
+    border-top: 1px solid #244c77;
     text-align: center;
 }
 
@@ -49,7 +50,7 @@
     background-color: steelblue !important;
     color: white;
     border-color: steelblue;
-    font-family: "Roboto, sans-serif";
+    font-family: "Montserrat", sans-serif;
     font-size: 30px;
     min-width: 200px;
 }
@@ -84,7 +85,7 @@
         margin-left: auto !important;
         margin-right: auto !important;
         text-align: center;
-        background-color: crimson!important;
+        background-color: #244c77!important;
         width: 100% !important;
     }
 

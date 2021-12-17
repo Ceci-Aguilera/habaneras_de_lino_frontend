@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import { useRouter } from "next/router";
 import axios from 'axios'
-import stylesT from '../../../styles/CategoryID.module.css'
-import ProductsGrid from '../../../components/ProductsGrid';
-import SecondaryNavbar from '../../../components/SecondaryNavbar';
+import stylesT from '../../styles/CategoryID.module.css'
+import ProductsGrid from '../../components/ProductsGrid';
+import SecondaryNavbar from '../../components/SecondaryNavbar';
 
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
 
   const res = await axios.get(domain +'store/collections/', config);
   const paths = await res.data.map((collection) => ({
-    params: { id: collection.id.toString() },
+    params: { title: collection.title.toString() },
   }));
 
   return {
@@ -33,23 +33,23 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (ctx) => {
 
-  const collection_id = ctx.params?.id;
+  const collection_title= ctx.params?.title;
     
-  const response = await axios.get(domain + `store/collections/${collection_id}/`, config);
+  const response = await axios.get(domain + `store/collection/title/${collection_title}/`, config);
 
   return {
     props: {
-      collection: response.data,
+      collection: response.data['Collection'],
     },
   };
 };
 
 
-export default function ColletionDetailFunction({collection}) {
+export default function CollectionTitleDetailFunction({collection}) {
 
   const router = useRouter();
 
-  return (collection == undefined)?<div></div>:(
+  return (collection == undefined)?<div>Error Loading Info</div>:(
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -61,7 +61,7 @@ export default function ColletionDetailFunction({collection}) {
 
       <main className={styles.main}>
         <h2 className={stylesT.about_title}><span className={stylesT.about_title_span}>{collection.title}</span></h2>
-          <ProductsGrid products={collection.all_products_per_collection} tag='w'/>
+          <ProductsGrid products={collection.all_products_per_collection}/>
       </main>
     </div>
   )

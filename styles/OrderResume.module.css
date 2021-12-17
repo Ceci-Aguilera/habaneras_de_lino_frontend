@@ -6,16 +6,16 @@
 
 .card{
     background-color: white;
-    color: crimson;
-    border: 1px solid crimson;
+    color: #244c77;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #244c77;
     font-size: 26px;
-    font-family: "Indie Flower"
 }
 
 .card_header{
     font-size: 30px;
     text-align: center;
-    border-bottom: 1px solid crimson;
-    font-family: "Indie Flower";
+    border-bottom: 1px solid #244c77;
+    font-family: "Montserrat", sans-serif;
     background-color: white;
 }

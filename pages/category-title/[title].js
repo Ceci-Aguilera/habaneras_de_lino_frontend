@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import { useRouter } from "next/router";
 import axios from 'axios'
-import ProductsGrid from '../../../components/ProductsGrid';
-import stylesT from '../../../styles/CategoryID.module.css'
-import SecondaryNavbar from '../../../components/SecondaryNavbar';
+import ProductsGrid from '../../components/ProductsGrid';
+import stylesT from '../../styles/CategoryID.module.css'
+import SecondaryNavbar from '../../components/SecondaryNavbar';
 
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
 
   const res = await axios.get(domain +'store/categories/', config);
   const paths = await res.data.map((category) => ({
-    params: { id: category.id.toString() },
+    params: { title: category.title.toString() },
   }));
 
   return {
@@ -33,21 +33,23 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (ctx) => {
 
-  const category_id = ctx.params?.id;
+  const category_title = ctx.params?.title;
     
-  const response = await axios.get(domain + `store/categories/${category_id}/`, config);
+  const response = await axios.get(domain + `store/category/title/${category_title}/`, config);
 
   return {
     props: {
-      category: response.data,
+      category: response.data['Category'],
+      products: response.data['Products'],
     },
   };
 };
 
 
-export default function CategoryDetailFunction({category}) {
+export default function CategoryTitleDetailFunction({category, products}) {
 
   const router = useRouter();
+
 
   return (category == undefined)?<div></div>:(
     <div className={styles.container}>
@@ -61,7 +63,7 @@ export default function CategoryDetailFunction({category}) {
 
       <main className={styles.main}>
         <h2 className={stylesT.about_title}><span className={stylesT.about_title_span}>{category.title}</span></h2>
-          <ProductsGrid products={category.products} tag={'w'}/>
+          <ProductsGrid products={products}/>
       </main>
     </div>
   )

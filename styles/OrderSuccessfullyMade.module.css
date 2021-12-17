@@ -4,9 +4,9 @@
 }
 
 .card{
-    background-color: #efdecd;
-    color: #e97451;;
-    border: 1px solid white;
+    background-color: white;
+    color: #244c77;
+    border: 1px solid #244c77;
     font-weight: lighter;
     font-size: 24px;
 }

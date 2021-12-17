@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
       </meta>
-        <link
+        {/* <link
           rel="preload"
           href="/fonts/Comforter/Corinthia-Regular.ttf"
           as="font"
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
           href="/fonts/Indie Flower/Montserrat-Bold.ttf"
           as="font"
           crossOrigin=""
-        />
+        /> */}
       </Head>
       <NextNavbar />
       <main className={styles.main}>{children}</main>

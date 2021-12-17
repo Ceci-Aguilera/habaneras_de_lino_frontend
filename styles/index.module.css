@@ -1,5 +1,6 @@
 .tag_div{
     margin-top: 20px;
+    margin-bottom: 300px;
     width: 80%;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -58,3 +59,16 @@
         cursor: pointer;
     }
 }
+
+.br {
+    width: 90%;
+    min-width: 300px;
+    height: 1px;
+    margin-top: 300px;
+    margin-bottom: 100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    background-color: rgba(100,100,100, 0.6) !important;
+  }
+  

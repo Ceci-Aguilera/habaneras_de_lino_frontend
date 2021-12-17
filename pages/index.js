@@ -17,6 +17,7 @@ import { Row, Col } from 'react-bootstrap'
 
 import enzo_men_image from "../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg"
 import enzo_women_image from "../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png"
+import Offers from '../components/Offers'
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -87,6 +88,8 @@ export default function Home() {
 
         </Row>
 
+        <div className={stylesi.br} />
+
         <CollectionCarousel collection={'Luxury'} />
         <CollectionCarousel collection={'Etnik'} />
         <CollectionCarousel collection={'Cittadino'} />
@@ -95,6 +98,7 @@ export default function Home() {
         <CollectionCarousel collection={'Romance'} />
         <CollectionCarousel collection={'Turquesa'} />
 
+        <Offers />
 
         <About />
       </main>

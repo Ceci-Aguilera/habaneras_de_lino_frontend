@@ -40,7 +40,7 @@ const WhatsAppIcon = (props) => (
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
-const SecondaryNavbar = () => {
+const SecondaryNavbar = ({navbarShow=true}) => {
   const [dropDownInfo, setDropDownInfo] = useState(null);
   const [show, setShow] = useState(false);
 
@@ -52,6 +52,7 @@ const SecondaryNavbar = () => {
   }, []);
 
   return (
+    (navbarShow === true)?(
     <>
       <Navbar
         collapseOnSelect
@@ -136,28 +137,28 @@ const SecondaryNavbar = () => {
                 drop="end"
                 active={true}
               >
-                <NavDropdown.Item>Luxury</NavDropdown.Item>
+                <NavDropdown.Item href='#Luxury'>Luxury</NavDropdown.Item>
 
-                <NavDropdown.Item>Etnik</NavDropdown.Item>
+                <NavDropdown.Item href='#Etnik'>Etnik</NavDropdown.Item>
 
-                <NavDropdown.Item>Cittadino</NavDropdown.Item>
+                <NavDropdown.Item href='#Cittadino'>Cittadino</NavDropdown.Item>
 
                 <Dropdown.Divider />
 
-                <NavDropdown.Item>Cancun</NavDropdown.Item>
+                <NavDropdown.Item href='/collection-title/Cancun'>Cancun</NavDropdown.Item>
 
-                <NavDropdown.Item>Valladolid</NavDropdown.Item>
+                <NavDropdown.Item href='/collection-title/Valladolid'>Valladolid</NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown.Item>Guayaberas</NavDropdown.Item>
+              <NavDropdown.Item href='/category-title/enzo-men/Guayaberas'>Guayaberas</NavDropdown.Item>
 
-              <NavDropdown.Item>Guayamisas</NavDropdown.Item>
+              <NavDropdown.Item href='/category-title/enzo-men/Guayamisas'>Guayamisas</NavDropdown.Item>
 
-              <NavDropdown.Item>Shirts (Camisas)</NavDropdown.Item>
+              <NavDropdown.Item href='/category-title/enzo-men/Camisas'>Shirts (Camisas)</NavDropdown.Item>
 
-              <NavDropdown.Item>Pants</NavDropdown.Item>
+              <NavDropdown.Item href='/category-title/enzo-men/Pantalones'>Pants</NavDropdown.Item>
 
-              <NavDropdown.Item>Accessories</NavDropdown.Item>
+              <NavDropdown.Item href='/category-title/enzo-men/Accesorios'>Accessories</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link
@@ -172,6 +173,13 @@ const SecondaryNavbar = () => {
           <Nav className={`mx-auto order-0  ${styles.navbar_contact_nav}`}>
 
           <Nav.Link
+              href="#offers"
+              className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
+            >
+              WHOLESALERS
+            </Nav.Link>
+
+          <Nav.Link
               href="#"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
               onClick={handleShow}
@@ -180,15 +188,14 @@ const SecondaryNavbar = () => {
             </Nav.Link>
 
             <Nav.Link
-              href="#"
+              href="#about_shipping"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
-              onClick={handleShow}
             >
-              ABOUT US
+              SHIPPING
             </Nav.Link>
 
-          <Nav.Link className={styles.navbar_link}>
-            <WhatsAppIcon width={30} height={30} /> 111 111 111
+          <Nav.Link href='#footer' className={styles.navbar_link}>
+            <WhatsAppIcon width={30} height={30} /> +1 941 447 5126
           </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -206,6 +213,8 @@ const SecondaryNavbar = () => {
         </Modal.Footer>
       </Modal>
     </>
+    ):
+    <div className={styles.navbar_br} />
   );
 };
 

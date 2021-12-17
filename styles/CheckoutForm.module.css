@@ -6,7 +6,7 @@
 
 .card{
     background-color: white;
-    color: crimson;
+    color: #244c77;
     border: 1px solid white;
 }
 
@@ -14,7 +14,7 @@
     font-size: 30px;
     text-align: center;
     border-bottom: 1px solid white;
-    font-family: "Indie Flower";
+    font-family: "Montserrat", sans-serif;
     background-color: white;
 }
 
@@ -72,7 +72,7 @@
     /* border-radius: 0px; */
     font-size: 18px;
     width: 200px;
-    font-family: "Indie Flower";
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
 }
 

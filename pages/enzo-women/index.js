@@ -24,7 +24,6 @@ export default function WomenIndex() {
     await getCollections(setCollections);
   }, []);
 
-console.log(collections)
 
   return (
     <div className={styles.container}>

@@ -23,7 +23,10 @@ import { useCart } from "../context/CartContext";
 
 const CartDetail = () => {
 
-    const { cart, delete_product, delete_cart } = useCart()
+    const { cart, delete_product, delete_cart, coupon, addCoupon } = useCart()
+
+    const [user_email, setUserEmail] = useState("")
+    const [code, setCode] = useState("")
 
     const onDeleteClickHandler = async (e, index) => {
         e.preventDefault();
@@ -35,6 +38,13 @@ const CartDetail = () => {
         e.preventDefault();
         await delete_cart()
     }
+
+    const addCouponHandler = async (e) => {
+        e.preventDefault()
+        await addCoupon(user_email, code)
+    }
+
+    console.log("Coupon: " + coupon)
 
     return cart == null ? (
         <div></div>
@@ -71,12 +81,12 @@ const CartDetail = () => {
 
                                                 <p>Cantidad: {prod.cant}</p>
                                                 {prod.color == "Default" ? <p>Color: Default</p> :
-                                                <div className={styles.color_box_wrapper}>
-                                                    <div className={styles.color_box_div}>
-                                                        <p className={styles.color_box_p}>Color: </p>
-                                                        <div style={{ backgroundColor: prod.color, height: "20px", width: '20px' }} />
-                                                    </div>
-                                                </div>}
+                                                    <div className={styles.color_box_wrapper}>
+                                                        <div className={styles.color_box_div}>
+                                                            <p className={styles.color_box_p}>Color: </p>
+                                                            <div style={{ backgroundColor: prod.color, height: "20px", width: '20px' }} />
+                                                        </div>
+                                                    </div>}
                                                 <p>Precio: ${prod.price}</p>
                                             </Col>
 
@@ -106,21 +116,56 @@ const CartDetail = () => {
 
                     <h2 className={styles.about_title}></h2>
 
-                    <Row className={styles.row_final_price}>
-                        <p>Precio Total: ${cart.cost}</p>
-                    </Row>
+                    {(coupon == null) ?
+                        (
+                            <>
+                                <Row className={styles.row_final_price}>
+                                    <p>Total Price: ${parseFloat(cart.cost).toFixed(2)}</p>
+                                </Row>
+                                <Row>
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                        <Form.Label>Email address</Form.Label>
+                                        <Form.Control type="email" placeholder="Enter email"  value={user_email} onChange={(e) => setUserEmail(e.target.value)} />
+                                    </Form.Group>
+                                    
+                                    <Form.Group className="mb-3" controlId="formBasicCode">
+                                        <Form.Label>{"Coupon's Code"}</Form.Label>
+                                        <Form.Control type="text" placeholder="code" value={code} onChange={(e) => setCode(e.target.value)}/>
+                                    </Form.Group>
+                                    <Button variant='success' onClick={(e) => addCouponHandler(e)}> Add Coupon</Button>
+                                </Row>
+                            </>
+                        ) : <div></div>}
+
+                        {(coupon !== null && coupon.discount_type == "POR CIENTO") ?
+                        (
+                            <>
+                                <Row className={styles.row_final_price}>
+                                    <p>Price after coupon: ${(cart.cost - (cart.cost * coupon.discount))}</p>
+                                </Row>
+                            </>
+                        ) : <div></div>}
+
+                        {(coupon !== null && coupon.discount_type == "FIJO") ?
+                        (
+                            <>
+                                <Row className={styles.row_final_price}>
+                                    <p>Price after coupon: ${(cart.cost - (coupon.discount))}</p>
+                                </Row>
+                            </>
+                        ) : <div></div>}
 
                     <Row className={styles.row_final_buttons}>
                         <Col xs={12} sm={12} md={6} lg={6}>
                             <Link href={`/order/`}>
                                 <Button className={`${styles.button_main} ${styles.order_button}`}>
-                                    Hacer Compra
+                                    Checkout
                                 </Button>
                             </Link>
                         </Col>
                         <Col xs={12} sm={12} md={6} lg={6}>
                             <Button className={`${styles.button_main} ${styles.delete_order_button}`} onClick={(e) => onDeleteCartHandler(e)}>
-                                Delete
+                                Delete Cart
                             </Button>
                         </Col>
                     </Row>
