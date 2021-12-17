@@ -5,48 +5,57 @@ import { useRouter } from "next/router";
 import axios from 'axios'
 import CustomProductDetail from '../../components/CustomProductDetail';
 import SecondaryNavbar from '../../components/SecondaryNavbar';
+import { useEffect, useState } from 'react';
 
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 
-const config = {
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
+// const config = {
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// };
 
-export const getStaticPaths = async () => {
+// export const getStaticPaths = async () => {
 
-  const res = await axios.get(domain + 'store/custom-products/', config);
-  const paths = await res.data.map((product) => ({
-    params: { id: product.id.toString() },
-  }));
+//   const res = await axios.get(domain + 'store/custom-products/', config);
+//   const paths = await res.data.map((product) => ({
+//     params: { id: product.id.toString() },
+//   }));
 
-  return {
-    paths,
-    fallback: false,
-  };
+//   return {
+//     paths,
+//     fallback: false,
+//   };
 
-};
+// };
 
-export const getStaticProps = async (ctx) => {
+// export const getStaticProps = async (ctx) => {
 
-  const product_id = ctx.params?.id;
+//   const product_id = ctx.params?.id;
     
-  const response = await axios.get(domain + `store/custom-products/${product_id}/`, config);
+//   const response = await axios.get(domain + `store/custom-products/${product_id}/`, config);
 
-  return {
-    props: {
-      product: response.data["Product"],
-    },
-  };
-};
+//   return {
+//     props: {
+//       product: response.data["Product"],
+//     },
+//   };
+// };
 
 
-export default function CustomProductDetailFunction({product}) {
+export default function CustomProductDetailFunction() {
 
   const router = useRouter();
+  
+  const { id } = router.query
+
+  const [product, setProduct] = useState(null);
+
+  useEffect (async() => {
+    await getProduct(id, setProduct);
+  },[])
 
   return (product == undefined)?<div></div>:(
     <div className={styles.container}>
@@ -63,4 +72,26 @@ export default function CustomProductDetailFunction({product}) {
       </main>
     </div>
   )
+}
+
+const getProduct = async(id, setProduct) =>{
+
+  
+const config = {
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
+  const product_url = domain + `store/custom-products/${id}/`;
+
+  axios
+        .get(product_url, config)
+        .then(async (res) => {
+          const result = await res.data["Product"]
+          setProduct(result)
+        })
+        .catch((error) => {
+          setProduct(null)
+        });
 }
