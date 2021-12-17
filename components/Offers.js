@@ -18,7 +18,7 @@ const Offers = () => {
         </h2>
         <div className={styles.about_p_div}>
           <p className={styles.about_p}>
-            The {"sell's"} policy allows and encourages wholesalers to buy using
+            Our {"sell's"} policy both allows and encourages wholesalers to buy using
             our website. For such {"client's"} we offer specific discounts. This
             offers include discounts for those buying at least. The kind and the
             amount of the discount depends on the range of the desired purchase,
