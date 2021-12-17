@@ -16,6 +16,7 @@
     border-bottom: 1px solid white;
     font-family: "Montserrat", sans-serif;
     background-color: white;
+    color: #244c77;
 }
 
 .form{
@@ -35,9 +36,8 @@
 }
 
 .formControl{
-    border-color:lightsteelblue;
+    border: 1px solid rgba(200,200,200,1);
     font-size:20px;
-    border-radius: 20px;
     font-weight: 300 !important;
 }
 

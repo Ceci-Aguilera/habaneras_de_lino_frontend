@@ -1,0 +1,26 @@
+.enzo_men_title{
+    font-size: 100px;
+    text-align: center;
+    color: #244c77;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.enzo_women_title{
+    font-size: 100px;
+    text-align: center;
+    color: #244c77;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.about_title{
+    font-size: 80px;
+    text-align: center;
+    color: #244c77;
+    font-family: "Montserrat", sans-serif;
+}

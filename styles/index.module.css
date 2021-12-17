@@ -72,3 +72,63 @@
     background-color: rgba(100,100,100, 0.6) !important;
   }
   
+
+  @media screen and (min-width: 768px) and (max-width: 992px) { 
+
+    .tag_div{
+        margin-top: 20px;
+        margin-bottom: 200px;
+        width: 80%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: flex;
+        flex-direction: wrap;
+        align-content: space-between !important;
+    }
+
+    .enzo_men_div, .enzo_women_div{
+        margin-top: 200px;
+    }
+
+    .br {
+        width: 90%;
+        min-width: 300px;
+        height: 1px;
+        margin-top: 100px !important;
+        margin-bottom: 100px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+        background-color: rgba(100,100,100, 0.6) !important;
+      }
+  }
+
+  @media screen and (max-width: 758px) { 
+
+    .tag_div{
+        margin-top: 20px;
+        margin-bottom: 150px;
+        width: 80%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: flex;
+        flex-direction: wrap;
+        align-content: space-between !important;
+    }
+
+    .enzo_men_div, .enzo_women_div{
+        margin-top: 100px;
+    }
+
+    .br {
+        width: 90%;
+        min-width: 300px;
+        height: 1px;
+        margin-top: 100px !important;
+        margin-bottom: 100px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+        background-color: rgba(100,100,100, 0.6) !important;
+      }
+  }

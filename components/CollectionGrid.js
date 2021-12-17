@@ -15,11 +15,33 @@ import {
     Row,
     ControlLabel,
     Card,
-    Carousel,
 } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+
+const responsive = {
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5,
+        slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+        slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+        slidesToSlide: 1 // optional, default to 1.
+    }
+};
+
 
 const CollectionGrid = ({ collections, tag = 'a' }) => {
 
@@ -28,66 +50,82 @@ const CollectionGrid = ({ collections, tag = 'a' }) => {
     return collections == null ? (
         <div></div>
     ) : (
-        <Container className={`${styles.categoryGridContainer}`}>
-            <h2 className={styles.about_title}>Collections</h2>
-            <Carousel variant="dark" className={styles.carousel}>
-                {collections.map((coll, index) => {
-                    var temp = 0;
-                    return (<Carousel.Item key={index}>
-                        <h3 className={styles.collection_title}>
-                            <span className={styles.collection_title_span}>{coll.title}</span>
-                        </h3>
-                        <Row className={styles.row}>
-                            {coll.all_products_per_collection.map((prod_per_coll, prod_index) => {
-                                if (temp < 3 && (prod_per_coll.extra_tag=='MEN' && tag=='m')) {
-                                    temp = temp + 1;
-                                    return (
-                                        <Col
-                                            key={prod_index}
-                                            xs={12}
-                                            sm={12}
-                                            md={4}
-                                            lg={4}
-                                            className={styles.categoryCol}
-                                        >
-                                            <Link href={`/collection/enzo-men/${coll.id}/`}>
-                                            <Card className={styles.card}>
-                                                <Card.Img variant="top" src={prod_per_coll.image} className={styles.card_coll_image} />
-                                            </Card>
-                                            </Link>
-                                        </Col>
-                                    );
-                                }
-                                else if (temp < 3 && (prod_per_coll.extra_tag=='WOMEN' && tag=='w')) {
-                                    temp = temp + 1;
-                                    return (
-                                        <Col
-                                            key={prod_index}
-                                            xs={12}
-                                            sm={12}
-                                            md={4}
-                                            lg={4}
-                                            className={styles.categoryCol}
-                                        >
-                                            <Link href={`/collection/enzo-women/${coll.id}/`}>
-                                            <Card className={styles.card}>
-                                                <Card.Img variant="top" src={prod_per_coll.image} className={styles.card_coll_image} />
-                                            </Card>
-                                            </Link>
-                                        </Col>
-                                    );
-                                }
+        <>
+            {collections.map((collectionInfo, index) => {
+                return (
+                    <Container key={index} className={`${styles.categoryGridContainer}`}>
+                        <h2 className={styles.about_title}>{collectionInfo.title} Collection</h2>
+                        <Carousel
+                            swipeable={false}
+                            draggable={false}
+                            showDots={true}
+                            responsive={responsive}
+                            ssr={true} // means to render carousel on server-side.
+                            infinite={true}
+                            autoPlay={true}
+                            autoPlaySpeed={5000}
+                            keyBoardControl={true}
+                            customTransition="all .5"
+                            transitionDuration={500}
+                            containerClass="carousel-container"
+                            removeArrowOnDeviceType={["tablet", "mobile"]}
+                            deviceType={"desktop"}
+                            dotListClass="custom-dot-list-style"
+                            itemClass="carousel-item-padding-40-px"
+
+                            className={styles.carousel}>
+                            {collectionInfo.all_products_per_collection.map((prod, prod_index) => {
+                                return (
+                                    <div key={prod_index}>
+                                        {(tag == 'a') ? (
+                                            <div className={styles.carousel_item_div}>
+
+                                                <Link href={`/product/${prod.id}/`}>
+                                                    <Card className={styles.card}>
+                                                        <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
+                                                    </Card>
+                                                </Link>
+                                            </div>
+
+                                        ) : <div></div>}
+
+                                        {(tag == 'w' && prod.extra_tag == "WOMEN") ? (
+                                            <div className={styles.carousel_item_div}>
+
+                                                <Link href={`/product/${prod.id}/`}>
+                                                    <Card className={styles.card}>
+                                                        <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
+                                                    </Card>
+                                                </Link>
+                                            </div>
+
+                                        ) : <div></div>}
+
+                                        {(tag == 'm' && prod.extra_tag == "MEN") ? (
+                                            <div className={styles.carousel_item_div}>
+
+                                                <Link href={`/product/${prod.id}/`}>
+                                                    <Card className={styles.card}>
+                                                        <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
+                                                    </Card>
+                                                </Link>
+                                            </div>
+
+                                        ) : <div></div>}
+                                    </div>
+                                );
                             })}
-                        </Row>
-                        <Carousel.Caption>
-                            {/* <h3>{coll.title}</h3>
-                            <p>{coll.description}</p> */}
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    )
-                })}
-            </Carousel>
-        </Container>
+                        </Carousel>
+                        <div className={styles.link_div}>
+                            <Link className={styles.coll_link} href={`/collection/${collectionInfo.id}/`}>
+                                <Button className={styles.coll_link_button} variant='primary'>View More of {collectionInfo.title}</Button>
+                            </Link>
+                        </div>
+                        <div className={styles.small_br} />
+                    </Container>
+                );
+            })}
+        </>
     );
 };
 

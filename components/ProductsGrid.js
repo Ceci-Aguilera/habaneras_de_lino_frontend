@@ -48,7 +48,8 @@ console.log(products)
                                     </div>
                                
                                     <Card.Footer className={styles.card_footer}>
-                                        ${prod.price}
+                                        <div className={styles.prod_price_div}>${prod.price}</div>
+                                        {/* <div className={styles.prod_coll_div}>${prod.collection[0]}</div> */}
                                     </Card.Footer>
                                 </Card>
                             </Link>

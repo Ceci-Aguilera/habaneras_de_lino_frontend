@@ -44,3 +44,18 @@
   text-align: center;
   background-color: rgba(100,100,100, 0.6) !important;
 }
+
+
+@media screen and (max-width: 758px){
+  .about_title{
+    font-size: 40px !important;
+  }
+
+  .br{
+    margin-top: 150px !important;
+  }
+
+  .about_p_div{
+    width: 80%;
+  }
+}

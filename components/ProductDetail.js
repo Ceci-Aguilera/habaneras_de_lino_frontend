@@ -64,7 +64,7 @@ const ProductDetail = ({ product }) => {
                 if (clothing_s === "S") {
                     body = JSON.stringify({
                         cant,
-                        clothing_s: "32",
+                        clothing_s: "28",
                         size_of_sleeve: "-1",
                         fit: "-1",
                         original_product_id: product.id,
@@ -106,7 +106,7 @@ const ProductDetail = ({ product }) => {
                 <Col
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={12}
                     lg={6}
                     className={styles.productCol}
                 >
@@ -134,7 +134,7 @@ const ProductDetail = ({ product }) => {
                 <Col
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={12}
                     lg={6}
                     className={styles.productCol}
                 >
@@ -143,27 +143,35 @@ const ProductDetail = ({ product }) => {
                             <Card.Body className={styles.card_body}>
                                 {product.subtag === "ARRIBA" ? (
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <Form.Label>Talla de Ropa</Form.Label>
+                                        <Form.Label>Size</Form.Label>
                                         <Form.Select aria-label="Default select example" onChange={(e) => setClothingS(e.target.value)}>
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                            <option value="XXL">XXL</option>
                                         </Form.Select>
                                     </Form.Group>
                                 ) : (
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <Form.Label>Talla de Ropa</Form.Label>
+                                        <Form.Label>Size</Form.Label>
                                         <Form.Select aria-label="Default select example" onChange={(e) => setClothingS(e.target.value)}>
+                                            <option value="28">28</option>
+                                            <option value="44">30</option>
                                             <option value="32">32</option>
                                             <option value="34">34</option>
                                             <option value="36">36</option>
+                                            <option value="38">38</option>
+                                            <option value="40">40</option>
+                                            <option value="42">42</option>
+                                            <option value="44">44</option>
                                         </Form.Select>
                                     </Form.Group>
                                 )}
 
                                 {product.subtag === "ARRIBA" ? (
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <Form.Label>Corte</Form.Label>
+                                        <Form.Label>Fit</Form.Label>
                                         <Form.Select aria-label="Default select example" onChange={(e) => setFit(e.target.value)}>
                                             <option value="Regular Fit">Regular Fit</option>
                                             <option value="Slim Fit">Slim Fit</option>
@@ -173,16 +181,16 @@ const ProductDetail = ({ product }) => {
 
                                 {product.subtag === "ARRIBA" ? (
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <Form.Label>Largo de Manga</Form.Label>
+                                        <Form.Label>Type of Sleeve</Form.Label>
                                         <Form.Select aria-label="Default select example" onChange={(e) => setSleeve(e.target.value)}>
-                                            <option value="Corta">Corta</option>
-                                            <option value="Larga">Larga</option>
+                                            <option value="Corta">Short</option>
+                                            <option value="Larga">Long</option>
                                         </Form.Select>
                                     </Form.Group>
                                 ) : <div></div>}
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Cantidad</Form.Label>
+                                    <Form.Label>Amount</Form.Label>
                                     <Form.Control type="number" onChange={(e) => setCant(e.target.value)} value={cant} />
                                 </Form.Group>
 
@@ -225,7 +233,7 @@ const ProductDetail = ({ product }) => {
 
                             </Card.Body>
                             <Card.Footer className={styles.card_footer}>
-                                <Button className={styles.button} onClick={(e) => onBuyClickedHandler(e)}>Comprar</Button>
+                                <Button className={styles.button} onClick={(e) => onBuyClickedHandler(e)}>Add To Cart</Button>
                             </Card.Footer>
                         </Card>
                     </div>

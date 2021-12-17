@@ -1,5 +1,5 @@
 .orderResumeContainer{
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
     font-weight: lighter;
 }
@@ -8,14 +8,14 @@
     background-color: white;
     color: #244c77;
     font-family: "Montserrat", sans-serif;
-    border: 1px solid #244c77;
-    font-size: 26px;
+    font-size: 24px;
+    border: 1px solid rgba(200,200,200,1);
 }
 
 .card_header{
     font-size: 30px;
     text-align: center;
-    border-bottom: 1px solid #244c77;
+    border-bottom: 1px solid rgba(200,200,200,1);
     font-family: "Montserrat", sans-serif;
     background-color: white;
 }

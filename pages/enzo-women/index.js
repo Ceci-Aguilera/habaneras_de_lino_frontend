@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import CategoryGrid from '../../components/CategoryGrid'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Enzo.module.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCart } from '../../context/CartContext'
@@ -34,12 +34,22 @@ export default function WomenIndex() {
       </Head>
 
 
+      <SecondaryNavbar navbarShow={false} />
+
+      <h1 className={styles.enzo_women_title}>
+        WOMEN
+      </h1>
+
+
       <main className={styles.main}>
-      <div id='enzo_women_category'>
-          <CategoryGrid categories={categories} tag={'w'} />
-        </div>
-        <div id='enzo_women_collection'>
+        <div id='enzo_woman_collection'>
           <CollectionGrid collections={collections} tag={'w'} />
+        </div>
+
+        <h3 className={styles.about_title}>Categories</h3>
+
+        <div id='enzo_woman_category'>
+          <CategoryGrid categories={categories} tag={'w'} />
         </div>
       </main>
 

@@ -26,6 +26,17 @@ const CartDetail = () => {
 
   const [user_email, setUserEmail] = useState("");
   const [code, setCode] = useState("");
+  const [amount_of_products, setAmountOfProducts] = useState(0);
+
+  useEffect(() => {
+    if (cart != null) {
+      var temp_amount = 0;
+      cart.products.map((item, index) => {
+        temp_amount += item.cant;
+      });
+    }
+    setAmountOfProducts(temp_amount);
+  }, []);
 
   const onDeleteClickHandler = async (e, index) => {
     e.preventDefault();
@@ -45,7 +56,7 @@ const CartDetail = () => {
 
   console.log("Coupon: " + coupon);
 
-  return cart == null ? (
+  return cart == null || amount_of_products == 0 ? (
     <div></div>
   ) : (
     <Container className={styles.cartDetailContainer}>
@@ -79,18 +90,24 @@ const CartDetail = () => {
                     </Row>
                     <Row className={styles.row_product_vars}>
                       <Col xs={6} sm={6} md={6} lg={6}>
-                        <p> Talla de Ropa: {prod.clothing_s}</p>
+                        <p> Size: {prod.clothing_s}</p>
                         {prod.product.subtag === "ARRIBA" ? (
                           <>
-                            <p> Largo de Manga: {prod.size_of_sleeve}</p>
-                            <p> Corte: {prod.fit}</p>
+                            <p>
+                              {" "}
+                              Type Of Sleeve:{" "}
+                              {prod.size_of_sleeve == "Corta"
+                                ? "Short"
+                                : "Long"}
+                            </p>
+                            <p> Fit: {prod.fit}</p>
                           </>
                         ) : (
                           <div></div>
                         )}
                       </Col>
                       <Col xs={6} sm={6} md={6} lg={6}>
-                        <p>Cantidad: {prod.cant}</p>
+                        <p>Amount: {prod.cant}</p>
                         {prod.color == "Default" ? (
                           <p>Color: Default</p>
                         ) : (
@@ -107,7 +124,7 @@ const CartDetail = () => {
                             </div>
                           </div>
                         )}
-                        <p>Precio: ${prod.price}</p>
+                        <p>Price: ${prod.price}</p>
                       </Col>
                     </Row>
 
@@ -171,7 +188,7 @@ const CartDetail = () => {
                     />
                   </Form.Group>
                   <Button
-                  className={styles.add_coupon_button}
+                    className={styles.add_coupon_button}
                     variant="success"
                     onClick={(e) => addCouponHandler(e)}
                   >
@@ -179,10 +196,16 @@ const CartDetail = () => {
                     Add Coupon
                   </Button>
                 </Col>
-                <Col xs={12} sm={12} md={6} lg={6} className={styles.coupon_info}>
+                <Col
+                  xs={12}
+                  sm={12}
+                  md={6}
+                  lg={6}
+                  className={styles.coupon_info}
+                >
                   <p>
-                    To obtain a wholesaler coupon for a purchase of at last 12 units,
-                    contact us at our{" "}
+                    To obtain a wholesaler coupon for a purchase of at last 12
+                    units, contact us at our{" "}
                     <span style={{ color: "#244c77" }}>
                       email (habanerasdelino@gmail.com)
                     </span>{" "}
@@ -201,9 +224,17 @@ const CartDetail = () => {
           {coupon !== null && coupon.discount_type == "POR CIENTO" ? (
             <>
               <Row className={styles.row_final_price}>
+              {amount_of_products >= coupon.how_many_items ? (
                 <p>
                   Price after coupon: ${cart.cost - cart.cost * coupon.discount}
                 </p>
+                ) : (
+                  <p>
+                    The coupon is active but it will only apply when there are
+                    more than {coupon.how_many_items} units (products) in the cart.
+                  </p>
+                )}
+                
               </Row>
             </>
           ) : (
@@ -213,7 +244,16 @@ const CartDetail = () => {
           {coupon !== null && coupon.discount_type == "FIJO" ? (
             <>
               <Row className={styles.row_final_price}>
-                <p>Price after coupon: ${cart.cost - coupon.discount}</p>
+                {amount_of_products >= coupon.how_many_items ? (
+                  <p>
+                    Price after applying coupon: ${cart.cost - coupon.discount}
+                  </p>
+                ) : (
+                  <p>
+                    The coupon is active but it will only apply when there are
+                    more than {coupon.how_many_items} units (products) in the cart.
+                  </p>
+                )}
               </Row>
             </>
           ) : (

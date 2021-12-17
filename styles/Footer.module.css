@@ -23,47 +23,6 @@
     padding: 0px;
   }
   
-  @media screen and (max-width: 758px) {
-    .footerWrapper {
-      color: white !important;
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      justify-content: center;
-    }
-  
-    .footer {
-      background-color: lightsteelblue;
-          color: white !important;
-      font-weight: 300 !important;
-      text-align: center;
-      margin-top: 50px;
-      height: 300px;
-      width: 100% !important;
-      position: relative;
-      bottom: 0;
-      margin-left: 0px !important;
-      margin-right: 0px !important;
-      padding: 0px;
-    }
-
-    .contactUsColP{
-      color: white !important;
-      text-decoration: none;
-      margin-top: 30px;
-      padding: 0px;
-    }
-  
-    .footerLink,
-    .p,
-    .contactUsP {
-      color: white !important;
-      text-decoration: none;
-      padding: 0px;
-    }
-  }
 
   .contactUsCol{
     margin-top: 30px;
@@ -104,4 +63,77 @@
     width: max-content;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  @media screen and (max-width: 758px) {
+    .footerWrapper {
+      color: white !important;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 120px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      justify-content: center;
+    }
+  
+    .footer {
+      background-color: #244c77;
+      color: white !important;
+      font-weight: 300 !important;
+      text-align: center;
+      margin-top: 50px;
+      height: 500px;
+      width: 100% !important;
+      position: relative;
+      bottom: 0;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+      padding: 0px;
+    }
+
+    .contactUsColP{
+      color: white !important;
+      text-decoration: none;
+      margin-top: 30px;
+      padding: 0px;
+    }
+  
+    .footerLink,
+    .p,
+    .contactUsP {
+      color: white !important;
+      text-decoration: none;
+      padding: 0px;
+    }
+
+    .contactUsRow{
+      width: 100%;
+    }
+
+    .contactUsInfoRow{
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .footer {
+      background-color: #244c77;
+      color: white !important;
+      font-weight: 300 !important;
+      text-align: center;
+      margin-top: 50px;
+      height: 400px;
+      width: 100% !important;
+      position: relative;
+      bottom: 0;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+      padding: 0px;
+    }
+
+    .footerWrapper {
+      margin-top: 100px;
+    }
+  
   }

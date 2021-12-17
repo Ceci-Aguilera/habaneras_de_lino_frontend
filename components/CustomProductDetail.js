@@ -77,7 +77,7 @@ const CustomProductDetail = ({ product, original_product }) => {
                 if(clothing_s === "S"){
                     body = JSON.stringify({
                         cant,
-                        clothing_s: "32",
+                        clothing_s: "28",
                         size_of_sleeve: "-1",
                         fit: "-1",
                         original_product_id: original_product.id,
@@ -121,7 +121,7 @@ const CustomProductDetail = ({ product, original_product }) => {
             <Col
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={12}
                     lg={6}
                     className={styles.productCol}
                 >
@@ -149,7 +149,7 @@ const CustomProductDetail = ({ product, original_product }) => {
                 <Col
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={12}
                     lg={6}
                     className={styles.productCol}
                 >
@@ -161,8 +161,10 @@ const CustomProductDetail = ({ product, original_product }) => {
                                     <Form.Select aria-label="Default select example" onChange={(e) => setClothingS(e.target.value)}>
                                         <option value={product.clothing_s}>{product.clothing_s}</option>
                                         <option value="S">S</option>
-                                        <option value="M">M</option>
-                                        <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                            <option value="XXL">XXL</option>
                                     </Form.Select>
                                 </Form.Group>
                             ) : (
@@ -170,9 +172,15 @@ const CustomProductDetail = ({ product, original_product }) => {
                                     <Form.Label>Talla de Ropa</Form.Label>
                                     <Form.Select aria-label="Default select example" onChange={(e) => setClothingS(e.target.value)}>
                                     <option value={product.clothing_s}>{product.clothing_s}</option>
-                                        <option value="32">32</option>
-                                        <option value="34">34</option>
-                                        <option value="36">36</option>
+                                    <option value="28">28</option>
+                                            <option value="44">30</option>
+                                            <option value="32">32</option>
+                                            <option value="34">34</option>
+                                            <option value="36">36</option>
+                                            <option value="38">38</option>
+                                            <option value="40">40</option>
+                                            <option value="42">42</option>
+                                            <option value="44">44</option>
                                     </Form.Select>
                                 </Form.Group>
                             )}

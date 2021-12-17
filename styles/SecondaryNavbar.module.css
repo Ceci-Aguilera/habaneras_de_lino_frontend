@@ -64,3 +64,10 @@
   text-align: center;
   background-color: #244c77 !important;
 }
+
+@media screen and (max-width: 992px){
+  .navbar_link{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

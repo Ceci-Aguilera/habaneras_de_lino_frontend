@@ -30,7 +30,7 @@ const OrderResume = () => {
     ) : (
         <Container className={styles.orderResumeContainer}>
             <Card className={styles.card}>
-                <Card.Header className={styles.card_header}>Cart</Card.Header>
+                <Card.Header className={styles.card_header}>Purchase Information</Card.Header>
                 <Card.Body className={styles.card_body}>
                     <p>
                         Subtotal: ${cart.cost}

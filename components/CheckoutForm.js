@@ -67,7 +67,7 @@ const CheckoutForm = () => {
         <Container className={styles.checkoutContainer}>
 
             <Card className={styles.card}>
-                <Card.Header className={styles.card_header}>Informacion sobre el pago</Card.Header>
+                <Card.Header className={styles.card_header}>Payment Information</Card.Header>
                 <Card.Body>
                     <Container className={styles.orderDetailContainer}>
                         <Form className={styles.form}>
@@ -208,7 +208,7 @@ const CheckoutForm = () => {
                                     onClick={(e) => makePaymentHandler()}
                                     className={styles.orderNowButton}
                                 >
-                                    Pagar
+                                    PAYMENT
                                 </Button>
                             </div>
                         </Form>

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import CategoryGrid from '../../components/CategoryGrid'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Enzo.module.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCart } from '../../context/CartContext'
@@ -34,13 +34,22 @@ export default function MenIndex() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <SecondaryNavbar navbarShow={false} />
+
+      <h1 className={styles.enzo_men_title}>
+        MEN
+      </h1>
+
 
       <main className={styles.main}>
-        <div id='enzo_men_category'>
-          <CategoryGrid categories={categories} tag={'m'} />
-        </div>
         <div id='enzo_men_collection'>
           <CollectionGrid collections={collections} tag={'m'} />
+        </div>
+
+        <h3 className={styles.about_title}>Categories</h3>
+
+        <div id='enzo_men_category'>
+          <CategoryGrid categories={categories} tag={'m'} />
         </div>
       </main>
 

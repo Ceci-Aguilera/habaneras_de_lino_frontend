@@ -4,35 +4,57 @@
 }
 
 .row {
-  width: 70%;
+  width: 100%;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
 .card {
-  margin-top: 100px;
-  width: 250px;
+  margin-top: 20px;
+  height: 300px;
+  width: 200px;
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-radius: 10px;
 }
 
 .card_image {
   height: 300px;
-  width: 250px;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.card_coll_image {
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.carousel{
+  height: 400px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  cursor: pointer;
 }
 
 .card_footer {
-  background-color: lightsteelblue;
+  background-color:#244c77;
   font-weight: lighter;
   text-align: center;
   color: white;
   font-size: 30px;
-  font-family: "Indie Flower", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 
 .about_title {
-  color: #244c77;
   font-family: "Montserrat", sans-serif;
-  font-size: 80px;
+  font-size: 60px;
+  color: #244c77;
   text-align: center;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -43,46 +65,108 @@
   padding: 0 10px;
 }
 
+.collection_title {
+  margin-top:50px;
+  text-align: center !important;
+  color: #244c77;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 @media screen and (max-width: 758px) {
   .categoryGridContainer {
     margin-top: 50 !important;
+  }
+
+  .card {
+    height: 250px;
+    width: 200px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
-    width: 100%;  
   }
 
-  .row{
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-    width: 100%; 
-  }
-
-  .card{
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-    width: 250px;
-    margin-top: 50px;
-  }
-
-  .card_image {
+  .card_coll_image {
     height: 300px;
-    width: 250px;
+    width: 200px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
   }
   .categoryCol {
     margin-top: 20px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-    width: 100%;  
   }
 
   .about_title {
     width: 98%;
   }
+
+  .carousel{
+    min-height: 1100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+}
+
+
+.link_div{
+  margin-top: 20px;
+  margin-left: auto!important;
+  margin-right: auto!important;  
+  text-align:center;
+}
+
+.coll_link{
+  margin-left: auto!important;
+  margin-right: auto!important;  
+  text-align:center;
+}
+
+.coll_link_button{
+  margin-left: auto!important;
+  margin-right: auto!important;
+  font-family: "Monstserrat", sans-serif;
+  font-size: 24px !important;
+  text-align:center;
+  background-color: white !important;
+  color: #244c77 !important;
+  border-color: #244c77 !important;
+}
+
+.coll_link_button:hover,
+.coll_link_button:after,
+.coll_link_button:active,
+.coll_link_button:focus{
+  background-color: #244c77 !important;
+  color: white !important;
+  border-color: #244c77 !important;
+}
+
+.small_br {
+  width: 90%;
+  min-width: 300px;
+  height: 1px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  background-color: rgba(100,100,100, 0.6) !important;
+}
+
+
+.br {
+  width: 90%;
+  min-width: 300px;
+  height: 1px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  background-color: rgba(100,100,100, 0.6) !important;
 }

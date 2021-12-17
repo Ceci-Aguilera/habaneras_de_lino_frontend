@@ -18,12 +18,12 @@ const Offers = () => {
         </h2>
         <div className={styles.about_p_div}>
           <p className={styles.about_p}>
-            Our {"sell's"} policy both allows and encourages wholesalers to buy using
-            our website. For such {"client's"} we offer specific discounts. This
-            offers include discounts for those buying at least. The kind and the
-            amount of the discount depends on the range of the desired purchase,
+            Our {"sell's"} policy allows and encourages wholesalers to buy using
+            our website. For such clients we offer specific discounts when
+            buying at least 12 units. The kind and the amount of the discount
+            depend on the number of units (products) in the desired purchase,
             but our main and most popular discounts are for purchases of 12
-            units, 24 units, 50 units, and more. To know more about these offers
+            units, 24 units, 50 units, and +50 units. To know more about these offers
             and discounts, contact us via{" "}
             <span style={{ color: "#244c77" }}>
               email (habanerasdelino@gmail.com)

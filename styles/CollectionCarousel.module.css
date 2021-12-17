@@ -7,17 +7,6 @@
     margin-top: 150px !important;
 }
 
-@media screen and (min-width: 992px) { 
-
-    
-    .coll_name{
-        color: #244c77;
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        font-size: 150px;
-    }
-}
-
 .card_coll_image{
     width: 300px;
     height: 400px;
@@ -76,3 +65,59 @@
     color: white !important;
     border-color: #244c77 !important;
 }
+
+
+@media screen and (min-width: 992px) { 
+
+    
+    .coll_name{
+        color: #244c77;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width: 758px) { 
+
+    
+    .coll_name{
+        color: #244c77;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 50px !important;
+    }
+
+    .coll_link_button{
+        margin-left: auto!important;
+        margin-right: auto!important;
+        font-family: "Monstserrat", sans-serif;
+        font-size: 20px !important;
+        text-align:center;
+        background-color: white !important;
+        color: #244c77 !important;
+        border-color: #244c77 !important;
+    }
+
+    .card_coll_image{
+        width: 300px;
+        height: 400px;
+        border-radius: 10px;
+    }
+    
+    .carousel_item_div{
+        margin-top: 30px;
+        width: 300px;
+        height: 450px;
+        margin-left: auto!important;
+        margin-right: auto!important;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .coll_name{
+        font-size: 60px !important;
+    }
+} 

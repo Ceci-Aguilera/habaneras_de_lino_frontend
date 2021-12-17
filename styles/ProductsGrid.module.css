@@ -1,11 +1,19 @@
 .productsGridContainer{
     margin-top: 50px;
     margin-bottom: 100px;
+    margin-left:auto !important;
+    margin-right: auto !important;
+    text-align: center;
 }
 
 .card{
     border: 1px solid white;
     margin-top: 50px;
+    height: max-content;
+    width: 300px;
+    text-align: center;
+    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+    border-radius: 10px;
 }
 
 .img_container{
@@ -25,18 +33,52 @@
     opacity: 0;
   }
 
-  .card_image_s:hover {
+  .card:hover .card_image_s {
     opacity: 1;
   }
 
 .card_footer{
-  background-color: lightsteelblue !important;
-    color: white;
+  background-color: white !important;
+    color: #244c77;
     border-top: 1px solid white;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 30px;
-    font-weight: lighter;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card:hover .card_footer{
+  background-color: #244c77 !important;
+  color: white !important;
+  border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card {
+    width: max-content;
+    height: 320px;
+    margin-left:auto !important;
+    margin-right: auto !important;
+    margin-bottom: 50px;
+  }
+
+  .card_image {
+    width: 220px;
+    height: 320px;
+  }
+
+  .card_image_s {
+    width: 220px;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 758px) {
@@ -45,21 +87,21 @@
     }
 
     .card {
-      width: 250px;
-      height: 300px;
+      width: max-content;
+      height: 400px;
       margin-left:auto !important;
       margin-right: auto !important;
       margin-bottom: 50px;
     }
 
     .card_image {
-      width: 250px;
-      height: 300px;
+      width: 300px;
+      height: 400px;
     }
 
     .card_image_s {
-      width: 250px;
-      height: 300px;
+      width: 300px;
+      height: 400px;
       position: absolute;
       top: 0;
       left: 0;
@@ -67,9 +109,29 @@
       opacity: 0;
     }
   
-    .card_image_s:hover {
+    .card:hover .card_image_s {
       opacity: 1;
     }
+  
+  .card_footer{
+    background-color: white !important;
+      color: #244c77;
+      border-top: 1px solid white;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
+  
+  .card:hover .card_footer{
+    background-color: #244c77 !important;
+    color: white !important;
+    border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+  }
+  
 
     .productCol {
       margin-top: 20px;
