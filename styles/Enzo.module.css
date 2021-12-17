@@ -24,3 +24,9 @@
     color: #244c77;
     font-family: "Montserrat", sans-serif;
 }
+
+@media screen and (max-width: 758px){
+    .about_title{
+        font-size: 60px;
+    }
+}

@@ -19,6 +19,7 @@
     margin-right: auto !important;
     background-color: transparent !important;
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+    transition: transform .2s;
 }
 
 .enzo_women_div{
@@ -30,6 +31,15 @@
     margin-right: auto !important;
     background-color: transparent !important;
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+    transition: transform .2s;
+}
+
+.enzo_men_div:hover{
+    transform: scale(1.1);
+}
+
+.enzo_women_div:hover{
+    transform: scale(1.1);
 }
 
 

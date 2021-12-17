@@ -36,8 +36,9 @@
 }
 
 .carousel{
-  height: 400px;
-  width: 80%;
+  height: 500px;
+  width: 100%;
+  margin-top: 30px;
   margin-left: auto !important;
   margin-right: auto !important;
   cursor: pointer;
@@ -50,6 +51,7 @@
   color: white;
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
 }
 
 .about_title {
@@ -91,16 +93,16 @@
   }
 
   .card {
-    height: 250px;
-    width: 200px !important;
+    height: 400px;
+    width: 300px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
   }
 
   .card_coll_image {
-    height: 300px;
-    width: 200px !important;
+    height: 400px;
+    width: 300px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
@@ -114,7 +116,7 @@
   }
 
   .carousel{
-    min-height: 1100px;
+    /* min-height: 1100px; */
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
