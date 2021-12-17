@@ -8,7 +8,7 @@
 
 .card{
     border: 1px solid white;
-    margin-top: 50px;
+    margin-top: 150px;
     height: max-content;
     width: 300px;
     margin-left:auto !important;
@@ -46,7 +46,7 @@
     border-top: 1px solid white;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -122,7 +122,7 @@
       border-top: 1px solid white;
       text-align: center;
       font-family: "Montserrat", sans-serif;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: bold;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -141,3 +141,40 @@
     }
   }
   
+  .rev__pagination_div{
+    margin-top: 100px;
+    margin-left:auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
+  .rev__prev_button, .rev__next_button{
+    background-color: #244c77;
+    border-color: #244c77;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+  }
+
+  .rev__prev_button:hover, .rev__next_button:hover,
+  .rev__prev_button:active, .rev__next_button:active,
+  .rev__prev_button:after, .rev__next_button:after,
+  .rev__prev_button:focus, .rev__next_button:focus{
+    background-color: steelblue;
+    border-color: steelblue;
+  }
+
+  .rev__pagination_div{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    margin-left:auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
+  .rev__page_number_div{
+    margin-top: 20px;
+    margin-left:auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
