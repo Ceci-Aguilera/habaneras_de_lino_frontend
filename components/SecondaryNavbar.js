@@ -158,7 +158,7 @@ const SecondaryNavbar = ({navbarShow=true}) => {
 
               <NavDropdown.Item href='/category-title/enzo-men/Pantalones'>Pants</NavDropdown.Item>
 
-              <NavDropdown.Item href='/category-title/enzo-men/Accesorios'>Accessories</NavDropdown.Item>
+              <NavDropdown.Item >Accessories</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link
