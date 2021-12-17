@@ -83,7 +83,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
     setPageNumber(newPageNumber);
     const currentPageNumber = newPageNumber * revNumber - revNumber;
     const temp_products = [...products];
-    setPaginatedRevs(temp_products.slice(currentPageNumber, revNumber));
+    setPaginatedRevs(temp_products.slice(currentPageNumber, currentPageNumber+revNumber));
   };
   const handleNext = () => {
     const newPageNumber = pageNumber + 1;
@@ -95,8 +95,6 @@ const ProductsGrid = ({ products, tag = "a" }) => {
         setPaginatedRevs(
           temp_products.slice(currentPageNumber, products.length)
         );
-
-        console.log(products.length - pageNumber * revNumber);
       }
       return;
     }
@@ -107,6 +105,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
       temp_products.slice(currentPageNumber, newPageNumber * revNumber)
     );
   };
+
 
   return products == null ? (
     <div></div>
