@@ -20,8 +20,8 @@
 }
 
 .card_image{
-    max-height: 200px;
-    max-width: 200px;
+    height: 300px;
+    width: 250px;
     margin-top: auto !important;
     margin-bottom: auto !important;
     margin-left: auto !important;
@@ -43,9 +43,9 @@
 
 .button_main{
     width: 60%;
-    background-color: steelblue;
+    background-color: #244c77;
     color:white;
-    border-color: steelblue;
+    border-color: #244c77;
 }
 
 .button_main:active,
@@ -53,9 +53,9 @@
 .button_main:focus,
 .button_main:hover{
     width: 60%;
-    background-color: lightsteelblue;
+    background-color: steelblue;
     color:white;
-    border-color: lightsteelblue;
+    border-color: steelblue;
 }
 
 .product_card{
@@ -126,4 +126,33 @@
         width:100%;
       }
       
+}
+
+.coupon_div{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.coupon_div_col{
+    max-width: 400px;
+    margin-bottom: 50px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.add_coupon_button{
+    background-color: steelblue !important;
+}
+
+.add_coupon_button:hover,
+.add_coupon_button:active,
+.add_coupon_button:after,
+.add_coupon_button:focus{
+    background-color: #244c77 !important;
+}
+
+.coupon_info{
+    padding-top: 20px !important;
 }
