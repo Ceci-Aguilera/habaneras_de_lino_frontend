@@ -23,13 +23,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
 import { useCart } from "../context/CartContext";
-import { fas, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
+import { fas, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckSquare, faCoffee } from "@fortawesome/fontawesome-free-solid";
 
-import tallas from '../public/images/tallas.jpeg'
-
-
+import tallas from "../public/images/tallas.jpeg";
 
 const SvgComponent = (props) => (
   <svg
@@ -46,15 +44,12 @@ const SvgComponent = (props) => (
       d="m528.12 301.319 47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"
     />
   </svg>
-)
-
-
+);
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 const NextNavbar = ({ show_second_navbar = false }) => {
-  const { cart } = useCart()
-
+  const { cart } = useCart();
 
   const [show, setShow] = useState(false);
 
@@ -73,26 +68,46 @@ const NextNavbar = ({ show_second_navbar = false }) => {
           className={`${styles.navbar}`}
         >
           <Container>
-
             {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
 
             <Navbar.Brand
               className={`navbar-brand d-md-none ${styles.brand_small}`}
               href="/"
             >
-              Habaneras de Lino
+              Habaneras
             </Navbar.Brand>
 
-            <Nav.Link className={`d-md-none  ${styles.navbar_link_item}`} href="/cart">
-              <SvgComponent className={styles.navbar_cart_svg} width={50} height={50} />
+            <Navbar.Brand
+              className={`navbar-brand d-md-none ${styles.brand_small}`}
+              href="/"
+            >
+              de
+            </Navbar.Brand>
+
+            <Navbar.Brand
+              className={`navbar-brand d-md-none ${styles.brand_small}`}
+              href="/"
+            >
+              Lino
+            </Navbar.Brand>
+
+            <Nav.Link
+              className={`d-md-none  ${styles.navbar_link_item} ${styles.navbar_cart}`}
+              href="/cart"
+            >
+              <SvgComponent
+                className={styles.navbar_cart_svg}
+                width={50}
+                height={50}
+              />
               <span className={styles.cart_count}>+</span>
             </Nav.Link>
 
-
-
-            <Navbar.Collapse id="responsive-navbar-nav" className={`${styles.navbar_collapse}`}>
+            <Navbar.Collapse
+              id="responsive-navbar-nav"
+              className={`${styles.navbar_collapse}`}
+            >
               <Nav className={`${styles.navbar_brand_nav} mx-auto order-0`}>
-
                 <Navbar.Brand
                   className={`d-none d-md-block mx-auto ${styles.brand}`}
                   href="/"
@@ -102,18 +117,17 @@ const NextNavbar = ({ show_second_navbar = false }) => {
               </Nav>
               <Nav className={`mr-auto ${styles.navbar_cart}`}>
                 <Nav.Link className={styles.navbar_link_item} href="/cart">
-                  <SvgComponent className={styles.navbar_cart_svg} width={50} height={50} />
+                  <SvgComponent
+                    className={styles.navbar_cart_svg}
+                    width={50}
+                    height={50}
+                  />
                   <span className={styles.cart_count}>+</span>
                 </Nav.Link>
-
               </Nav>
-
             </Navbar.Collapse>
           </Container>
-
         </Navbar>
-
-
       </div>
     </>
   );

@@ -57,7 +57,7 @@
 
 @media screen and (max-width: 758px){
   .navbar {
-    height: 200px;
+    height: 250px;
   }
 
   .navbar_cart_svg {
@@ -84,7 +84,7 @@
 
   .brand_small{
     color: #244c77 !important;
-    font-size: 50px;
+    font-size: 80px;
     font-family: "Corinthia", cursive !important;
     font-weight: bold;
     padding-top: 0 !important;
@@ -95,6 +95,13 @@
     overflow-wrap:break-word !important;
   }
 
+  
+  .navbar_cart{
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px){
@@ -104,5 +111,5 @@
     font-family: "Corinthia", cursive !important;
     font-weight: bold;
   }
-  
+
 }
