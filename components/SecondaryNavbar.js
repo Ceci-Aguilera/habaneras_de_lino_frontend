@@ -161,11 +161,11 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
                 drop="end"
                 active={true}
               >
-                <NavDropdown.Item href="#Luxury">Luxury</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Luxury">Luxury</NavDropdown.Item>
 
-                <NavDropdown.Item href="#Etnik">Etnik</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Etnik">Etnik</NavDropdown.Item>
 
-                <NavDropdown.Item href="#Cittadino">Cittadino</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Cittadino">Cittadino</NavDropdown.Item>
 
                 <Dropdown.Divider />
 
