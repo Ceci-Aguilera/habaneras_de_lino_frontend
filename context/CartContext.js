@@ -92,7 +92,7 @@ export const CartProvider = ({ children }) => {
         setCoupon(temp_coupon)
 
         setLoading(false);
-        router.push("/");
+        router.back();
       })
       .catch((error) => {
         setLoading(false);
@@ -112,7 +112,7 @@ export const CartProvider = ({ children }) => {
         await window.localStorage.setItem("token", temp_cart['token'])
 
         setLoading(false);
-        router.push("/");
+        router.back();
       })
       .catch((error) => {
         setLoading(false);
@@ -145,7 +145,7 @@ export const CartProvider = ({ children }) => {
       setCoupon(temp_coupon)
 
       setLoading(false);
-      router.push("/");
+      router.back();
 
     }).catch((error)=>{
       
@@ -178,7 +178,7 @@ export const CartProvider = ({ children }) => {
       setCoupon(temp_coupon)
 
       setLoading(false);
-      router.push("/");
+      router.back();
 
     }).catch((error)=>{
       
@@ -209,7 +209,7 @@ export const CartProvider = ({ children }) => {
       setCoupon(temp_coupon)
 
       setLoading(false);
-      router.push("/cart");
+      router.back();
 
     }).catch((error)=>{
       
@@ -247,7 +247,7 @@ export const CartProvider = ({ children }) => {
       setCoupon(temp_coupon)
 
       setLoading(false);
-      router.push("/");
+      router.back();
 
     }).catch((error)=>{
       

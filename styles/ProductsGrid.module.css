@@ -90,6 +90,7 @@
     }
 
     .card {
+      margin-top: 50px !important;
       width: max-content;
       height: 400px;
       margin-left:auto !important;

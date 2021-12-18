@@ -139,7 +139,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
                     </div>
 
                     <Card.Footer className={styles.card_footer}>
-                      <div className={styles.prod_price_div}>${prod.price}</div>
+                      <div className={styles.prod_price_div}>${parseFloat(prod.price).toFixed(2)}</div>
                       {/* <div className={styles.prod_coll_div}>${prod.collection[0]}</div> */}
                     </Card.Footer>
                   </Card>
@@ -172,7 +172,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
                     </div>
 
                     <Card.Footer className={styles.card_footer}>
-                      ${prod.price}
+                      ${parseFloat(prod.price).toFixed(2)}
                     </Card.Footer>
                   </Card>
                 </Link>
@@ -204,7 +204,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
                     </div>
 
                     <Card.Footer className={styles.card_footer}>
-                      ${prod.price}
+                        ${parseFloat(prod.price).toFixed(2)}
                     </Card.Footer>
                   </Card>
                 </Link>
@@ -215,6 +215,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
       </Row>
       <div className={styles.rev__pagination_div}>
         <div className={styles.rev__buttons_div}>
+        {pageNumber != 1?
           <Button
             variant="primary"
             className={styles.rev__prev_button}
@@ -222,6 +223,9 @@ const ProductsGrid = ({ products, tag = "a" }) => {
           >
             <LeftArrowIcon width={20} height={20} /> Prev
           </Button>
+        :<div></div>}
+
+        {pageNumber != maxAmountOfPages?
           <Button
             variant="primary"
             className={styles.rev__next_button}
@@ -229,6 +233,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
           >
             Next <RightArrowIcon width={20} height={20} /> 
           </Button>
+        :<div></div>}
         </div>
         <div className={styles.rev__page_number_div}>
           <div className={styles.rev__page_number_dummy_div}>

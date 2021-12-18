@@ -119,12 +119,14 @@ const CartDetail = () => {
                                   backgroundColor: prod.color,
                                   height: "20px",
                                   width: "20px",
+                                  border: "1px solid royalblue",
+                                   borderRadius: "30px",
                                 }}
                               />
                             </div>
                           </div>
                         )}
-                        <p>Price: ${prod.price}</p>
+                        <p>Price: ${parseFloat(prod.price).toFixed(2)}</p>
                       </Col>
                     </Row>
 

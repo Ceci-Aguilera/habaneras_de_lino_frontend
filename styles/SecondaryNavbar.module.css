@@ -3,6 +3,7 @@
   min-height: 50px;
   font-family: "Montserrat", sans-serif;
   z-index: 999998;
+  width: 100%;
 }
 
 .navbar_navdropdown{
@@ -63,6 +64,14 @@
   margin-right: auto !important;
   text-align: center;
   background-color: #244c77 !important;
+
+  
+}
+
+
+.brand_small{
+  padding-left: 50px !important;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 992px){
@@ -70,4 +79,8 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+  .brand_small{
+    padding-left: 10px !important;
+  }
 }
+

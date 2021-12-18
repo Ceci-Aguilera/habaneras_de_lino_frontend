@@ -144,6 +144,7 @@
 
 .add_coupon_button{
     background-color: steelblue !important;
+    border-color: steelblue !important;
 }
 
 .add_coupon_button:hover,
@@ -151,6 +152,7 @@
 .add_coupon_button:after,
 .add_coupon_button:focus{
     background-color: #244c77 !important;
+    border-color:#244c77 !important;
 }
 
 .coupon_info{

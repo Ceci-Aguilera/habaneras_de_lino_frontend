@@ -18,7 +18,7 @@ const Offers = () => {
         </h2>
         <div className={styles.about_p_div}>
           <p className={styles.about_p}>
-            Our {"sell's"} policy allows and encourages wholesalers to buy using
+            Our {"sells'"} policy allows and encourages wholesalers to buy using
             our website. For such clients we offer specific discounts when
             buying at least 12 units. The kind and the amount of the discount
             depend on the number of units (products) in the desired purchase,

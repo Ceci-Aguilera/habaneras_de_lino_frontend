@@ -61,7 +61,6 @@ const NextNavbar = ({ show_second_navbar = false }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  console.log(cart)
   return (
     <>
       <div className={styles.navbar_wrapper}>

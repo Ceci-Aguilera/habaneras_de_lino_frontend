@@ -41,7 +41,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SecondaryNavbar />
+      <SecondaryNavbar linkBackShow={false}/>
 
       <main className={styles.main}>
         <NextCarousel />
@@ -102,10 +102,6 @@ export default function Home() {
 
         <About />
       </main>
-
-      <footer className={styles.footer}>
-
-      </footer>
     </div>
   )
 }

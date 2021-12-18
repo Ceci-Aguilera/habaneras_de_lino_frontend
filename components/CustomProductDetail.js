@@ -68,9 +68,6 @@ const CustomProductDetail = ({ product, original_product }) => {
         if(cant > 0){
             
             var temp_color = color;
-            if(changeColor == false){
-                temp_color = "Default"
-            }
         
             
              if(product.product.subtag === "ABAJO"){
@@ -102,12 +99,8 @@ const CustomProductDetail = ({ product, original_product }) => {
                     color: temp_color,
                 })
             }
-            if(color == 'Default' && changeColor==true){
-                alert("Select a custom color")
-            }
-            else{
                 await update_product(product.id, body)
-            }
+            
            
         }
         
@@ -213,20 +206,9 @@ const CustomProductDetail = ({ product, original_product }) => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Check
-                                    inline
-                                    name="group1"
-                                    type="checkbox"
-                                    id="checkbox_color"
-                                    checked={changeColor === true}
-                                    onChange={e => setChangeColor(e.target.checked)}
-                                />
                                 <Form.Label>
-                                    Custom Color
+                                    Color
                                 </Form.Label>
-                            </Form.Group>
-
-                            {(changeColor === true) ? <div>
                                 <Row>
                                     {original_product.available_colors.map((ecolor, index) => {
                                         var sel_outline = '';
@@ -239,13 +221,13 @@ const CustomProductDetail = ({ product, original_product }) => {
                                         return (
                                             <Col key={index} xs={4} sm={4} md={3} lg={2}>
                                                 <div style={{}}>
-                                                    <div onClick={e => setColor(ecolor.code)} key={index} style={{ backgroundColor: ecolor.code, height: '25px', width: '25px', border: "1px solid white", borderRadius: "30px", outline:sel_outline}} />
+                                                    <div onClick={e => setColor(ecolor.code)} key={index} style={{ backgroundColor: ecolor.code, height: '25px', width: '25px', border: "1px solid lightblue", borderRadius: "30px", outline:sel_outline}} />
                                                 </div>
                                             </Col>
                                         )
                                     })}
                                 </Row>
-                            </div> : <div></div>}
+                            </Form.Group>
 
                         </Card.Body>
                         <Card.Footer className={styles.card_footer}>

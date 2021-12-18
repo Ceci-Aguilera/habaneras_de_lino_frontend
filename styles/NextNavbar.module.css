@@ -26,18 +26,12 @@
 
 .brand {
   color: #244c77 !important;
-  font-size: 100px;
+  font-size: 150px;
   font-family: "Corinthia", cursive !important;
+  font-weight: bold;
 }
 
-.brand_small{
-  color: #244c77 !important;
-  font-size: 50px;
-  font-family: "Corinthia", cursive !important;
-  padding-top: 0 !important;
-  margin-left: 0;
-  margin-right: auto;
-}
+
 
 .navbar_cart_svg {
   width: 50px !important;
@@ -88,4 +82,27 @@
     font-weight: 700;
   }
 
+  .brand_small{
+    color: #244c77 !important;
+    font-size: 50px;
+    font-family: "Corinthia", cursive !important;
+    font-weight: bold;
+    padding-top: 0 !important;
+    margin-left: 0;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap:break-word !important;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .brand {
+    color: #244c77 !important;
+    font-size: 80px;
+    font-family: "Corinthia", cursive !important;
+    font-weight: bold;
+  }
+  
 }

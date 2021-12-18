@@ -9,7 +9,7 @@
   margin-right: auto !important;
   text-align: center;
   width: 500px;
-  height: 600px;
+  height: 700px;
 }
 
 .card {
@@ -23,7 +23,7 @@
   margin-right: auto !important;
   text-align: center;
   width: 500px;
-  height: 600px;
+  height: 700px;
   border-radius: 10px;
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
@@ -111,11 +111,14 @@
 
   .card_div {
     max-width: 100% !important;
-    width: 80%;
+    width: 90%;
+    border-color:rgba(200, 200, 200, 0.6);
   }
 
   .card {
     width: 100%;
+    border-color:rgba(200, 200, 200, 0.6);
+    height: 700px;
   }
 
   .card_image_mcard {
@@ -136,7 +139,7 @@
 
   .card_s_image {
     grid-column: 1 / 3;
-  grid-row: 1;
+    grid-row: 1;
     width: 100px;
     height: 150px;
     margin-bottom: 10px;
