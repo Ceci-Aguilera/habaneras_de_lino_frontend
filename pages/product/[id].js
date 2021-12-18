@@ -63,7 +63,7 @@ export default function ProductDetailFunction({product}) {
           property="og:description"
           content={`Description of the product ${product.title} from the online store Habaneras de Lino which is an online store specializes in linen and cotton clothes such as guayaberas and guayamisas`}
         />
-        <meta property="og:url" content={`https://habanerasdelino.com/product/${id}`} />
+        <meta property="og:url" content={`https://habanerasdelino.com/product/${product.id}`} />
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
