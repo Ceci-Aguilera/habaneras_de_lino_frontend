@@ -4,7 +4,7 @@ const prettier = require("prettier");
 
 const getDate = new Date().toISOString();
 
-const fetchUrl = "https://www.habanerasdelinoapi.website/store/collections/";
+const fetchUrl = "https://www.habanerasdelinoapi.website/store/collections/women/";
 const YOUR_AWESOME_DOMAIN = "https://habanerasdelino.com";
 
 const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
@@ -15,7 +15,7 @@ const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
     .catch(err => console.log(err));
 
   const postList = [];
-  fetchPosts.forEach(post => postList.push(post.id));
+  fetchPosts.Collections.forEach(post => postList.push(post.id));
 
   const postListSitemap = `
     ${postList
@@ -40,7 +40,7 @@ const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
     </urlset>
   `;
 
-  const formattedSitemap = [formatted(generatedSitemap)];
+  const formattedSitemap = formatted(generatedSitemap);
 
-  fs.writeFileSync("../public/sitemap-collection-title-women.xml", JSON.stringify(formattedSitemap), "utf8");
+  fs.writeFileSync("../public/sitemap/sitemap-collection-title-women.xml", formattedSitemap, "utf8");
 })();

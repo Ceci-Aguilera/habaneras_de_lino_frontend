@@ -1,0 +1,6 @@
+Sitemap: https://habanerasdelino.com/sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

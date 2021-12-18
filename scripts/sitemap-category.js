@@ -40,7 +40,7 @@ const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
     </urlset>
   `;
 
-  const formattedSitemap = [formatted(generatedSitemap)];
+  const formattedSitemap = formatted(generatedSitemap);
 
-  fs.writeFileSync("../public/sitemap-category.xml", JSON.stringify(formattedSitemap), "utf8");
+  fs.writeFileSync("../public/sitemap/sitemap-category.xml", formattedSitemap, "utf8");
 })();

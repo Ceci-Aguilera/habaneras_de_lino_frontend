@@ -4,7 +4,7 @@ const prettier = require("prettier");
 
 const getDate = new Date().toISOString();
 
-const fetchUrl = "https://www.habanerasdelinoapi.website/store/categories/";
+const fetchUrl = "https://www.habanerasdelinoapi.website/store/categories/men/";
 const YOUR_AWESOME_DOMAIN = "https://habanerasdelino.com";
 
 const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
@@ -15,14 +15,14 @@ const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
     .catch(err => console.log(err));
 
   const postList = [];
-  fetchPosts.forEach(post => postList.push(post.id));
+  fetchPosts.Categories.forEach(post => postList.push(post.id));
 
   const postListSitemap = `
     ${postList
       .map(id => {
         return `
           <url>
-            <loc>${`${YOUR_AWESOME_DOMAIN}/category-title/enzo-men/${id}`}</loc>
+            <loc>${`${YOUR_AWESOME_DOMAIN}/category/enzo-men/${id}`}</loc>
             <lastmod>${getDate}</lastmod>
           </url>`;
       })
@@ -40,7 +40,7 @@ const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
     </urlset>
   `;
 
-  const formattedSitemap = [formatted(generatedSitemap)];
+  const formattedSitemap = formatted(generatedSitemap);
 
-  fs.writeFileSync("../public/sitemap-category-men.xml", JSON.stringify(formattedSitemap), "utf8");
+  fs.writeFileSync("../public/sitemap/sitemap-category-men.xml", formattedSitemap, "utf8");
 })();

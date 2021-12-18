@@ -19,8 +19,8 @@ const config = {
 
 export const getStaticPaths = async () => {
 
-  const res = await axios.get(domain +'store/categories/', config);
-  const paths = await res.data.map((category) => ({
+  const res = await axios.get(domain +'store/categories/men/', config);
+  const paths = await res.data["Categories"].map((category) => ({
     params: { id: category.id.toString() },
   }));
 

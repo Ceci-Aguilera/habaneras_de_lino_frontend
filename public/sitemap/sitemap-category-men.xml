@@ -1,1 +1,23 @@
-["<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset\n  xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"\n  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\"\n>\n  <url>\n    <loc>https://habanerasdelino.com/category-title/enzo-men/1</loc>\n    <lastmod>2021-12-18T21:00:29.539Z</lastmod>\n  </url>\n  <url>\n    <loc>https://habanerasdelino.com/category-title/enzo-men/2</loc>\n    <lastmod>2021-12-18T21:00:29.539Z</lastmod>\n  </url>\n  <url>\n    <loc>https://habanerasdelino.com/category-title/enzo-men/3</loc>\n    <lastmod>2021-12-18T21:00:29.539Z</lastmod>\n  </url>\n  <url>\n    <loc>https://habanerasdelino.com/category-title/enzo-men/4</loc>\n    <lastmod>2021-12-18T21:00:29.539Z</lastmod>\n  </url>\n</urlset>\n"]
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+  <url>
+    <loc>https://habanerasdelino.com/category/enzo-men/1</loc>
+    <lastmod>2021-12-18T22:29:42.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://habanerasdelino.com/category/enzo-men/4</loc>
+    <lastmod>2021-12-18T22:29:42.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://habanerasdelino.com/category/enzo-men/3</loc>
+    <lastmod>2021-12-18T22:29:42.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://habanerasdelino.com/category/enzo-men/2</loc>
+    <lastmod>2021-12-18T22:29:42.821Z</lastmod>
+  </url>
+</urlset>
