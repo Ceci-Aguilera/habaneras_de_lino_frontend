@@ -1,4 +1,4 @@
-Sitemap: https://habanerasdelino.com/sitemap
+Sitemap: https://habanerasdelino.com/sitemap.xml
 
 User-agent: *
 Allow: /*
