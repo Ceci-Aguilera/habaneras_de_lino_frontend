@@ -63,7 +63,7 @@ export default function CategoryDetailFunction({category}) {
           property="og:description"
           content={`Description of the category ${category.title} made of linen and cotton for men at Habaneras de Lino which is an online store specializes in linen and cotton clothes such as guayaberas and guayamisas`}
         />
-        <meta property="og:url" content={`https://habanerasdelino.com/category-title/enzo-men/${collection.title}`} />
+        <meta property="og:url" content={`https://habanerasdelino.com/category/enzo-men/${category.id}`} />
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
