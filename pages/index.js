@@ -100,9 +100,8 @@ export default function Home() {
         <CollectionCarousel collection={"Etnik"} />
         <CollectionCarousel collection={"Cittadino"} />
 
-        <CollectionCarousel collection={"Navy"} />
         <CollectionCarousel collection={"Romance"} />
-        <CollectionCarousel collection={"Turquesa"} />
+        <CollectionCarousel collection={"Navy"} />
 
         <Offers />
 
