@@ -122,26 +122,24 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
                 drop="end"
                 active={true}
               >
-                <NavDropdown.Item>Romance</NavDropdown.Item>
-
-                <NavDropdown.Item>Turquoise</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Romance">Romance</NavDropdown.Item>
 
                 <NavDropdown.Item>Navy</NavDropdown.Item>
 
                 <Dropdown.Divider />
 
-                <NavDropdown.Item>Zen</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Zen">Zen</NavDropdown.Item>
 
                 <NavDropdown.Item>Fuchsia</NavDropdown.Item>
 
                 <NavDropdown.Item>Valladolid</NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown.Item>Dresses</NavDropdown.Item>
+              <NavDropdown.Item href="/category-title/enzo-women/Vestidos">Dresses</NavDropdown.Item>
 
-              <NavDropdown.Item>Shirts</NavDropdown.Item>
+              <NavDropdown.Item href="/category-title/enzo-women/Blusas">Blouses/Shirts</NavDropdown.Item>
 
-              <NavDropdown.Item>Pants</NavDropdown.Item>
+              <NavDropdown.Item href="/category-title/enzo-women/Pantalones">Pants</NavDropdown.Item>
 
               <NavDropdown.Item>Accessories</NavDropdown.Item>
 
@@ -206,7 +204,7 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
 
           <Nav className={`mx-auto order-0  ${styles.navbar_contact_nav}`}>
             <Nav.Link
-              href="#offers"
+              href="/#offers"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
             >
               WHOLESALERS
@@ -221,7 +219,7 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
             </Nav.Link>
 
             <Nav.Link
-              href="#about_shipping"
+              href="/#about_shipping"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
             >
               SHIPPING
