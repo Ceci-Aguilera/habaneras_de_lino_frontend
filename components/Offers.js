@@ -23,8 +23,8 @@ const Offers = () => {
             buying at least 12 units. The kind and the amount of the discount
             depend on the number of units (products) in the desired purchase,
             but our main and most popular discounts are for purchases of 12
-            units, 24 units, 50 units, and +50 units. To know more about these offers
-            and discounts, contact us via{" "}
+            units, 24 units, 50 units, and +50 units. To know more about these
+            offers and discounts, contact us via{" "}
             <span style={{ color: "#244c77" }}>
               email (habanerasdelino@gmail.com)
             </span>{" "}
@@ -32,6 +32,23 @@ const Offers = () => {
             <span style={{ color: "#244c77" }}>
               WhatsApp/Phone (+1 941 447 5126)
             </span>
+          </p>
+          <p>
+            Because all of our products are carefully made by hand, we welcome
+            clients to ask for customizations beyond the ones offered in our
+            website. We can accept specific requests of a product in a
+            different size/color or with different decorative shapes than the
+            ones already in stock. To know more about this policy or to order a customized product contact us at{" "}
+            <span style={{ color: "#244c77" }}>
+              habanerasdelino@gmail.com
+            </span>{" "}
+            or by{" "}
+            <span style={{ color: "#244c77" }}>
+              WhatsApp/Phone (+1 941 447 5126)
+            </span>.
+            These products usually arrive about 8
+            to 15 days after the purchase is made (see our{" "}
+            <Link href={"/#about_shipping"}>shipping policy</Link> for more information about this regard).
           </p>
         </div>
       </div>

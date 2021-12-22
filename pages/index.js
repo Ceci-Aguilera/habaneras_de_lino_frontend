@@ -18,6 +18,7 @@ import { Row, Col } from "react-bootstrap";
 import enzo_men_image from "../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg";
 import enzo_women_image from "../public/images/Enzo Women.jpg";
 import Offers from "../components/Offers";
+import AboutUs from "../components/AboutUs";
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -104,6 +105,8 @@ export default function Home() {
         <CollectionCarousel collection={"Navy"} />
 
         <Offers />
+
+        <AboutUs />
 
         <About />
       </main>

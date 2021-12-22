@@ -25,20 +25,34 @@ const About = () => {
           </p>
 
           <p>
-            To ask for a product with a different color/size or decorative shapes use the following contact info: 
-            </p>
-            <p> reach to us at any time at {" "}
-            <span style={{ color: "#244c77" }}>
-            (habanerasdelino@gmail.com)
-            </span>{" "}
-            or by{" "}
-            <span style={{ color: "#244c77" }}>
-              WhatsApp/Phone (+1 941 447 5126)
-            </span>
-            . In this case, it will take from 8 to 15 days to the product to arrive to
-            the client.
+            To ask for a product with a different color/size or decorative
+            shapes use the following contact info:
           </p>
-         
+          <ul>
+            <li>
+              <p>
+                {" "}
+                reach to us at any time at{" "}
+                <span style={{ color: "#244c77" }}>
+                  (habanerasdelino@gmail.com)
+                </span>{" "}
+                or by{" "}
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <span style={{ color: "#244c77" }}>
+                  WhatsApp/Phone (+1 941 447 5126)
+                </span>
+                .
+              </p>
+            </li>
+          </ul>
+          <p>
+            In this case, it takes from 8 to 15 days for the product to arrive
+            to the client.
+          </p>
         </div>
       </div>
     </>

@@ -210,12 +210,13 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
               WHOLESALERS
             </Nav.Link>
 
+
+
             <Nav.Link
-              href="#"
+              href="/#about_store"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
-              onClick={handleShow}
             >
-              FIND SIZE
+              ABOUT US
             </Nav.Link>
 
             <Nav.Link
@@ -223,6 +224,14 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
             >
               SHIPPING
+            </Nav.Link>
+
+            <Nav.Link
+              href="#"
+              className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
+              onClick={handleShow}
+            >
+              FIND SIZE
             </Nav.Link>
 
             <Nav.Link href="#footer" className={styles.navbar_link}>
