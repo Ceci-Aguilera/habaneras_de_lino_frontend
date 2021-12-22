@@ -6,6 +6,7 @@ import Head from "next/head";
 export default function Layout({ children }) {
   return (
     <>
+    <html lang={'en'} />
       <Head>
       <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests">
 

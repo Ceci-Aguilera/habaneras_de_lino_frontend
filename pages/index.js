@@ -39,13 +39,13 @@ export default function Home() {
         <title>Habaneras de Lino</title>
         <meta
           name="description"
-          content="Habaneras de Lino is an online store specialized in guayaberas, guayamisas, and in general, linen and cotton clothes. We sell highly customizable products that are hand-made in a Mexican factory. We specialize in guayaberas, guayamisas, and camisas (shirts) made of high quality linen and cotton with beautiful and creative decorative shapes."
+          content="Habaneras de Lino is an e-commerce that sells high quality linen and cotton clothing, and that specializes in Caribbean guayaberas and guayamisas"
         />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Habaneras de Lino" />
         <meta
           property="og:description"
-          content="Habaneras de Lino is an online store specialized in guayaberas, guayamisas, and in general, linen and cotton clothes. We sell highly customizable products that are hand-made in a Mexican factory. We specialize in guayaberas, guayamisas, and camisas (shirts) made of high quality linen and cotton with beautiful and creative decorative shapes."
+          content="Habaneras de Lino is an e-commerce that sells high quality linen and cotton clothing, and that specializes in Caribbean guayaberas and guayamisas"
         />
         <meta property="og:url" content="https://habanerasdelino.com/" />
         <meta property="og:type" content="website" />
