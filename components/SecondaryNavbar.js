@@ -15,7 +15,7 @@ import axios from "axios";
 
 import tallas from "../public/images/tallas.jpeg";
 
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 const WhatsAppIcon = (props) => (
   <svg
@@ -53,18 +53,14 @@ const LeftArrowIcon = (props) => (
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
-const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
-
-  const router = useRouter()
-
+const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
+  const router = useRouter();
 
   const [dropDownInfo, setDropDownInfo] = useState(null);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-
 
   useEffect(async () => {
     await getDropDownInfo(setDropDownInfo);
@@ -79,14 +75,16 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
         variant="dark"
         className={styles.navbar}
       >
-      {linkBackShow === true?
-        <Navbar.Brand
-          className={`navbar-brand ${styles.brand_small} ${styles.navbar_link}`}
-          onClick={(e) => router.back()}
-        >
-          <LeftArrowIcon width={20} height={20} /> BACK
-        </Navbar.Brand>
-      :<div></div>}
+        {linkBackShow === true ? (
+          <Navbar.Brand
+            className={`navbar-brand ${styles.brand_small} ${styles.navbar_link}`}
+            onClick={(e) => router.back()}
+          >
+            <LeftArrowIcon width={20} height={20} /> BACK
+          </Navbar.Brand>
+        ) : (
+          <div></div>
+        )}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Navbar.Collapse
@@ -94,7 +92,7 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
           className={styles.navbar_collapse}
         >
           <Nav className={`mx-auto ${styles.navbar_nav}`}>
-            <NavDropdown
+            {/* <NavDropdown
               title="WEDDING"
               className={styles.navbar_navdropdown}
               menuVariant="dark"
@@ -107,7 +105,7 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
               <NavDropdown.Item>Groomsmen</NavDropdown.Item>
 
               <NavDropdown.Item>Accessories</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
 
             <NavDropdown
               title="WOMEN"
@@ -115,7 +113,11 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
               menuVariant="dark"
               active={true}
             >
-              <NavDropdown
+              <NavDropdown.Item href="#">
+                Coming soon
+              </NavDropdown.Item>
+
+              {/* <NavDropdown
                 title="Collections"
                 className={styles.navbar_navdropdown}
                 menuVariant="dark"
@@ -143,7 +145,7 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
 
               <NavDropdown.Item>Accessories</NavDropdown.Item>
 
-              <NavDropdown.Item href="/enzo-women">All</NavDropdown.Item>
+              <NavDropdown.Item href="/enzo-women">All</NavDropdown.Item> */}
             </NavDropdown>
 
             <NavDropdown
@@ -159,11 +161,17 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
                 drop="end"
                 active={true}
               >
-                <NavDropdown.Item href="/collection-title/Luxury">Luxury</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Luxury">
+                  Luxury
+                </NavDropdown.Item>
 
-                <NavDropdown.Item href="/collection-title/Etnik">Etnik</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Etnik">
+                  Etnik
+                </NavDropdown.Item>
 
-                <NavDropdown.Item href="/collection-title/Cittadino">Cittadino</NavDropdown.Item>
+                <NavDropdown.Item href="/collection-title/Cittadino">
+                  Cittadino
+                </NavDropdown.Item>
 
                 <Dropdown.Divider />
 
@@ -197,9 +205,9 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
               <NavDropdown.Item href="/enzo-men">All</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#" className={styles.navbar_link}>
+            {/* <Nav.Link href="#" className={styles.navbar_link}>
               COLLECTION 2022
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
 
           <Nav className={`mx-auto order-0  ${styles.navbar_contact_nav}`}>
@@ -209,8 +217,6 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow=true }) => {
             >
               WHOLESALERS
             </Nav.Link>
-
-
 
             <Nav.Link
               href="/#about_store"

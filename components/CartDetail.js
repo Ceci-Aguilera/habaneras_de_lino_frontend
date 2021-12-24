@@ -82,6 +82,7 @@ const CartDetail = () => {
                       variant="top"
                       src={prod.product.image}
                       className={styles.card_image}
+                      alt={prod.product.title}
                     />
                   </Col>
                   <Col xs={12} sm={12} md={6} lg={8}>

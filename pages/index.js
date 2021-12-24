@@ -58,8 +58,16 @@ export default function Home() {
       <main className={styles.main}>
         <NextCarousel />
 
+        <h1 className={stylesi.title_h1}>
+          Habaneras de Lino
+        </h1>
+
+        <h2 className={stylesi.catch_phrase_h2}>
+          The linen and cotton clothes that offer comfort, luxury, and modernity.
+        </h2>
+
         <Row className={stylesi.tag_div}>
-          <Col xs={12} sm={12} md={6} lg={6}>
+          <Col xs={12} sm={12} md={12} lg={12}>
             <Link href={`/enzo-men/`}>
               <div className={stylesi.enzo_men_div}>
                 <Image
@@ -77,7 +85,7 @@ export default function Home() {
             </Link>
           </Col>
 
-          <Col xs={12} sm={12} md={6} lg={6}>
+          {/* <Col xs={12} sm={12} md={6} lg={6}>
             <Link href={`/enzo-women/`}>
               <div className={stylesi.enzo_women_div}>
                 <Image
@@ -92,7 +100,7 @@ export default function Home() {
                 />
               </div>
             </Link>
-          </Col>
+          </Col> */}
         </Row>
 
         <div className={stylesi.br} />

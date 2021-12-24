@@ -49,7 +49,7 @@ export default function WomenIndex() {
       <SecondaryNavbar navbarShow={false} />
 
       <h1 className={styles.enzo_women_title}>
-        WOMEN
+        WOMEN 
       </h1>
 
 

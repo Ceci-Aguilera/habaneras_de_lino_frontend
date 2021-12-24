@@ -4,7 +4,7 @@ const prettier = require("prettier");
 
 const getDate = new Date().toISOString();
 
-const fetchUrl = "https://www.habanerasdelinoapi.website/store/collections/women/";
+const fetchUrl = "https://www.habanerasdelinoapi.com/store/collections/women/";
 const YOUR_AWESOME_DOMAIN = "https://habanerasdelino.com";
 
 const formatted = sitemap => prettier.format(sitemap, { parser: "html" });

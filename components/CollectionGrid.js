@@ -92,6 +92,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -108,6 +109,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -124,6 +126,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -171,6 +174,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -187,6 +191,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -203,6 +208,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -265,6 +271,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -281,6 +288,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>
@@ -297,6 +305,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                                     variant="top"
                                     src={prod.image}
                                     className={styles.card_coll_image}
+                                    alt={prod.title}
                                   />
                                 </Card>
                               </Link>

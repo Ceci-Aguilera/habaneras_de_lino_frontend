@@ -24,7 +24,7 @@ const NextCarousel = () => {
             className={`d-block w-100 ${styles.slideImage}`}
             sizes="(max-width: 1400px) 100vw, 1400px"
             src={slide_3}
-            alt="Slide number 3" 
+            alt="Guayaberas of Cancun Collection" 
             layout="fill"
           />
           </div>
@@ -39,7 +39,7 @@ const NextCarousel = () => {
             className={`d-block w-100 ${styles.slideImage}`}
             sizes="(max-width: 1400px) 100vw, 1400px"
             src={slide_4}
-            alt="Slide number 4" 
+            alt="Guayaberas of Cittadino Collection" 
             layout="fill"
           />
           </div>
@@ -53,7 +53,7 @@ const NextCarousel = () => {
             className={`d-block w-100 ${styles.slideImage}`}
             sizes="(max-width: 1400px) 100vw, 1400px"
             src={slide_5}
-            alt="Slide number 5" 
+            alt="Guayaberas of Etnik Collection" 
             layout="fill"
           />
           </div>
@@ -68,7 +68,7 @@ const NextCarousel = () => {
             className={`d-block w-100 ${styles.slideImage}`}
             sizes="(max-width: 1400px) 100vw, 1400px"
             src={slide_6}
-            alt="Slide number 6" 
+            alt="Guayaberas of Luxury Collection" 
             layout="fill"
           />
           </div>

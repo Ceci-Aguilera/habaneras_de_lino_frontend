@@ -16,12 +16,16 @@ const About = () => {
         </h2>
         <div className={styles.about_p_div}>
           <p className={styles.about_p}>
-            Once a purchase is made, it takes from 5 days to a week for the
-            products to arrive (to the client). Note that most of our products
-            are first hand-made in Mexico and then imported to the USA. Next,
-            the products are send to the client via UPS or a similar service.
-            This only applies to the products that are already in stock, that
-            is, all products that can be selected using this website.
+            Once a purchase is made in the website{" "}
+            <strong>Habaneras de Lino</strong>, it takes from 5 days to a week
+            for the products to arrive (to the client). Note that most of our
+            products are first hand-made in Mexico, and then imported to the USA
+            (all decorative shapes embedded in our <strong>guayaberas</strong> and <strong>guayamisas</strong> are
+            hand-made, as well as all our <strong>linen</strong> and <strong>cotton</strong> clothes that can be
+            found in our website). After arriving to the United States, the products
+            are send to the client via UPS or a similar service. This only
+            applies to the products that are already in stock, that is, all
+            products that can be selected using our website <strong>Habaneras de Lino</strong>.
           </p>
 
           <p>

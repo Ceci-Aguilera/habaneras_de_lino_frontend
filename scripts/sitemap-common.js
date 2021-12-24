@@ -16,10 +16,10 @@ const formatted = sitemap => prettier.format(sitemap, { parser: "html" });
     "../pages/cart.js",
     "../pages/index.js",
     "../pages/order-made.js",
-    "../pages/enzo-women/index.js",
     "../pages/enzo-men/index.js",
     // exclude
-    "!../pages/_*.tsx"
+    "!../pages/_*.tsx",
+    "!../pages/enzo-women/index.js"
   ]);
 
   const pagesSitemap = `

@@ -97,7 +97,7 @@ const CollectionCarousel = ({ collection }) => {
 
                             <Link href={`/product/${prod.id}/`}>
                                 <Card className={styles.card}>
-                                    <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
+                                    <Card.Img variant="top" src={prod.image} className={styles.card_coll_image}  alt={prod.title}/>
                                 </Card>
                             </Link>
                         </div>
@@ -132,7 +132,7 @@ const CollectionCarousel = ({ collection }) => {
 
                             <Link href={`/product/${prod.id}/`}>
                                 <Card className={styles.card}>
-                                    <Card.Img variant="top" src={prod.image} className={styles.card_coll_image} />
+                                    <Card.Img variant="top" src={prod.image} className={styles.card_coll_image}  alt={prod.title}/>
                                 </Card>
                             </Link>
                         </div>

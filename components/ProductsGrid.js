@@ -130,11 +130,13 @@ const ProductsGrid = ({ products, tag = "a" }) => {
                         variant="top"
                         src={prod.image}
                         className={styles.card_image}
+                        alt={prod.title}
                       />
                       <Card.Img
                         variant="top"
                         src={prod.s_image}
                         className={styles.card_image_s}
+                        alt={prod.title}
                       />
                     </div>
 
@@ -163,11 +165,13 @@ const ProductsGrid = ({ products, tag = "a" }) => {
                         variant="top"
                         src={prod.image}
                         className={styles.card_image}
+                        alt={prod.title}
                       />
                       <Card.Img
                         variant="top"
                         src={prod.s_image}
                         className={styles.card_image_s}
+                        alt={prod.title}
                       />
                     </div>
 
@@ -195,11 +199,13 @@ const ProductsGrid = ({ products, tag = "a" }) => {
                         variant="top"
                         src={prod.image}
                         className={styles.card_image}
+                        alt={prod.title}
                       />
                       <Card.Img
                         variant="top"
                         src={prod.s_image}
                         className={styles.card_image_s}
+                        alt={prod.title}
                       />
                     </div>
 

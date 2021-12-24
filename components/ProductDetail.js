@@ -104,7 +104,7 @@ const ProductDetail = ({ product }) => {
                         src={image.image}
                         onMouseOver={(e) => setCurrentImage(e.target.src)}
                         className={styles.card_s_image}
-                        alt="Image of product"
+                        alt={product.title}
                       />
                     </div>
                   );
@@ -118,6 +118,7 @@ const ProductDetail = ({ product }) => {
                   variant="top"
                   src={currentImage}
                   className={styles.card_image}
+                  alt={product.title}
                 />
               </Card>
             </Col>
