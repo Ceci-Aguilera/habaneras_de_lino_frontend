@@ -23,6 +23,8 @@ import router from "next/router";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -42,10 +44,10 @@ const responsive = {
 };
 
 const CollectionGrid = ({ collections, tag = "a" }) => {
-  console.log(collections);
+  const { language } = useLanguage();
 
   return collections == null ? (
-    <div></div>
+    <div />
   ) : (
     <>
       {collections.map((collectionInfo, index) => {
@@ -54,7 +56,9 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
             {collectionInfo.all_products_per_collection.length >= 6 ? (
               <Container className={`${styles.categoryGridContainer}`}>
                 <h2 className={styles.about_title}>
-                  {collectionInfo.title} Collection
+                  {language == "en"
+                    ? collectionInfo.title + " Collection"
+                    : "Colección " + collectionInfo.title}
                 </h2>
 
                 <Carousel
@@ -98,7 +102,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "w" && prod.extra_tag == "WOMEN" ? (
@@ -115,7 +119,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "m" && prod.extra_tag == "MEN" ? (
@@ -132,7 +136,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
                         </div>
                       );
@@ -180,7 +184,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "w" && prod.extra_tag == "WOMEN" ? (
@@ -197,7 +201,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "m" && prod.extra_tag == "MEN" ? (
@@ -214,7 +218,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
                         </div>
                       );
@@ -229,7 +233,9 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                       className={styles.coll_link_button}
                       variant="primary"
                     >
-                      View More of {collectionInfo.title}
+                      {language == "en"
+                        ? "View More of " + collectionInfo.title
+                        : "Ver Más de " + collectionInfo.title}
                     </Button>
                   </Link>
                 </div>
@@ -238,7 +244,9 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
             ) : (
               <Container className={`${styles.categoryGridContainer}`}>
                 <h2 className={styles.about_title}>
-                  {collectionInfo.title} Collection
+                  {language == "en"
+                    ? collectionInfo.title + " Collection"
+                    : "Colección " + collectionInfo.title}
                 </h2>
                 <Carousel
                   swipeable={false}
@@ -277,7 +285,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "w" && prod.extra_tag == "WOMEN" ? (
@@ -294,7 +302,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "m" && prod.extra_tag == "MEN" ? (
@@ -311,7 +319,7 @@ const CollectionGrid = ({ collections, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
                         </div>
                       );

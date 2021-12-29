@@ -23,6 +23,8 @@ import router from "next/router";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -42,8 +44,10 @@ const responsive = {
 };
 
 const CategoryGrid = ({ categories, tag = "a" }) => {
+  const { language } = useLanguage();
+
   return categories == null ? (
-    <div></div>
+    <div />
   ) : (
     <Container className={`${styles.categoryGridContainer}`}>
       <div className={styles.br} />
@@ -53,7 +57,19 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
             <div key={index}>
               {cat.products.length >= 6 ? (
                 <div>
-                  <h3 className={styles.collection_title}>{cat.title}</h3>
+                  <h3 className={styles.collection_title}>
+                    {language == "en" && cat.title == "Camisas" ? "Shirts" : ""}
+                    {language == "en" && cat.title == "Pantalones"
+                      ? "Pants"
+                      : ""}
+
+                    {language == "en" &&
+                    cat.title != "Camisas" &&
+                    cat.title != "Pantalones"
+                      ? cat.title
+                      : ""}
+                    {language == "es" ? cat.title : ""}
+                  </h3>
                   <Carousel
                     swipeable={false}
                     draggable={false}
@@ -73,62 +89,64 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                     itemClass="carousel-item-padding-40-px"
                     className={styles.carousel}
                   >
-                    {cat.products.slice(0, cat.products.length / 2).map((prod, prod_index) => {
-                      return (
-                        <div key={prod_index}>
-                          {tag == "a" ? (
-                            <div className={styles.carousel_item_div}>
-                              <Link href={`/product/${prod.id}/`}>
-                                <Card className={styles.card}>
-                                  <Card.Img
-                                    variant="top"
-                                    src={prod.image}
-                                    className={styles.card_coll_image}
-                                    alt={prod.title}
-                                  />
-                                </Card>
-                              </Link>
-                            </div>
-                          ) : (
-                            <div></div>
-                          )}
+                    {cat.products
+                      .slice(0, cat.products.length / 2)
+                      .map((prod, prod_index) => {
+                        return (
+                          <div key={prod_index}>
+                            {tag == "a" ? (
+                              <div className={styles.carousel_item_div}>
+                                <Link href={`/product/${prod.id}/`}>
+                                  <Card className={styles.card}>
+                                    <Card.Img
+                                      variant="top"
+                                      src={prod.image}
+                                      className={styles.card_coll_image}
+                                      alt={prod.title}
+                                    />
+                                  </Card>
+                                </Link>
+                              </div>
+                            ) : (
+                              <div />
+                            )}
 
-                          {tag == "w" && prod.extra_tag == "WOMEN" ? (
-                            <div className={styles.carousel_item_div}>
-                              <Link href={`/product/${prod.id}/`}>
-                                <Card className={styles.card}>
-                                  <Card.Img
-                                    variant="top"
-                                    src={prod.image}
-                                    className={styles.card_coll_image}
-                                    alt={prod.title}
-                                  />
-                                </Card>
-                              </Link>
-                            </div>
-                          ) : (
-                            <div></div>
-                          )}
+                            {tag == "w" && prod.extra_tag == "WOMEN" ? (
+                              <div className={styles.carousel_item_div}>
+                                <Link href={`/product/${prod.id}/`}>
+                                  <Card className={styles.card}>
+                                    <Card.Img
+                                      variant="top"
+                                      src={prod.image}
+                                      className={styles.card_coll_image}
+                                      alt={prod.title}
+                                    />
+                                  </Card>
+                                </Link>
+                              </div>
+                            ) : (
+                              <div />
+                            )}
 
-                          {tag == "m" && prod.extra_tag == "MEN" ? (
-                            <div className={styles.carousel_item_div}>
-                              <Link href={`/product/${prod.id}/`}>
-                                <Card className={styles.card}>
-                                  <Card.Img
-                                    variant="top"
-                                    src={prod.image}
-                                    className={styles.card_coll_image}
-                                    alt={prod.title}
-                                  />
-                                </Card>
-                              </Link>
-                            </div>
-                          ) : (
-                            <div></div>
-                          )}
-                        </div>
-                      );
-                    })}
+                            {tag == "m" && prod.extra_tag == "MEN" ? (
+                              <div className={styles.carousel_item_div}>
+                                <Link href={`/product/${prod.id}/`}>
+                                  <Card className={styles.card}>
+                                    <Card.Img
+                                      variant="top"
+                                      src={prod.image}
+                                      className={styles.card_coll_image}
+                                      alt={prod.title}
+                                    />
+                                  </Card>
+                                </Link>
+                              </div>
+                            ) : (
+                              <div />
+                            )}
+                          </div>
+                        );
+                      })}
                   </Carousel>
 
                   <Carousel
@@ -150,62 +168,64 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                     itemClass="carousel-item-padding-40-px"
                     className={styles.carousel}
                   >
-                    {cat.products.slice(cat.products.length / 2, cat.products.length).map((prod, prod_index) => {
-                      return (
-                        <div key={prod_index}>
-                          {tag == "a" ? (
-                            <div className={styles.carousel_item_div}>
-                              <Link href={`/product/${prod.id}/`}>
-                                <Card className={styles.card}>
-                                  <Card.Img
-                                    variant="top"
-                                    src={prod.image}
-                                    className={styles.card_coll_image}
-                                    alt={prod.title}
-                                  />
-                                </Card>
-                              </Link>
-                            </div>
-                          ) : (
-                            <div></div>
-                          )}
+                    {cat.products
+                      .slice(cat.products.length / 2, cat.products.length)
+                      .map((prod, prod_index) => {
+                        return (
+                          <div key={prod_index}>
+                            {tag == "a" ? (
+                              <div className={styles.carousel_item_div}>
+                                <Link href={`/product/${prod.id}/`}>
+                                  <Card className={styles.card}>
+                                    <Card.Img
+                                      variant="top"
+                                      src={prod.image}
+                                      className={styles.card_coll_image}
+                                      alt={prod.title}
+                                    />
+                                  </Card>
+                                </Link>
+                              </div>
+                            ) : (
+                              <div />
+                            )}
 
-                          {tag == "w" && prod.extra_tag == "WOMEN" ? (
-                            <div className={styles.carousel_item_div}>
-                              <Link href={`/product/${prod.id}/`}>
-                                <Card className={styles.card}>
-                                  <Card.Img
-                                    variant="top"
-                                    src={prod.image}
-                                    className={styles.card_coll_image}
-                                    alt={prod.title}
-                                  />
-                                </Card>
-                              </Link>
-                            </div>
-                          ) : (
-                            <div></div>
-                          )}
+                            {tag == "w" && prod.extra_tag == "WOMEN" ? (
+                              <div className={styles.carousel_item_div}>
+                                <Link href={`/product/${prod.id}/`}>
+                                  <Card className={styles.card}>
+                                    <Card.Img
+                                      variant="top"
+                                      src={prod.image}
+                                      className={styles.card_coll_image}
+                                      alt={prod.title}
+                                    />
+                                  </Card>
+                                </Link>
+                              </div>
+                            ) : (
+                              <div />
+                            )}
 
-                          {tag == "m" && prod.extra_tag == "MEN" ? (
-                            <div className={styles.carousel_item_div}>
-                              <Link href={`/product/${prod.id}/`}>
-                                <Card className={styles.card}>
-                                  <Card.Img
-                                    variant="top"
-                                    src={prod.image}
-                                    className={styles.card_coll_image}
-                                    alt={prod.title}
-                                  />
-                                </Card>
-                              </Link>
-                            </div>
-                          ) : (
-                            <div></div>
-                          )}
-                        </div>
-                      );
-                    })}
+                            {tag == "m" && prod.extra_tag == "MEN" ? (
+                              <div className={styles.carousel_item_div}>
+                                <Link href={`/product/${prod.id}/`}>
+                                  <Card className={styles.card}>
+                                    <Card.Img
+                                      variant="top"
+                                      src={prod.image}
+                                      className={styles.card_coll_image}
+                                      alt={prod.title}
+                                    />
+                                  </Card>
+                                </Link>
+                              </div>
+                            ) : (
+                              <div />
+                            )}
+                          </div>
+                        );
+                      })}
                   </Carousel>
 
                   <div className={styles.link_div}>
@@ -218,11 +238,13 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                           className={styles.coll_link_button}
                           variant="primary"
                         >
-                          More {cat.title}
+                          {language == "en"
+                            ? "More " + cat.title
+                            : "Más " + cat.title}
                         </Button>
                       </Link>
                     ) : (
-                      <div></div>
+                      <div />
                     )}
 
                     {tag == "w" ? (
@@ -234,11 +256,13 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                           className={styles.coll_link_button}
                           variant="primary"
                         >
-                          More {cat.title}
+                          {language == "en"
+                            ? "More " + cat.title
+                            : "Más " + cat.title}
                         </Button>
                       </Link>
                     ) : (
-                      <div></div>
+                      <div />
                     )}
 
                     {tag == "m" ? (
@@ -250,11 +274,13 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                           className={styles.coll_link_button}
                           variant="primary"
                         >
-                          More {cat.title}
+                          {language == "en"
+                            ? "More " + cat.title
+                            : "Más " + cat.title}
                         </Button>
                       </Link>
                     ) : (
-                      <div></div>
+                      <div />
                     )}
                   </div>
                 </div>
@@ -296,7 +322,7 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "w" && prod.extra_tag == "WOMEN" ? (
@@ -312,7 +338,7 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
 
                           {tag == "m" && prod.extra_tag == "MEN" ? (
@@ -328,15 +354,13 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                               </Link>
                             </div>
                           ) : (
-                            <div></div>
+                            <div />
                           )}
                         </div>
                       );
                     })}
                   </Carousel>
 
-               
-                  
                   <div className={styles.link_div}>
                     {tag == "a" ? (
                       <Link
@@ -347,11 +371,13 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                           className={styles.coll_link_button}
                           variant="primary"
                         >
-                          More {cat.title}
+                          {language == "en"
+                            ? "More " + cat.title
+                            : "Más " + cat.title}
                         </Button>
                       </Link>
                     ) : (
-                      <div></div>
+                      <div />
                     )}
 
                     {tag == "w" ? (
@@ -363,11 +389,13 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                           className={styles.coll_link_button}
                           variant="primary"
                         >
-                          More {cat.title}
+                          {language == "en"
+                            ? "More " + cat.title
+                            : "Más " + cat.title}
                         </Button>
                       </Link>
                     ) : (
-                      <div></div>
+                      <div />
                     )}
 
                     {tag == "m" ? (
@@ -379,11 +407,13 @@ const CategoryGrid = ({ categories, tag = "a" }) => {
                           className={styles.coll_link_button}
                           variant="primary"
                         >
-                          More {cat.title}
+                          {language == "en"
+                            ? "More " + cat.title
+                            : "Más " + cat.title}
                         </Button>
                       </Link>
                     ) : (
-                      <div></div>
+                      <div />
                     )}
                   </div>
                 </div>

@@ -12,10 +12,32 @@
 .top_navbar_border {
   width: 95%;
   min-width: 300px;
-  height: 30px;
+  height: 40px;
   background-color: #244c77;
   margin-left: auto;
   margin-right: auto;
+}
+
+.lan_p{
+	color: white !important;
+	text-align: end !important;
+}
+
+.lan_button{
+	color: white !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
+	font-family: "Montserrat", sans-serif !important;
+	font-size: 20px !important;
+}
+
+.lan_button:hover,
+.lan_button:active,
+.lan_button:after,
+.lan_button:focus{
+	color: white !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
 }
 
 .navbar {

@@ -20,11 +20,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
 import { useCart } from "../context/CartContext";
+import { useLanguage } from "../context/LanguageContext";
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 const CustomProductDetail = ({ product, original_product }) => {
   const { cart, update_product } = useCart();
+  const { language } = useLanguage();
 
   const [cant, setCant] = useState(1);
   const [clothing_s, setClothingS] = useState("S");
@@ -99,7 +101,7 @@ const CustomProductDetail = ({ product, original_product }) => {
   };
 
   return product == null || images == null ? (
-    <div></div>
+    <div />
   ) : (
     <Container className={styles.customProductsDetailContainer}>
       <Row className={styles.row}>
@@ -139,7 +141,7 @@ const CustomProductDetail = ({ product, original_product }) => {
             <Card.Body className={styles.card_body}>
               {product.product.subtag === "ARRIBA" ? (
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Talla de Ropa</Form.Label>
+                  <Form.Label>{language == "en" ? "Size" : "Talla"}</Form.Label>
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setClothingS(e.target.value)}
@@ -156,7 +158,10 @@ const CustomProductDetail = ({ product, original_product }) => {
                 </Form.Group>
               ) : (
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Talla de Ropa</Form.Label>
+                  <Form.Label>
+                    {" "}
+                    {language == "en" ? "Size" : "Talla"}
+                  </Form.Label>
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setClothingS(e.target.value)}
@@ -179,7 +184,7 @@ const CustomProductDetail = ({ product, original_product }) => {
 
               {product.product.subtag === "ARRIBA" ? (
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Corte</Form.Label>
+                  <Form.Label> {language == "en" ? "Fit" : "Corte"}</Form.Label>
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setFit(e.target.value)}
@@ -190,29 +195,46 @@ const CustomProductDetail = ({ product, original_product }) => {
                   </Form.Select>
                 </Form.Group>
               ) : (
-                <div></div>
+                <div />
               )}
 
               {product.product.subtag === "ARRIBA" ? (
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Largo de Manga</Form.Label>
+                  <Form.Label>
+                    {" "}
+                    {language == "en" ? "Type of Sleeve" : "Largo de Manga"}
+                  </Form.Label>
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setSleeve(e.target.value)}
                   >
                     <option value={product.size_of_sleeve}>
-                      {product.size_of_sleeve}
+                      {language == "en" && product.size_of_sleeve == "Corta"
+                        ? "Short"
+                        : ""}
+                      {language == "en" && product.size_of_sleeve == "Larga"
+                        ? "Long"
+                        : ""}{" "}
+                      {language == "es" ? product.size_of_sleeve : ""}
                     </option>
-                    <option value="Corta">Corta</option>
-                    <option value="Larga">Larga</option>
+                    <option value="Corta">
+                      {" "}
+                      {language == "en" ? "Short" : "Corta"}
+                    </option>
+                    <option value="Larga">
+                      {" "}
+                      {language == "en" ? "Long" : "Larga"}
+                    </option>
                   </Form.Select>
                 </Form.Group>
               ) : (
-                <div></div>
+                <div />
               )}
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Cantidad</Form.Label>
+                <Form.Label>
+                  {language == "en" ? "Amount" : "Cantidad"}
+                </Form.Label>
                 <Form.Control
                   type="number"
                   onChange={(e) => setCant(e.target.value)}
@@ -257,7 +279,7 @@ const CustomProductDetail = ({ product, original_product }) => {
                 className={styles.button}
                 onClick={(e) => onSaveClickedHandler(e)}
               >
-                Save
+                {language == "en" ? "Save" : "Guardar"}
               </Button>
             </Card.Footer>
           </Card>

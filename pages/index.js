@@ -7,6 +7,7 @@ import stylesi from "../styles/index.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCart } from "../context/CartContext";
+import { useLanguage } from "../context/LanguageContext";
 import NextCarousel from "../components/Carousel";
 import About from "../components/About";
 import CollectionGrid from "../components/CollectionGrid";
@@ -22,8 +23,17 @@ import AboutUs from "../components/AboutUs";
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
+const language_dictionary = {
+  slogan: {
+    en:
+      "The linen and cotton clothes that offer comfort, luxury, and modernity",
+    es: "La ropa de lino y algodón que ofrece confort, lujo y modernidad",
+  },
+};
+
 export default function Home() {
   const { cart } = useCart();
+  const { language } = useLanguage();
 
   const [categories, setCategories] = useState(null);
   const [collections, setCollections] = useState(null);
@@ -32,6 +42,10 @@ export default function Home() {
     await getCategories(setCategories);
     await getCollections(setCollections);
   }, []);
+
+  const languageTranslate = (phrase) => {
+    return language_dictionary[phrase][language];
+  };
 
   return (
     <div className={styles.container}>
@@ -58,12 +72,10 @@ export default function Home() {
       <main className={styles.main}>
         <NextCarousel />
 
-        <h1 className={stylesi.title_h1}>
-          Habaneras de Lino
-        </h1>
+        <h1 className={stylesi.title_h1}>Habaneras de Lino</h1>
 
         <h2 className={stylesi.catch_phrase_h2}>
-          The linen and cotton clothes that offer comfort, luxury, and modernity.
+          {languageTranslate("slogan")}
         </h2>
 
         <Row className={stylesi.tag_div}>

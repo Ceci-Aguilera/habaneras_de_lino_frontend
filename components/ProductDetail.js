@@ -22,10 +22,13 @@ import router from "next/router";
 import { useCart } from "../context/CartContext";
 import { useRouter } from "next/router";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 const ProductDetail = ({ product }) => {
   const { cart, add_product } = useCart();
+  const { language } = useLanguage();
 
   const router = useRouter();
 
@@ -89,7 +92,7 @@ const ProductDetail = ({ product }) => {
   console.log(images);
 
   return product == null || images == null ? (
-    <div></div>
+    <div />
   ) : (
     <Container className={styles.productsDetailContainer}>
       <Row className={styles.row}>
@@ -130,7 +133,9 @@ const ProductDetail = ({ product }) => {
               <Card.Body className={styles.card_body}>
                 {product.subtag === "ARRIBA" ? (
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Size</Form.Label>
+                    <Form.Label>
+                      {language == "en" ? "Size" : "Talla"}
+                    </Form.Label>
                     <Form.Select
                       aria-label="Default select example"
                       onChange={(e) => setClothingS(e.target.value)}
@@ -144,7 +149,10 @@ const ProductDetail = ({ product }) => {
                   </Form.Group>
                 ) : (
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Size</Form.Label>
+                    <Form.Label>
+                      {" "}
+                      {language == "en" ? "Size" : "Talla"}
+                    </Form.Label>
                     <Form.Select
                       aria-label="Default select example"
                       onChange={(e) => setClothingS(e.target.value)}
@@ -164,36 +172,57 @@ const ProductDetail = ({ product }) => {
 
                 {product.subtag === "ARRIBA" ? (
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Fit</Form.Label>
+                    <Form.Label>
+                      {" "}
+                      {language == "en" ? "Fit" : "Corte"}
+                    </Form.Label>
                     <Form.Select
                       aria-label="Default select example"
                       onChange={(e) => setFit(e.target.value)}
                     >
-                      <option value="Regular Fit">Regular Fit</option>
-                      <option value="Slim Fit">Slim Fit</option>
+                      <option value="Regular Fit">
+                        {" "}
+                        {language == "en" ? "Regular Fit" : "Corte Regular"}
+                      </option>
+                      <option value="Slim Fit">
+                        {" "}
+                        {language == "en" ? "Slim Fit" : "Slim Fit"}
+                      </option>
                     </Form.Select>
                   </Form.Group>
                 ) : (
-                  <div></div>
+                  <div />
                 )}
 
                 {product.subtag === "ARRIBA" ? (
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Type of Sleeve</Form.Label>
+                    <Form.Label>
+                      {" "}
+                      {language == "en" ? "Type of Sleeve" : "Largo de Manga"}
+                    </Form.Label>
                     <Form.Select
                       aria-label="Default select example"
                       onChange={(e) => setSleeve(e.target.value)}
                     >
-                      <option value="Corta">Short</option>
-                      <option value="Larga">Long</option>
+                      <option value="Corta">
+                        {" "}
+                        {language == "en" ? "Short" : "Corta"}
+                      </option>
+                      <option value="Larga">
+                        {" "}
+                        {language == "en" ? "Larga" : "Long"}
+                      </option>
                     </Form.Select>
                   </Form.Group>
                 ) : (
-                  <div></div>
+                  <div />
                 )}
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Amount</Form.Label>
+                  <Form.Label>
+                    {" "}
+                    {language == "en" ? "Amount" : "Cantidad"}
+                  </Form.Label>
                   <Form.Control
                     type="number"
                     onChange={(e) => setCant(e.target.value)}
@@ -202,7 +231,12 @@ const ProductDetail = ({ product }) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Available Colors</Form.Label>
+                  <Form.Label>
+                    {" "}
+                    {language == "en"
+                      ? "Available Colors"
+                      : "Colores Disponibles"}
+                  </Form.Label>
                   <div>
                     <Row>
                       {product.available_colors.map((ecolor, index) => {
@@ -214,7 +248,7 @@ const ProductDetail = ({ product }) => {
                         }
                         return (
                           <Col key={index} xs={4} sm={4} md={3} lg={2}>
-                            <div style={{marginTop: "10px"}}>
+                            <div style={{ marginTop: "10px" }}>
                               <div
                                 onClick={(e) => setColor(ecolor.code)}
                                 key={index}
@@ -240,7 +274,7 @@ const ProductDetail = ({ product }) => {
                   className={styles.button}
                   onClick={(e) => onBuyClickedHandler(e)}
                 >
-                  Add To Cart
+                  {language == "en" ? "Add To Cart" : "Adicionar Al Carrito"}
                 </Button>
               </Card.Footer>
             </Card>

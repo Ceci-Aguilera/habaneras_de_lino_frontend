@@ -17,6 +17,8 @@ import tallas from "../public/images/tallas.jpeg";
 
 import { useRouter } from "next/router";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const WhatsAppIcon = (props) => (
   <svg
     aria-hidden="true"
@@ -54,6 +56,8 @@ const LeftArrowIcon = (props) => (
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
+  const { language } = useLanguage();
+
   const router = useRouter();
 
   const [dropDownInfo, setDropDownInfo] = useState(null);
@@ -77,13 +81,16 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
       >
         {linkBackShow === true ? (
           <Navbar.Brand
-            className={`navbar-brand ${styles.brand_small} ${styles.navbar_link}`}
+            className={`navbar-brand ${styles.brand_small} ${
+              styles.navbar_link
+            }`}
             onClick={(e) => router.back()}
           >
-            <LeftArrowIcon width={20} height={20} /> BACK
+            <LeftArrowIcon width={20} height={20} />{" "}
+            {language == "en" ? "BACK" : "Atrás"}
           </Navbar.Brand>
         ) : (
-          <div></div>
+          <div />
         )}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -108,13 +115,13 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
             </NavDropdown> */}
 
             <NavDropdown
-              title="WOMEN"
+              title={language == "en" ? "WOMEN" : "MUJERES"}
               className={styles.navbar_navdropdown}
               menuVariant="dark"
               active={true}
             >
               <NavDropdown.Item href="#">
-                Coming soon
+                {language == "en" ? "Soon in Stock" : "Pronto en Stock"}
               </NavDropdown.Item>
 
               {/* <NavDropdown
@@ -149,13 +156,13 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
             </NavDropdown>
 
             <NavDropdown
-              title="MEN"
+              title={language == "en" ? "MEN" : "HOMBRES"}
               className={styles.navbar_navdropdown}
               menuVariant="dark"
               active={true}
             >
               <NavDropdown
-                title="Collections"
+                title={language == "en" ? "Collections" : "Colecciones"}
                 className={styles.navbar_navdropdown}
                 menuVariant="dark"
                 drop="end"
@@ -193,16 +200,20 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
               </NavDropdown.Item>
 
               <NavDropdown.Item href="/category-title/enzo-men/Camisas">
-                Shirts (Camisas)
+                {language == "en" ? "Shirts" : "Camisas"}
               </NavDropdown.Item>
 
               <NavDropdown.Item href="/category-title/enzo-men/Pantalones">
-                Pants
+                {language == "en" ? "Pants" : "Pantalones"}
               </NavDropdown.Item>
 
-              <NavDropdown.Item>Accessories</NavDropdown.Item>
+              <NavDropdown.Item>
+                {language == "en" ? "Accessories" : "Accesorios"}
+              </NavDropdown.Item>
 
-              <NavDropdown.Item href="/enzo-men">All</NavDropdown.Item>
+              <NavDropdown.Item href="/enzo-men">
+                {language == "en" ? "All" : "Todo"}
+              </NavDropdown.Item>
             </NavDropdown>
 
             {/* <Nav.Link href="#" className={styles.navbar_link}>
@@ -215,21 +226,23 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
               href="/#offers"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
             >
-              WHOLESALERS
+              {language == "en"
+                ? "WHOLESALER DICOUNTS"
+                : "DESCUENTOS MOYORISTAS"}
             </Nav.Link>
 
             <Nav.Link
               href="/#about_store"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
             >
-              ABOUT US
+              {language == "en" ? "ABOUT US" : "SOBRE NOSOTROS"}
             </Nav.Link>
 
             <Nav.Link
               href="/#about_shipping"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
             >
-              SHIPPING
+              {language == "en" ? "SHIPPING" : "ENVIO"}
             </Nav.Link>
 
             <Nav.Link
@@ -237,7 +250,7 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}
               onClick={handleShow}
             >
-              FIND SIZE
+              {language == "en" ? "FIND SIZE" : "TALLAS"}
             </Nav.Link>
 
             <Nav.Link href="#footer" className={styles.navbar_link}>

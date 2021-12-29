@@ -23,6 +23,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
 import { useCart } from "../context/CartContext";
+import { useLanguage } from "../context/LanguageContext";
 import { fas, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckSquare, faCoffee } from "@fortawesome/fontawesome-free-solid";
@@ -50,16 +51,37 @@ const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
 const NextNavbar = ({ show_second_navbar = false }) => {
   const { cart } = useCart();
+  const { language, setCustomLanguage } = useLanguage();
 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const languageHandler = (lan) => {
+    setCustomLanguage(lan);
+  };
+
   return (
     <>
       <div className={styles.navbar_wrapper}>
-        <div className={styles.top_navbar_border}></div>
+        <div className={styles.top_navbar_border}>
+          <p className={styles.lan_p}>
+            <Button
+              className={styles.lan_button}
+              onClick={(e) => setCustomLanguage("es")}
+            >
+              ESPAÑOL
+            </Button>{" "}
+            /{" "}
+            <Button
+              className={styles.lan_button}
+              onClick={(e) => setCustomLanguage("en")}
+            >
+              ENGLISH
+            </Button>
+          </p>
+        </div>
         <Navbar
           collapseOnSelect
           expand="md"
@@ -92,7 +114,9 @@ const NextNavbar = ({ show_second_navbar = false }) => {
             </Navbar.Brand>
 
             <Nav.Link
-              className={`d-md-none  ${styles.navbar_link_item} ${styles.navbar_cart}`}
+              className={`d-md-none  ${styles.navbar_link_item} ${
+                styles.navbar_cart
+              }`}
               href="/cart"
             >
               <SvgComponent
@@ -100,7 +124,9 @@ const NextNavbar = ({ show_second_navbar = false }) => {
                 width={50}
                 height={50}
               />
-              <span className={styles.cart_count}>+</span>
+              <span className={styles.cart_count}>
+                {cart == null ? "+" : cart.products.length}
+              </span>
             </Nav.Link>
 
             <Navbar.Collapse
@@ -122,7 +148,9 @@ const NextNavbar = ({ show_second_navbar = false }) => {
                     width={50}
                     height={50}
                   />
-                  <span className={styles.cart_count}>+</span>
+                  <span className={styles.cart_count}>
+                    {cart == null ? "+" : cart.products.length}
+                  </span>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
