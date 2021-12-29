@@ -6,6 +6,7 @@ import axios from "axios";
 import ProductsGrid from "../../../components/ProductsGrid";
 import stylesT from "../../../styles/CategoryID.module.css";
 import SecondaryNavbar from "../../../components/SecondaryNavbar";
+import { useLanguage } from "../../../context/LanguageContext";
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -44,6 +45,8 @@ export const getStaticProps = async (ctx) => {
 
 export default function CategoryDetailFunction({ category }) {
   const router = useRouter();
+
+  const { language } = useLanguage();
 
   return category == undefined ? (
     <div />
@@ -100,4 +103,3 @@ export default function CategoryDetailFunction({ category }) {
     </div>
   );
 }
-
