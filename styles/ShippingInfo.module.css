@@ -1,0 +1,110 @@
+.checkoutContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: lighter;
+}
+
+.card{
+    background-color: white;
+    color: #244c77;
+    border: 1px solid white;
+}
+
+.card_header{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    border-bottom: 1px solid white;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    color: #244c77;
+}
+
+.form{
+    max-width: 600px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-weight: 300 !important;
+}
+
+
+.formGroup{
+    width: 100%;
+    margin-top: 20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-weight: 300 !important;
+}
+
+.formControl{
+    border: 1px solid rgba(200,200,200,1);
+    font-size:20px;
+    font-weight: 300 !important;
+}
+
+.formGroupLeftCol{
+    margin-top: 20px;
+    padding:0px;
+    margin-left: auto !important;
+}
+
+.formGroupRightCol{
+    margin-top: 20px;
+    padding:0px;
+    margin-right: auto !important;
+}
+
+.cardFormGroup{
+    width: 100%;
+    margin-top: 45px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.orderNowButtonDiv{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.orderNowButton{
+    background-color: steelblue;
+    color:white;
+    border-color: steelblue;
+    /* border-radius: 0px; */
+    font-size: 18px;
+    width: 200px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+.orderNowButton:hover,
+.orderNowButton:focus,
+.orderNowButton:after{
+    background-color: lightsteelblue;
+    color:white;
+    border-color: lightsteelblue;
+}
+
+.priceP{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.stepper_div{
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.mandatory_field{
+    color: #ff0000;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+.non_mandatory_field{
+    color: white;
+    font-size: 24px;
+    padding-right: 10px;
+}

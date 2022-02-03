@@ -1,0 +1,31 @@
+.paypal_div{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto !important;
+    /* margin-right: auto !important; */
+}
+
+.header_title{
+    color: #244c77;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;  
+}
+
+.stepper_div{
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 50px;
+}
+
+.order_resume_div{
+    width: 100%;
+    max-width: 600px;
+    /* margin-left: auto !important; */
+    margin-right: auto !important;
+}

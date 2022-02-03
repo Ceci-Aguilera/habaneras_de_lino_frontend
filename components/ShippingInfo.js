@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/CheckoutForm.module.css";
+import styles from "../styles/ShippingInfo.module.css";
 import {
   Nav,
   Navbar,
@@ -22,9 +22,11 @@ import router from "next/router";
 import { useCart } from "../context/CartContext";
 import { useLanguage } from "../context/LanguageContext";
 
+import Stepper from 'react-stepper-horizontal';
+
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
-const CheckoutForm = () => {
+const ShippingInfo = () => {
   const { cart, coupon } = useCart();
   const { language } = useLanguage();
 
@@ -34,10 +36,6 @@ const CheckoutForm = () => {
   const [address2, setAddress2] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [card_num, setCardNum] = useState("");
-  const [exp_month, setExpMonth] = useState("");
-  const [exp_year, setExpYear] = useState("");
-  const [cvc, setCvc] = useState("");
 
   const body = JSON.stringify({
     order: {
@@ -47,33 +45,60 @@ const CheckoutForm = () => {
       address2,
       email,
       phone,
-    },
-    card_num,
-    exp_month,
-    exp_year,
-    cvc,
+    }
   });
 
-  const makePaymentHandler = async () => {
-    await makePayment(body, cart.token);
+  const sendShippingInfoHandler = async (e) => {
+    e.preventDefault();
+    if( !first_name.trim().length ) {
+      // only white-spaces
+    }
+
+    else if( !last_name.trim().length ) {
+      // only white-spaces
+      }
+
+      else if( !email.trim().length ) {
+        // only white-spaces
+      }
+
+      else if( !phone.trim().length ) {
+        // only white-spaces
+      }
+
+    else{
+     const result =  await sendShippingInfo(body, cart.token);
+    }
   };
 
   return cart == null ? (
     <div />
   ) : (
     <Container className={styles.checkoutContainer}>
+    
+    <div className={styles.stepper_div}>
+      <Stepper steps={ [{title: 'Shipping Info'}, {title: 'Make Payment'}] } 
+      activeStep={ 0 }
+      activeColor="#244c77"
+      completeColor="#244c77"
+      activeTitleColor="244c77"
+      completeTitleColor="244c77"
+      titleFontSize={20}
+         />
+    </div>
+
       <Card className={styles.card}>
         <Card.Header className={styles.card_header}>
-          {language == "en" ? "Payment Information" : "Información del Pago"}
+          {language == "en" ? "Shipping Information" : "Información del Envío"}
         </Card.Header>
         <Card.Body>
           <Container className={styles.orderDetailContainer}>
-            <Form className={styles.form}>
+            <Form className={styles.form} onSubmit={e => {sendShippingInfoHandler(e)}}>
               <Row>
                 <Col className={styles.col} xs={6}>
                   <InputGroup className={styles.formGroupLeftCol}>
-                    {/* <Form.Label className={styles.formLabel}>First Name</Form.Label> */}
-                    <FormControl
+                    <Form.Label className={styles.formLabel}><span className={styles.mandatory_field}>*</span></Form.Label>
+                    <Form.Control
                       className={styles.formControl}
                       autoFocus
                       placeholder={language == "en" ? "First Name" : "Nombre"}
@@ -86,8 +111,8 @@ const CheckoutForm = () => {
 
                 <Col xs={6}>
                   <InputGroup className={styles.formGroupRightCol}>
-                    {/* <Form.Label className={styles.formLabel}>Address (Optional)</Form.Label> */}
-                    <FormControl
+                  <Form.Label className={styles.formLabel}><span className={styles.mandatory_field}>*</span></Form.Label>
+                  <Form.Control
                       className={styles.formControl}
                       autoFocus
                       placeholder={language == "en" ? "Last Name" : "Apellido"}
@@ -100,8 +125,8 @@ const CheckoutForm = () => {
               </Row>
 
               <InputGroup className={styles.formGroup}>
-                {/* <Form.Label className={styles.formLabel}>Address</Form.Label> */}
-                <FormControl
+              <Form.Label className={styles.formLabel}><span className={styles.mandatory_field}>*</span></Form.Label>
+              <Form.Control
                   className={styles.formControl}
                   autoFocus
                   placeholder={
@@ -114,8 +139,8 @@ const CheckoutForm = () => {
               </InputGroup>
 
               <InputGroup className={styles.formGroup}>
-                {/* <Form.Label className={styles.formLabel}>Address (Optional)</Form.Label> */}
-                <FormControl
+              <Form.Label className={styles.formLabel}><span className={styles.non_mandatory_field}>*</span></Form.Label>
+                <Form.Control
                   className={styles.formControl}
                   autoFocus
                   placeholder={
@@ -130,11 +155,11 @@ const CheckoutForm = () => {
               </InputGroup>
 
               <InputGroup className={styles.formGroup}>
-                {/* <Form.Label className={styles.formLabel}>Address (Optional)</Form.Label> */}
-                <FormControl
+              <Form.Label className={styles.formLabel}><span className={styles.mandatory_field}>*</span></Form.Label>
+                <Form.Control
                   className={styles.formControl}
                   autoFocus
-                  placeholder="Email (optional)"
+                  placeholder="Email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -142,8 +167,8 @@ const CheckoutForm = () => {
               </InputGroup>
 
               <InputGroup className={styles.formGroup}>
-                {/* <Form.Label className={styles.formLabel}>Address (Optional)</Form.Label> */}
-                <FormControl
+              <Form.Label className={styles.formLabel}><span className={styles.mandatory_field}>*</span></Form.Label>
+              <Form.Control
                   className={styles.formControl}
                   autoFocus
                   placeholder={
@@ -155,67 +180,11 @@ const CheckoutForm = () => {
                 />
               </InputGroup>
 
-              <InputGroup className={styles.cardFormGroup}>
-                {/* <Form.Label className={styles.formLabel}>Address (Optional)</Form.Label> */}
-                <FormControl
-                  className={styles.formControl}
-                  autoFocus
-                  placeholder={
-                    language == "en" ? "Card Number" : "Número de la Tarjeta"
-                  }
-                  type="text"
-                  value={card_num}
-                  onChange={(e) => setCardNum(e.target.value)}
-                />
-              </InputGroup>
-
-              <Row>
-                <Col className={styles.col} xs={6}>
-                  <InputGroup className={styles.formGroupLeftCol}>
-                    {/* <Form.Label className={styles.formLabel}>First Name</Form.Label> */}
-                    <FormControl
-                      className={styles.formControl}
-                      autoFocus
-                      placeholder={
-                        language == "en" ? "Exp Month" : "Mes de Exp"
-                      }
-                      type="text"
-                      value={exp_month}
-                      onChange={(e) => setExpMonth(e.target.value)}
-                    />
-                  </InputGroup>
-                </Col>
-
-                <Col xs={6}>
-                  <InputGroup className={styles.formGroupRightCol}>
-                    {/* <Form.Label className={styles.formLabel}>Address (Optional)</Form.Label> */}
-                    <FormControl
-                      className={styles.formControl}
-                      autoFocus
-                      placeholder={language == "en" ? "Exp Year" : "Año de Exp"}
-                      type="text"
-                      value={exp_year}
-                      onChange={(e) => setExpYear(e.target.value)}
-                    />
-                  </InputGroup>
-                </Col>
-              </Row>
-
-              <InputGroup className={styles.formGroup}>
-                {/* <Form.Label className={styles.formLabel}>Address (Optional)</Form.Label> */}
-                <FormControl
-                  className={styles.formControl}
-                  autoFocus
-                  placeholder="CVC"
-                  type="text"
-                  value={cvc}
-                  onChange={(e) => setCvc(e.target.value)}
-                />
-              </InputGroup>
 
               <div className={styles.orderNowButtonDiv}>
                 <Button
-                  onClick={(e) => makePaymentHandler()}
+                type="submit"
+                  // onClick={(e) => sendShippingInfoHandler()}
                   className={styles.orderNowButton}
                 >
                   {language == "en" ? "MAKE PAYMENT" : "HACER PAGO"}
@@ -229,28 +198,31 @@ const CheckoutForm = () => {
   );
 };
 
-const makePayment = async (body, cart_token) => {
+const sendShippingInfo = async (body, cart_token) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
     },
   };
 
-  const order_url = domain + `store/order/${cart_token}/`;
+  const order_url = domain + `store/shipping-info/${cart_token}/`;
   axios
     .post(order_url, body, config)
     .then(async (res) => {
       const result = await res.data["Result"];
       if (result === "Success") {
-        router.push("/order-made");
+        // return "Success"
+        router.push("/checkout-paypal")
       } else {
-        console.log("Uppss Something fishy -_-");
+        console.log("Error in Shipping Info")
       }
     })
     .catch((error) => {
+      alert("Some Error")
       return "Error";
     });
 };
 
-export default CheckoutForm;
+
+export default ShippingInfo;
 

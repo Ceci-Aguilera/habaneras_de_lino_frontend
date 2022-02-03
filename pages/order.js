@@ -5,7 +5,7 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 import { useCart } from '../context/CartContext'
 import OrderResume from '../components/OrderResume'
-import CheckoutForm from '../components/CheckoutForm'
+import ShippingInfo from '../components/ShippingInfo'
 import {
   Col,
   Row,
@@ -14,9 +14,10 @@ import SecondaryNavbar from '../components/SecondaryNavbar'
 
 export default function OrderCheckout() {
 
+
   const {cart} = useCart()
-  
-  return (
+
+  return(
     <div className={styles.container}>
       <Head>
           <title>Resume of Order and Purchase - Habaneras de Lino</title>
@@ -39,18 +40,10 @@ export default function OrderCheckout() {
       <SecondaryNavbar navbarShow={false} />
 
       <main className={styles.main}>
-      <Row>
-                <Col xs={12} sm={12} md={12} lg={6}>
-        <CheckoutForm />
 
-                </Col>
-                <Col xs={12} sm={12} md={12} lg={6}>
-                    
-        <OrderResume />
-                </Col>
-            </Row>
+      <ShippingInfo />
+      
       </main>
-
       <footer className={styles.footer}>
         
       </footer>
