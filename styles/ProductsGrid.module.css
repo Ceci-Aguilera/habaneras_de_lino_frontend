@@ -100,31 +100,34 @@
     .card {
       margin-top: 20px !important;
       width: max-content;
-      height: 350px;
+      height: max-content;
       margin-left:auto !important;
       margin-right: auto !important;
       margin-bottom: 10px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
+      /* background-color:#244c77; */
     }
 
     .card_image {
-      width: 250px;
-      height: 300px !important;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+      width: 300px;
+      height: 350px !important;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
     }
 
     .card_image_s {
-      width: 250px;
-      height: 300px !important;
+      width: 300px;
+      height: 350px !important;
       position: absolute;
       top: 0;
       left: 0;
       transition: opacity 1s;
       opacity: 0;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
   
     .card:hover .card_image_s {
