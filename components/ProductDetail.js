@@ -210,7 +210,7 @@ const ProductDetail = ({ product }) => {
                       </option>
                       <option value="Larga">
                         {" "}
-                        {language == "en" ? "Larga" : "Long"}
+                        {language == "en" ? "Long" : "Larga"}
                       </option>
                     </Form.Select>
                   </Form.Group>

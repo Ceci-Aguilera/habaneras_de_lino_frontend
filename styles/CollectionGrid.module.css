@@ -174,6 +174,39 @@
 }
 
 
+@media screen and (min-width: 576px) and (max-width: 758px) {
+  .categoryGridContainer {
+    margin-top: 50 !important;
+  }
+
+  .carousel{
+    height: 370px;
+    cursor: pointer;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .card {
+    width: 220px;
+    height: 270px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .card_coll_image {
+    width: 220px;
+    height: 270px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+
+}
+
+
 .link_div{
   margin-top: 20px;
   margin-left: auto!important;
