@@ -78,6 +78,21 @@
 }
 
 @media screen and (max-width: 758px){
+
+  .top_navbar_border {
+    width: 95%;
+    min-width: 300px;
+    height: 30px;
+  }
+
+  .lan_button{
+    color: white !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 12px !important;
+  }
+
   .navbar {
     height: 100px;
   }
