@@ -15,6 +15,7 @@
 
   @media screen and (max-width: 758px) {
     .about_title {
-        font-size: 60px;
+        font-size: 30px;
+        padding-top: 50px;
       }
   }

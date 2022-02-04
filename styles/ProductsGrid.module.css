@@ -15,16 +15,18 @@
     margin-right: auto !important;
     text-align: center;
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .img_container{
   position: relative !important;
-   border-radius: 10px;
+   border-radius: 12px;
 }
 
 .card_image {
     height: 400px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .card_image_s {
@@ -34,6 +36,8 @@
     left: 0;
     transition: opacity 1s;
     opacity: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .card:hover .card_image_s {
@@ -85,32 +89,42 @@
 }
 
 @media screen and (max-width: 758px) {
-    .categoryGridContainer {
-      margin-top: 50 !important;
-    }
-
-    .card {
-      margin-top: 50px !important;
-      width: max-content;
-      height: 400px;
+    .productsGridContainer{
+      margin-top: 10px;
+      margin-bottom: 100px;
       margin-left:auto !important;
       margin-right: auto !important;
-      margin-bottom: 50px;
+      text-align: center;
+  }
+
+    .card {
+      margin-top: 20px !important;
+      width: max-content;
+      height: 300px;
+      margin-left:auto !important;
+      margin-right: auto !important;
+      margin-bottom: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
     .card_image {
-      width: 300px;
-      height: 400px;
+      width: 200px;
+      height: 250px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
     .card_image_s {
-      width: 300px;
-      height: 400px;
+      width: 200px;
+      height: 250px;
       position: absolute;
       top: 0;
       left: 0;
       transition: opacity 1s;
       opacity: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
   
     .card:hover .card_image_s {

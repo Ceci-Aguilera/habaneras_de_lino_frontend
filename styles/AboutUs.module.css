@@ -58,5 +58,6 @@
   
     .about_p_div{
       width: 80%;
+      margin-top: 50px !important;
     }
   }

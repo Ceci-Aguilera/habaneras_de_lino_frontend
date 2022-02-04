@@ -27,6 +27,10 @@
 
 @media screen and (max-width: 758px){
     .about_title{
-        font-size: 60px;
+        font-size: 40px;
+    }
+
+    .enzo_men_title, .enzo_women_title{
+        display: none !important;
     }
 }

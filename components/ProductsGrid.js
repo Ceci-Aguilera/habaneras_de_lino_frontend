@@ -27,7 +27,7 @@ const RightArrowIcon = (props) => (
     aria-hidden="true"
     data-prefix="fas"
     data-icon="arrow-right"
-    lassName="svg-inline--fa fa-arrow-right fa-w-14"
+    className="svg-inline--fa fa-arrow-right fa-w-14"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"
     {...props}
@@ -44,7 +44,7 @@ const LeftArrowIcon = (props) => (
     aria-hidden="true"
     data-prefix="fas"
     data-icon="arrow-left"
-    lassName="svg-inline--fa fa-arrow-left fa-w-14"
+    className="svg-inline--fa fa-arrow-left fa-w-14"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"
     {...props}
@@ -103,7 +103,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
   };
 
   return products == null ? (
-    <div />
+    <div></div>
   ) : (
     <Container className={styles.productsGridContainer}>
       <Row className={styles.row}>

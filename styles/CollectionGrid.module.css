@@ -87,22 +87,51 @@
   padding: 0 10px;
 }
 
+.small_br {
+  width: 90%;
+  min-width: 300px;
+  height: 1px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  background-color: rgba(100,100,100, 0.6) !important;
+}
+
+
+.br {
+  width: 90%;
+  min-width: 300px;
+  height: 1px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  background-color: rgba(100,100,100, 0.6) !important;
+}
+
+
 @media screen and (max-width: 758px) {
   .categoryGridContainer {
-    margin-top: 50 !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px;
   }
 
+
   .card {
-    height: 400px;
-    width: 300px !important;
+    height: 250px;
+    width: 200px !important;
+    margin-top: 0px;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
   }
 
   .card_coll_image {
-    height: 400px;
-    width: 300px !important;
+    height: 250px;
+    width: 200px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
@@ -113,10 +142,12 @@
 
   .about_title {
     width: 98%;
+    font-size: 30px;
   }
 
   .carousel{
-    /* min-height: 1100px; */
+    height: 350px;
+    margin-top: 0px;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
@@ -125,6 +156,20 @@
   .collection_title {
     width: 80%;
   }
+
+  .small_br {
+    width: 90%;
+    min-width: 300px;
+    height: 1px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    background-color: rgba(100,100,100, 0.6) !important;
+  }
+  
+
 
 }
 
@@ -163,27 +208,3 @@
 }
 
 
-.small_br {
-  width: 90%;
-  min-width: 300px;
-  height: 1px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center;
-  background-color: rgba(100,100,100, 0.6) !important;
-}
-
-
-.br {
-  width: 90%;
-  min-width: 300px;
-  height: 1px;
-  margin-top: 200px;
-  margin-bottom: 100px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center;
-  background-color: rgba(100,100,100, 0.6) !important;
-}

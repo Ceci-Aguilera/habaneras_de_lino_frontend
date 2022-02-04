@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 758px){
   .navbar {
-    height: 250px;
+    height: 100px;
   }
 
   .navbar_cart_svg {
@@ -106,7 +106,7 @@
 
   .brand_small{
     color: #244c77 !important;
-    font-size: 80px;
+    font-size: 40px;
     font-family: "Corinthia", cursive !important;
     font-weight: bold;
     padding-top: 0 !important;

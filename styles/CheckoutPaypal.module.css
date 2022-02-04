@@ -29,3 +29,19 @@
     /* margin-left: auto !important; */
     margin-right: auto !important;
 }
+
+@media screen and (max-width: 758px){
+    .paypal_div{
+        margin-top: 50px;
+        width: 90%;
+        max-width: 250px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .order_resume_div{
+        width: 90%;
+        max-width: 400px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
