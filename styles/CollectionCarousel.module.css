@@ -101,8 +101,8 @@
     }
 
     .card{
-        width: 200px;
-        height: 250px;
+        width: 250px;
+        height: 300px;
         margin-left: auto!important;
         margin-right: auto!important;
         text-align: center;
@@ -111,15 +111,15 @@
     }
 
     .card_coll_image{
-        width: 200px;
-        height: 250px;
+        width: 250px;
+        height: 300px;
         border-radius: 12px;
     }
     
     .carousel_item_div{
         margin-top: 30px;
-        width: 200px;
-        height: 300px;
+        width: 250px;
+        height: 350px;
         margin-left: auto!important;
         margin-right: auto!important;
         text-align: center;

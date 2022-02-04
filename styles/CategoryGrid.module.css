@@ -109,7 +109,7 @@
   }
 
   .carousel{
-    height: 350px;
+    height: 400px;
     cursor: pointer;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -127,16 +127,16 @@
   }
 
   .card {
-    height: 250px;
-    width: 200px !important;
+    width: 250px;
+    height: 300px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
   }
 
   .card_coll_image {
-    height: 250px;
-    width: 200px !important;
+    width: 250px;
+    height: 300px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;

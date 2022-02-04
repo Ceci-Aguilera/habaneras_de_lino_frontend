@@ -121,8 +121,8 @@
 
 
   .card {
-    height: 250px;
-    width: 200px !important;
+    width: 250px;
+    height: 300px !important;
     margin-top: 0px;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -130,8 +130,8 @@
   }
 
   .card_coll_image {
-    height: 250px;
-    width: 200px !important;
+    width: 250px;
+    height: 300px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
