@@ -67,8 +67,8 @@ const language_dictionary = (lan, key) => {
       return (
         <p className={styles.about_p}>
           Una vez realizada la compra en la web{" "}
-          <strong>Habaneras de Lino</strong>, los productos tardan entre 7 días
-          a dos semana en llegar (al cliente). Tenga en cuenta que la mayoría de
+          <strong>Habaneras de Lino</strong>, los productos tardan entre 10 días
+          a 15 días en llegar (al cliente). Tenga en cuenta que la mayoría de
           nuestros productos son fabricados primero a mano en México y luego se
           importan a los EE. UU. (Todas las formas decorativas incrustadas en
           nuestras <strong>guayaberas</strong> y <strong>guayamisas</strong>{" "}
@@ -110,7 +110,7 @@ const language_dictionary = (lan, key) => {
             </li>
           </ul>
           <p>
-            En este caso, el producto tarda de 10 a 15 días en llegar al
+            En este caso, el producto tarda de 15 a 21 días en llegar al
             cliente.
           </p>
         </>
