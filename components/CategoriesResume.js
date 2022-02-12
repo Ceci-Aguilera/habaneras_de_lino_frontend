@@ -63,7 +63,7 @@ const CategoriesResume = ({ categories, tag = "a" }) => {
 
                                         <div className={styles.card_div}>
                                             <div className={styles.carousel_item_div}>
-                                                <Link href={`/categories/${categoriesInfo.id}/`}>
+                                                <Link href={`/category/${categoriesInfo.id}/`}>
                                                     <Card className={styles.card}>
                                                         <Card.Img
                                                             variant="top"
