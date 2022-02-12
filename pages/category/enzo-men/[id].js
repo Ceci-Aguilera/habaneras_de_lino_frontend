@@ -7,6 +7,7 @@ import ProductsGrid from "../../../components/ProductsGrid";
 import stylesT from "../../../styles/CategoryID.module.css";
 import SecondaryNavbar from "../../../components/SecondaryNavbar";
 import { useLanguage } from "../../../context/LanguageContext";
+import NextNavbar from "../../../components/NextNavbar";
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -82,9 +83,12 @@ export default function CategoryDetailFunction({ category }) {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+      <NextNavbar navy={false}/>
+      <SecondaryNavbar navbarShow={false} navy={false}/>
 
       <main className={styles.main}>
+      <div className={stylesT.background_div} style={{ backgroundImage: `url(${category.image})` }}>
+        <div className={stylesT.title_div}>
         <h2 className={stylesT.about_title}>
           <span className={stylesT.about_title_span}>
             {language == "en" && category.title == "Camisas" ? "Shirts" : ""}
@@ -98,6 +102,8 @@ export default function CategoryDetailFunction({ category }) {
             {language == "es" ? category.title : ""}
           </span>
         </h2>
+        </div>
+        </div>
         <ProductsGrid products={category.products} tag={"m"} />
       </main>
     </div>

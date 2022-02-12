@@ -6,6 +6,7 @@ import axios from 'axios'
 import CustomProductDetail from '../../components/CustomProductDetail';
 import SecondaryNavbar from '../../components/SecondaryNavbar';
 import { useEffect, useState } from 'react';
+import NextNavbar from '../../components/NextNavbar';
 
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
@@ -42,7 +43,8 @@ export default function CustomProductDetailFunction() {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+      <NextNavbar navy={true}/>
+      <SecondaryNavbar navbarShow={false} navy={true}/>
 
       <main className={styles.main}>
         <CustomProductDetail product={product} original_product={product.product} />

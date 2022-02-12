@@ -6,6 +6,7 @@ import axios from "axios";
 import ProductsGrid from "../../components/ProductsGrid";
 import stylesT from "../../styles/CategoryID.module.css";
 import SecondaryNavbar from "../../components/SecondaryNavbar";
+import NextNavbar from "../../components/NextNavbar";
 
 import { useLanguage } from "../../context/LanguageContext";
 
@@ -81,9 +82,12 @@ export default function CategoryDetailFunction({ category }) {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+      <NextNavbar navy={false}/>
+      <SecondaryNavbar navbarShow={false} navy={false}/>
 
       <main className={styles.main}>
+      <div className={stylesT.background_div} style={{ backgroundImage: `url(${category.image})` }}>
+        <div className={stylesT.title_div}>
         <h2 className={stylesT.about_title}>
           <span className={stylesT.about_title_span}>
             {language == "en" && category.title == "Camisas" ? "Shirts" : ""}
@@ -97,6 +101,8 @@ export default function CategoryDetailFunction({ category }) {
             {language == "es" ? category.title : ""}
           </span>
         </h2>
+        </div>
+        </div>
         <ProductsGrid products={category.products} />
       </main>
     </div>

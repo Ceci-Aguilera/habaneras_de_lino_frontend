@@ -6,6 +6,7 @@ import axios from "axios";
 import { useCart } from "../context/CartContext";
 import OrderSuccessfullyMade from "../components/OrderSuccessfullyMade";
 import SecondaryNavbar from "../components/SecondaryNavbar";
+import NextNavbar from "../components/NextNavbar";
 
 export default function OderMade() {
   const { cart } = useCart();
@@ -33,7 +34,8 @@ export default function OderMade() {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+      <NextNavbar navy={true}/>
+      <SecondaryNavbar navbarShow={false} navy={true}/>
 
       <main className={styles.main}>
         <OrderSuccessfullyMade />

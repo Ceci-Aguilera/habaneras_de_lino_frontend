@@ -6,6 +6,7 @@ import axios from 'axios'
 import stylesT from '../../styles/CategoryID.module.css'
 import ProductsGrid from '../../components/ProductsGrid';
 import SecondaryNavbar from '../../components/SecondaryNavbar';
+import NextNavbar from '../../components/NextNavbar';
 
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
@@ -69,10 +70,15 @@ export default function ColletionDetailFunction({collection}) {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+      <NextNavbar navy={false}/>
+      <SecondaryNavbar navbarShow={false} navy={false}/>
 
       <main className={styles.main}>
+      <div className={stylesT.background_div} style={{ backgroundImage: `url(${collection.image})` }}>
+        <div className={stylesT.title_div}>
         <h2 className={stylesT.about_title}><span className={stylesT.about_title_span}>{collection.title}</span></h2>
+        </div>
+        </div>
           <ProductsGrid products={collection.all_products_per_collection}/>
       </main>
     </div>

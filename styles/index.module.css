@@ -7,10 +7,11 @@
     display: flex;
     flex-direction: wrap;
     align-content: space-between !important;
+    z-index: 999999;
 }
 
 
-.enzo_men_div{
+.enzo_men_div, .enzo_women_div{
     margin-top: 0px;
     max-height: 600px;
     max-width: 300px;
@@ -20,19 +21,9 @@
     background-color: transparent !important;
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
     transition: transform .2s;
+    z-index: 999999;
 }
 
-.enzo_women_div{
-    margin-top: 0px;
-    max-height: 600px;
-    max-width: 300px;
-    min-width: 250px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    background-color: transparent !important;
-    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
-    transition: transform .2s;
-}
 
 .enzo_men_div:hover{
     transform: scale(1.1);
@@ -44,13 +35,14 @@
 
 .title_h1{
     font-family: "Corinthia", cursive !important;
-    font-size: 150px !important;
+    font-size: 100px !important;
     font-weight: bold !important;
-    color:#244c77 !important;
+    color:#25284b !important;
     text-align: center !important;
-    margin-top: 200px !important;
+    margin-top: 300px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    z-index: 999999;
 }
 
 
@@ -59,19 +51,55 @@
     margin-left: auto !important;
     margin-right: auto !important;
     font-family: "Montserrat", sans-serif !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     color: rgba(100,100,100, 1) !important;
+    z-index: 999999;
 }
+
+.about_title {
+    color: #25284b;
+    font-family: "Montserrat", sans-serif;
+    font-size: 80px;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: transparent !important;
+    opacity: 1 !important; 
+    padding-top: 350px !important;
+  }
+
+  .about_title_span{
+    font-size: 50px;
+    color: white;
+}
+
+.background_div{
+    top:30px;
+    left:0;
+    position: absolute;
+    height: 550px;
+    width: 100%;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    z-index: 1;
+  }
+
+  .title_div{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    z-index: 2;
+  }
 
 @media screen and (min-width: 992px) { 
 
     .tag_div{
-        margin-top: 150px;
+        margin-top: 50px;
     }
 
-    .enzo_men_div{
-        max-height: 700px;
-        min-height: 700px;
+    .enzo_men_div, .enzo_women_div{
+        max-height: 500px;
+        min-height: 500px;
         max-width: 600px;
         min-width: 500px;
         margin-left: auto !important;
@@ -79,14 +107,9 @@
         cursor: pointer;
     }
 
-    .enzo_women_div{
-        max-height: 700px;
-        min-height: 700px;
-        max-width: 600px;
-        min-width: 500px;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        cursor: pointer;
+    .enzo_men_img, .enzo_men_div{
+        width: 300px !important;
+        height: 400px !important;
     }
 
 }
@@ -95,7 +118,7 @@
     width: 90%;
     min-width: 300px;
     height: 1px;
-    margin-top: 300px;
+    margin-top: 300px !important;
     margin-bottom: 100px;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -140,13 +163,18 @@
     .catch_phrase_h2{
         width: 80% !important;
     }
+
+    .about_title_span{
+        font-size: 0px;
+        color: white;
+    }
   }
 
   @media screen and (max-width: 758px) { 
 
     .tag_div{
         margin-top: 20px;
-        margin-bottom: 150px;
+        margin-bottom: 80px;
         width: 80%;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -156,15 +184,15 @@
     }
 
     .enzo_men_div, .enzo_women_div{
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .br {
         width: 90%;
         min-width: 300px;
         height: 1px;
-        margin-top: 100px !important;
-        margin-bottom: 100px;
+        margin-top: 50px !important;
+        margin-bottom: 50px;
         margin-left: auto !important;
         margin-right: auto !important;
         text-align: center;
@@ -172,12 +200,42 @@
       }
 
       .title_h1{
-        margin-top: 100px !important;
+        margin-top: 50px !important;
         font-size: 0px !important;
+    }
+
+    .enzo_men_img{
+        width: 100%;
+        height: 100%;
     }
     
     
     .catch_phrase_h2{
         width: 80% !important;
     }
+
+    .about_title_span{
+        font-size: 0px;
+        color: white;
+    }
+
+    .about_title {
+        font-size: 30px;
+        padding-top: 250px !important;
+        color: #25284b;
+      }
+
+      .about_title_span{
+        color: #25284b;
+      }
+
+      .background_div{
+        height: 80px;
+        background: none !important;
+        background-color: white;
+      }
+      .title_div{
+        background-color: white;
+        height: 100%;
+      }
   }

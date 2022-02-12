@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import axios from 'axios'
 import ProductDetail from '../../components/ProductDetail';
 import SecondaryNavbar from '../../components/SecondaryNavbar';
-
+import NextNavbar from '../../components/NextNavbar';
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -69,8 +69,8 @@ export default function ProductDetailFunction({product}) {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
-
+      <NextNavbar navy={true}/>
+      <SecondaryNavbar navbarShow={false} navy={true}/>
       <main className={styles.main}>
         <ProductDetail product={product} />
       </main>

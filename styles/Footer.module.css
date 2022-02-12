@@ -1,5 +1,5 @@
 .footer {
-    background-color: #244c77;
+    background-color: #25284b;
     color: white !important;
     font-weight: 300 !important;
     text-align: center;
@@ -78,7 +78,7 @@
     }
   
     .footer {
-      background-color: #244c77;
+      background-color: #25284b;
       color: white !important;
       font-weight: 300 !important;
       text-align: center;
@@ -122,7 +122,7 @@
 
   @media screen and (min-width: 768px) and (max-width: 992px) {
     .footer {
-      background-color: #244c77;
+      background-color: #25284b;
       color: white !important;
       font-weight: 300 !important;
       text-align: center;

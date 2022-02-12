@@ -105,7 +105,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
   return products == null ? (
     <div></div>
   ) : (
-    <Container className={styles.productsGridContainer}>
+    <div className={styles.productsGridContainer}>
       <Row className={styles.row}>
         {paginatedRevs.map((prod, index) => {
           if (tag == "a") {
@@ -252,7 +252,7 @@ const ProductsGrid = ({ products, tag = "a" }) => {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

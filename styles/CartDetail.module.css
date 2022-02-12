@@ -7,7 +7,7 @@
     margin-bottom: 100px;
     background-color: white !important;
     border: 1px solid white;
-    color: #244c77;
+    color: #25284b;
     font-family: "Montserrat", sans-serif;
     font-size:20px;
 }
@@ -43,9 +43,9 @@
 
 .button_main{
     width: 60%;
-    background-color: #244c77;
+    background-color: #25284b;
     color:white;
-    border-color: #244c77;
+    border-color: #25284b;
 }
 
 .button_main:active,
@@ -76,7 +76,7 @@
 }
 
 .about_title {
-    color: #244c77;
+    color: #25284b;
     font-family: "Montserrat", sans-serif;
     font-size: 60px;
     text-align: center;
@@ -152,8 +152,8 @@
 .add_coupon_button:active,
 .add_coupon_button:after,
 .add_coupon_button:focus{
-    background-color: #244c77 !important;
-    border-color:#244c77 !important;
+    background-color: #25284b !important;
+    border-color:#25284b !important;
 }
 
 .coupon_info{

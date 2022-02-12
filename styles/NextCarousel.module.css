@@ -1,5 +1,5 @@
 .carousel_div{
-    margin-top: 0px;
+    margin-top:200px;
     font-family: "Comforter", cursive;
 }
 
@@ -23,6 +23,11 @@
 }
 
 @media screen and (max-width: 992px) {
+    .carousel_div{
+        margin-top:0px;
+        font-family: "Comforter", cursive;
+    }
+
     .image_div{
         width: 500px !important;
         height: 400px !important;

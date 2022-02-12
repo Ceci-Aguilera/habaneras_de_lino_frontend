@@ -55,7 +55,7 @@ const LeftArrowIcon = (props) => (
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
-const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
+const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true, navy= true }) => {
   const { language } = useLanguage();
 
   const router = useRouter();
@@ -75,9 +75,9 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        bg="dark"
+        bg="#244c77"
         variant="dark"
-        className={styles.navbar}
+        className={`${styles.navbar} ${navy?styles.navbar_navy:styles.navbar_white}`}
       >
         {linkBackShow === true ? (
           <Navbar.Brand
@@ -254,7 +254,7 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true }) => {
             </Nav.Link>
 
             <Nav.Link href="#footer" className={styles.navbar_link}>
-              <WhatsAppIcon width={30} height={30} /> +1 941 447 5126
+              <WhatsAppIcon width={25} height={25} /> +1 941 447 5126
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

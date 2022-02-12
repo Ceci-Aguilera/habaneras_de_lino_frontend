@@ -43,7 +43,7 @@
 }
 
 .card_footer {
-  background-color:#244c77;
+  background-color:#25284b;
   font-weight: lighter;
   text-align: center;
   color: white;
@@ -54,7 +54,7 @@
 .about_title {
   font-family: "Montserrat", sans-serif;
   font-size: 60px;
-  color: #244c77;
+  color: #25284b;
   text-align: center;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -70,7 +70,7 @@
 .collection_title {
   margin-top:50px;
   text-align: center !important;
-  color: #244c77;
+  color: #25284b;
   font-size: 40px;
   font-family: "Montserrat", sans-serif;
   margin-left: auto !important;
@@ -94,8 +94,8 @@
   width: 90%;
   min-width: 300px;
   height: 1px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center;
@@ -119,7 +119,7 @@
   .collection_title {
     margin-top:10px;
     text-align: center !important;
-    color: #244c77;
+    color: #25284b;
     font-size: 30px;
     font-family: "Montserrat", sans-serif;
     margin-left: auto !important;
@@ -231,17 +231,17 @@
   font-family: "Monstserrat", sans-serif;
   font-size: 24px !important;
   text-align:center;
-  background-color: white !important;
-  color: #244c77 !important;
-  border-color: #244c77 !important;
+  background-color: #25284b !important;
+  color: white !important;
+  border-color: #25284b !important;
 }
 
 .coll_link_button:hover,
 .coll_link_button:after,
 .coll_link_button:active,
 .coll_link_button:focus{
-  background-color: #244c77 !important;
-  color: white !important;
-  border-color: #244c77 !important;
+  background-color: white !important;
+  color: #25284b !important;
+  border-color: #25284b !important;
 }
 

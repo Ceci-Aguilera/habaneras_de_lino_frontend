@@ -89,7 +89,6 @@ const ProductDetail = ({ product }) => {
     }
   };
 
-  console.log(images);
 
   return product == null || images == null ? (
     <div />
@@ -131,104 +130,128 @@ const ProductDetail = ({ product }) => {
           <div className={styles.card_div}>
             <Card className={styles.card}>
               <Card.Body className={styles.card_body}>
-                {product.subtag === "ARRIBA" ? (
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>
-                      {language == "en" ? "Size" : "Talla"}
-                    </Form.Label>
-                    <Form.Select
-                      aria-label="Default select example"
-                      onChange={(e) => setClothingS(e.target.value)}
-                    >
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                      <option value="XXL">XXL</option>
-                    </Form.Select>
-                  </Form.Group>
-                ) : (
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>
-                      {" "}
-                      {language == "en" ? "Size" : "Talla"}
-                    </Form.Label>
-                    <Form.Select
-                      aria-label="Default select example"
-                      onChange={(e) => setClothingS(e.target.value)}
-                    >
-                      <option value="28">28</option>
-                      <option value="44">30</option>
-                      <option value="32">32</option>
-                      <option value="34">34</option>
-                      <option value="36">36</option>
-                      <option value="38">38</option>
-                      <option value="40">40</option>
-                      <option value="42">42</option>
-                      <option value="44">44</option>
-                    </Form.Select>
-                  </Form.Group>
-                )}
+                <Row>
 
-                {product.subtag === "ARRIBA" ? (
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>
-                      {" "}
-                      {language == "en" ? "Fit" : "Corte"}
-                    </Form.Label>
-                    <Form.Select
-                      aria-label="Default select example"
-                      onChange={(e) => setFit(e.target.value)}
-                    >
-                      <option value="Regular Fit">
-                        {" "}
-                        {language == "en" ? "Regular Fit" : "Corte Regular"}
-                      </option>
-                      <option value="Slim Fit">
-                        {" "}
-                        {language == "en" ? "Slim Fit" : "Slim Fit"}
-                      </option>
-                    </Form.Select>
-                  </Form.Group>
-                ) : (
-                  <div />
-                )}
+                  <Col xs={12} sm={12} md={6} lg={6}>
+                    {product.subtag === "ARRIBA" ? (
+                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>
+                          {language == "en" ? "Size" : "Talla"}
+                        </Form.Label>
+                        <Form.Select
+                          aria-label="Default select example"
+                          onChange={(e) => setClothingS(e.target.value)}
+                          className={styles.form_control}
+                        >
+                          <option value="S">S</option>
+                          <option value="M">M</option>
+                          <option value="L">L</option>
+                          <option value="XL">XL</option>
+                          <option value="XXL">XXL</option>
+                        </Form.Select>
+                      </Form.Group>
+                    ) : (
+                      <Form.Group className="mb-3" controlId="formBasicEmail" >
+                        <Form.Label>
+                          {" "}
+                          {language == "en" ? "Size" : "Talla"}
+                        </Form.Label>
+                        <Form.Select
+                          aria-label="Default select example"
+                          onChange={(e) => setClothingS(e.target.value)}
+                          className={styles.form_control}
+                        >
+                          <option value="28">28</option>
+                          <option value="44">30</option>
+                          <option value="32">32</option>
+                          <option value="34">34</option>
+                          <option value="36">36</option>
+                          <option value="38">38</option>
+                          <option value="40">40</option>
+                          <option value="42">42</option>
+                          <option value="44">44</option>
+                        </Form.Select>
+                      </Form.Group>
+                    )}
 
-                {product.subtag === "ARRIBA" ? (
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>
-                      {" "}
-                      {language == "en" ? "Type of Sleeve" : "Largo de Manga"}
-                    </Form.Label>
-                    <Form.Select
-                      aria-label="Default select example"
-                      onChange={(e) => setSleeve(e.target.value)}
-                    >
-                      <option value="Corta">
-                        {" "}
-                        {language == "en" ? "Short" : "Corta"}
-                      </option>
-                      <option value="Larga">
-                        {" "}
-                        {language == "en" ? "Long" : "Larga"}
-                      </option>
-                    </Form.Select>
-                  </Form.Group>
-                ) : (
-                  <div />
-                )}
+                  </Col>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>
-                    {" "}
-                    {language == "en" ? "Amount" : "Cantidad"}
-                  </Form.Label>
-                  <Form.Control
-                    type="number"
-                    onChange={(e) => setCant(e.target.value)}
-                    value={cant}
-                  />
-                </Form.Group>
+                  <Col xs={12} sm={12} md={6} lg={6}>
+
+                    {product.subtag === "ARRIBA" ? (
+                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>
+                          {" "}
+                          {language == "en" ? "Fit" : "Corte"}
+                        </Form.Label>
+                        <Form.Select
+                          aria-label="Default select example"
+                          onChange={(e) => setFit(e.target.value)}
+                          className={styles.form_control}
+                        >
+                          <option value="Regular Fit">
+                            {" "}
+                            {language == "en" ? "Regular Fit" : "Corte Regular"}
+                          </option>
+                          <option value="Slim Fit">
+                            {" "}
+                            {language == "en" ? "Slim Fit" : "Slim Fit"}
+                          </option>
+                        </Form.Select>
+                      </Form.Group>
+                    ) : (
+                      <div />
+                    )}
+
+                  </Col>
+
+                  <Col xs={12} sm={12} md={6} lg={6}>
+
+                    {product.subtag === "ARRIBA" ? (
+                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>
+                          {" "}
+                          {language == "en" ? "Type of Sleeve" : "Largo de Manga"}
+                        </Form.Label>
+                        <Form.Select
+                          aria-label="Default select example"
+                          onChange={(e) => setSleeve(e.target.value)}
+                          className={styles.form_control}
+                        >
+                          <option value="Corta">
+                            {" "}
+                            {language == "en" ? "Short" : "Corta"}
+                          </option>
+                          <option value="Larga">
+                            {" "}
+                            {language == "en" ? "Long" : "Larga"}
+                          </option>
+                        </Form.Select>
+                      </Form.Group>
+                    ) : (
+                      <div />
+                    )}
+
+                  </Col>
+
+                  <Col xs={12} sm={12} md={6} lg={6}>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>
+                        {" "}
+                        {language == "en" ? "Amount" : "Cantidad"}
+                      </Form.Label>
+                      <Form.Control
+                        type="number"
+                        onChange={(e) => setCant(e.target.value)}
+                        value={cant}
+                        className={styles.form_control}
+                      />
+                    </Form.Group>
+                  </Col>
+
+                </Row>
+
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>
@@ -238,7 +261,7 @@ const ProductDetail = ({ product }) => {
                       : "Colores Disponibles"}
                   </Form.Label>
                   <div>
-                    <Row>
+                    <Row className={styles.form_control}>
                       {product.available_colors.map((ecolor, index) => {
                         var sel_outline = "";
                         if (ecolor.code == color) {
@@ -268,6 +291,11 @@ const ProductDetail = ({ product }) => {
                     </Row>
                   </div>
                 </Form.Group>
+
+
+                {cant > 0 ? <p className={styles.product_price_p}><span className={styles.blue_span}>Price: </span> ${parseFloat(product.price * cant).toFixed(2)}</p> : <p className={styles.product_price_p}>$0</p>}
+
+
               </Card.Body>
               <Card.Footer className={styles.card_footer}>
                 <Button

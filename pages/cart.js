@@ -6,6 +6,7 @@ import axios from "axios";
 import { useCart } from "../context/CartContext";
 import CartDetail from "../components/CartDetail";
 import SecondaryNavbar from "../components/SecondaryNavbar";
+import NextNavbar from "../components/NextNavbar";
 
 export default function Home() {
   const { cart } = useCart();
@@ -32,7 +33,8 @@ export default function Home() {
         <meta charSet="utf-8" />
         </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+        <NextNavbar navy={true}/>
+      <SecondaryNavbar navbarShow={false} navy={true}/>
 
       <main className={styles.main}>
         <CartDetail />

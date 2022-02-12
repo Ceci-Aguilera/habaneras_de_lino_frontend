@@ -11,6 +11,7 @@ import {
   Row,
 } from "react-bootstrap";
 import SecondaryNavbar from '../components/SecondaryNavbar'
+import NextNavbar from '../components/NextNavbar'
 
 export default function OrderCheckout() {
 
@@ -37,7 +38,8 @@ export default function OrderCheckout() {
         <meta charSet="utf-8" />
         </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+        <NextNavbar navy={true}/>
+      <SecondaryNavbar navbarShow={false} navy={true}/>
 
       <main className={styles.main}>
 

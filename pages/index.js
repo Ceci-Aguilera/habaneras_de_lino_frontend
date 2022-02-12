@@ -20,6 +20,11 @@ import enzo_men_image from "../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_
 import enzo_women_image from "../public/images/Enzo Women.jpg";
 import Offers from "../components/Offers";
 import AboutUs from "../components/AboutUs";
+import NextNavbar from "../components/NextNavbar";
+
+import stylesT from '../styles/CategoryID.module.css'
+
+import navbarImage from "../public/images/Navbar/LUX4A.jpg";
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -48,7 +53,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={stylesi.container}>
       <Head>
         <title>Habaneras de Lino</title>
         <meta
@@ -67,10 +72,23 @@ export default function Home() {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar linkBackShow={false} />
+      <NextNavbar navy={false}/>
+
+      <SecondaryNavbar navbarShow={false} navy={false}/>
+
 
       <main className={styles.main}>
-        <NextCarousel />
+
+      
+      <div className={stylesi.background_div} style={{ backgroundImage: `url('/images/Navbar/LUX8A.jpg')` }}>
+        <div className={stylesi.title_div}>
+        <h2 className={stylesi.about_title}>
+          <span className={stylesi.about_title_span}>Comfort, Luxury, and Modernity</span>
+        </h2>
+        </div>
+        </div>
+        
+        {/* <NextCarousel /> */}
 
         <h1 className={stylesi.title_h1}>Habaneras de Lino</h1>
 
@@ -78,19 +96,18 @@ export default function Home() {
           {languageTranslate("slogan")}
         </h2>
 
+
+
         <Row className={stylesi.tag_div}>
           <Col xs={12} sm={12} md={12} lg={12}>
             <Link href={`/enzo-men/`}>
               <div className={stylesi.enzo_men_div}>
                 <Image
-                  sizes="(max-width: 600px) 100vw, 600px"
-                  //                 srcset="
-                  // /../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_200.jpg 200w,
-                  // /../public/images/Enzo Men/Enzo_Men_artbfq_c_scale,w_600.jpg 600w"
+                  // sizes="(max-width: 400px) 100vw, 400px"
                   src={enzo_men_image}
                   alt="Enzo Men Clothes Image"
-                  width="80%"
-                  height="100%"
+                  // width="80%"
+                  // height="90%"
                   className={styles.enzo_men_img}
                 />
               </div>

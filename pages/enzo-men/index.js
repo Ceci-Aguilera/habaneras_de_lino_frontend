@@ -7,10 +7,17 @@ import axios from "axios";
 import { useCart } from "../../context/CartContext";
 import CollectionGrid from "../../components/CollectionGrid";
 import SecondaryNavbar from "../../components/SecondaryNavbar";
+import NextNavbar from "../../components/NextNavbar";
+import CategoriesResume from "../../components/CategoriesResume";
 
 import { Row, Col } from "react-bootstrap";
 
 import { useLanguage } from "../../context/LanguageContext";
+import CollectionResume from "../../components/CollectionsResume";
+
+
+import stylesi from "../../styles/index.module.css";
+
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -52,13 +59,36 @@ export default function MenIndex() {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+      <NextNavbar navy={false}/>
+
+<SecondaryNavbar navbarShow={false} navy={false}/>
 
       <h1 className={styles.enzo_men_title}>
         {language == "en" ? "MEN" : "HOMBRES"}
       </h1>
 
-      <main className={styles.main}>
+
+
+
+<main className={styles.main}>
+
+
+<div className={stylesi.background_div} style={{ backgroundImage: `url('/images/Navbar/LUX8A.jpg')` }}>
+  <div className={stylesi.title_div}>
+  <h2 className={stylesi.about_title}>
+    <span className={stylesi.about_title_span}>Comfort, Luxury, and Modernity</span>
+  </h2>
+  </div>
+  </div>
+
+      <div id="enzo_men_collection">
+          <CollectionResume collections={collections} tag={"m"} />
+        </div>
+
+        <div id="enzo_men_category">
+          <CategoriesResume categories={categories} tag={"m"} />
+        </div>
+
         <div id="enzo_men_collection">
           <CollectionGrid collections={collections} tag={"m"} />
         </div>
@@ -66,6 +96,8 @@ export default function MenIndex() {
         <h3 className={styles.about_title}>
           {language == "en" ? "Categories" : "Categorías"}
         </h3>
+
+
 
         <div id="enzo_men_category">
           <CategoryGrid categories={categories} tag={"m"} />

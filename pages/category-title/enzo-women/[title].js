@@ -6,6 +6,7 @@ import axios from 'axios'
 import ProductsGrid from '../../../components/ProductsGrid';
 import stylesT from '../../../styles/CategoryID.module.css'
 import SecondaryNavbar from '../../../components/SecondaryNavbar';
+import NextNavbar from '../../../components/NextNavbar';
 
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
@@ -71,10 +72,14 @@ export default function CategoryTitleWomanDetailFunction({category, products}) {
         <meta charSet="utf-8" />
       </Head>
 
-      <SecondaryNavbar navbarShow={false} />
-
+      <NextNavbar navy={false}/>
+      <SecondaryNavbar navbarShow={false} navy={false}/>
       <main className={styles.main}>
+      <div className={stylesT.background_div} style={{ backgroundImage: `url(${category.image})` }}>
+        <div className={stylesT.title_div}>
         <h2 className={stylesT.about_title}><span className={stylesT.about_title_span}>{category.title}</span></h2>
+        </div>
+        </div>
           <ProductsGrid products={products}/>
       </main>
     </div>

@@ -12,7 +12,7 @@ export default function Layout({ children }) {
 
       </meta>
       </Head>
-      <NextNavbar />
+      {/* <NextNavbar /> */}
       <main className={styles.main}>{children}</main>
       <Footer />
     </>

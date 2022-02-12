@@ -1,0 +1,59 @@
+
+.card_div{
+    height: 350px;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.card_div{
+    margin-bottom: 100px;
+}
+
+.card{
+    border: 0px;
+    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+    transition: transform .2s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card_coll_image{
+    height: 350px;
+    width: 100%;
+}
+
+.card_footer{
+
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #25284b;
+}
+
+.collections_resume_h2{
+    font-size: 30px;
+    color: #25284b;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+    .collections_div{
+        margin-top: 50px;
+    }
+
+    .collections_resume_h2{
+        font-size: 30px;
+        color: #25284b;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: "Montserrat", sans-serif;
+    }
+}

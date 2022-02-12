@@ -139,12 +139,16 @@ const CustomProductDetail = ({ product, original_product }) => {
         <Col xs={12} sm={12} md={12} lg={6} className={styles.productCol}>
           <Card className={styles.card}>
             <Card.Body className={styles.card_body}>
+            <Row>
+
+<Col xs={12} sm={12} md={6} lg={6}>
               {product.product.subtag === "ARRIBA" ? (
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>{language == "en" ? "Size" : "Talla"}</Form.Label>
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setClothingS(e.target.value)}
+                    className={styles.form_control}
                   >
                     <option value={product.clothing_s}>
                       {product.clothing_s}
@@ -165,6 +169,7 @@ const CustomProductDetail = ({ product, original_product }) => {
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setClothingS(e.target.value)}
+                    className={styles.form_control}
                   >
                     <option value={product.clothing_s}>
                       {product.clothing_s}
@@ -181,13 +186,16 @@ const CustomProductDetail = ({ product, original_product }) => {
                   </Form.Select>
                 </Form.Group>
               )}
+              </Col>
 
+              <Col xs={12} sm={12} md={6} lg={6}>
               {product.product.subtag === "ARRIBA" ? (
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label> {language == "en" ? "Fit" : "Corte"}</Form.Label>
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setFit(e.target.value)}
+                    className={styles.form_control}
                   >
                     <option value={product.fit}>{product.fit}</option>
                     <option value="Regular Fit">Regular Fit</option>
@@ -197,7 +205,8 @@ const CustomProductDetail = ({ product, original_product }) => {
               ) : (
                 <div />
               )}
-
+</Col>
+<Col xs={12} sm={12} md={6} lg={6}>
               {product.product.subtag === "ARRIBA" ? (
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>
@@ -207,6 +216,7 @@ const CustomProductDetail = ({ product, original_product }) => {
                   <Form.Select
                     aria-label="Default select example"
                     onChange={(e) => setSleeve(e.target.value)}
+                    className={styles.form_control}
                   >
                     <option value={product.size_of_sleeve}>
                       {language == "en" && product.size_of_sleeve == "Corta"
@@ -231,6 +241,10 @@ const CustomProductDetail = ({ product, original_product }) => {
                 <div />
               )}
 
+              </Col>
+
+              <Col xs={12} sm={12} md={6} lg={6}>
+
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>
                   {language == "en" ? "Amount" : "Cantidad"}
@@ -239,12 +253,16 @@ const CustomProductDetail = ({ product, original_product }) => {
                   type="number"
                   onChange={(e) => setCant(e.target.value)}
                   value={cant}
+                  className={styles.form_control}
                 />
               </Form.Group>
+              </Col>
+
+              </Row>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Color</Form.Label>
-                <Row>
+                <Row className={styles.form_control}>
                   {original_product.available_colors.map((ecolor, index) => {
                     var sel_outline = "";
                     if (ecolor.code == color) {
@@ -273,6 +291,9 @@ const CustomProductDetail = ({ product, original_product }) => {
                   })}
                 </Row>
               </Form.Group>
+
+              {cant > 0 ? <p className={styles.product_price_p}><span className={styles.blue_span}>Price: </span> ${parseFloat(product.price * cant).toFixed(2)}</p> : <p className={styles.product_price_p}>$0</p>}
+
             </Card.Body>
             <Card.Footer className={styles.card_footer}>
               <Button

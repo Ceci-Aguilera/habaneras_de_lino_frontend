@@ -10,10 +10,11 @@
 }
 
 .top_navbar_border {
-  width: 95%;
+  width: 100%;
   min-width: 300px;
-  height: 40px;
-  background-color: #244c77;
+  height: 30px;
+  background-color: #25284b;
+  z-index: 999999;
   margin-left: auto;
   margin-right: auto;
 }
@@ -21,6 +22,7 @@
 .lan_p{
 	color: white !important;
 	text-align: end !important;
+  padding-right: 50px;
 }
 
 .lan_button{
@@ -28,7 +30,7 @@
 	background-color: transparent !important;
 	border-color: transparent !important;
 	font-family: "Montserrat", sans-serif !important;
-	font-size: 20px !important;
+	font-size: 16px !important;
 }
 
 .lan_button:hover,
@@ -41,46 +43,73 @@
 }
 
 .navbar {
-  height: 300px;
-  background-color: white !important;
-  color: #244c77 !important;
+  height: 250px;
+  /* background-color:transparent !important; */
+  z-index: 999999;
+  /* background-color: white !important; */
+  /* background-color: #25284b !important; */
+}
+
+.navbar_navy{
+  background-color: #25284b !important;
+  height: 200px;
+  width: 100%;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  z-index: 1;
+}
+
+
+.navbar_white{
+  background-color: transparent !important;
+  background: none;
+  background-image: none;
 }
 
 .brand {
-  color: #244c77 !important;
-  font-size: 150px;
+  /* color: #244c77 !important; */
+  font-size: 120px;
   font-family: "Corinthia", cursive !important;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 
 
 .navbar_cart_svg {
-  width: 50px !important;
-  height: 50px !important;
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .cart_count {
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  border: solid white;
+  border: solid transparent;
   border-radius: 60%;
   height: 30px;
   width: 25px;
-  background-color: white;
-  color: #244c77;
+  background-color: transparent;
+  /* color: #244c77; */
   text-align: center;
-  margin-left: -10px;
+  margin-left: -5px;
   margin-top: -5px;
   font-family: "Montserrat, sans-serif" !important;
   font-weight: 700;
 }
 
+.brand_navy{
+  color: white !important;
+}
+
+.brand_white{
+  color: white !important;
+}
+
 @media screen and (max-width: 758px){
 
   .top_navbar_border {
-    width: 95%;
+    width: 100%;
     min-width: 300px;
     height: 30px;
   }
@@ -94,7 +123,7 @@
   }
 
   .navbar {
-    height: 100px;
+    height: 150px !important;
   }
 
   .navbar_cart_svg {
@@ -106,24 +135,24 @@
     font-size: 18px;
     font-weight: bold;
     position: absolute;
-    border: solid white;
+    border: solid transparent;
     border-radius: 60%;
     height: 25px;
     width: 20px;
-    background-color: white;
-    color: #244c77;
+    background-color: transparent;
+    color: white;
     text-align: center;
-    margin-left: -10px;
+    margin-left: -5px;
     margin-top: -10px;
     font-family: "Montserrat, sans-serif" !important;
     font-weight: 700;
   }
 
   .brand_small{
-    color: #244c77 !important;
+    color: white !important;
     font-size: 40px;
     font-family: "Corinthia", cursive !important;
-    font-weight: bold;
+    font-weight: bold !important;
     padding-top: 0 !important;
     margin-left: 0;
     margin-right: auto;
@@ -137,16 +166,68 @@
     margin-left: auto !important;
     margin-right: 0 !important;
   }
+
+  .navbar_cart_svg{
+    fill: white !important;
+  }
+
+  .navbar_navy{
+    background-color: #25284b !important;
+  }
+  
+  .navbar_white{
+    background-color: #25284b !important;
+  }
   
 
 }
 
+@media screen and (min-width: 500px) and (max-width: 758px){
+  .brand_small{
+    color: white !important;
+    font-size: 50px;
+    font-family: "Corinthia", cursive !important;
+    font-weight: bold !important;
+    padding-top: 0 !important;
+    margin-left: 0;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap:break-word !important;
+    padding-left: 20px
+  }
+
+  .navbar_cart_svg{
+    fill: white !important;
+  }
+
+  .navbar_navy{
+    background-color: #25284b !important;
+  }
+  
+  .navbar_white{
+    background-color: #25284b !important;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px){
   .brand {
-    color: #244c77 !important;
+    color: white !important;
     font-size: 80px;
     font-family: "Corinthia", cursive !important;
     font-weight: bold;
+  }
+
+  .navbar_cart_svg{
+    fill: white !important;
+  }
+
+  .navbar_navy{
+    background-color: #25284b !important;
+  }
+  
+  .navbar_white{
+    background-color: #25284b !important;
   }
 
 }

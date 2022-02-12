@@ -14,6 +14,8 @@ import SecondaryNavbar from '../components/SecondaryNavbar'
 import Stepper from 'react-stepper-horizontal';
 import { PayPalButton } from "react-paypal-button-v2";
 import { useRouter } from 'next/router'
+import NextNavbar from '../components/NextNavbar' 
+
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
@@ -67,7 +69,8 @@ export default function OrderCheckout() {
         <meta charSet="utf-8" />
         </Head>
 
-      <SecondaryNavbar navbarShow={false} />
+        <NextNavbar navy={true}/>
+      <SecondaryNavbar navbarShow={false} navy={true}/>
 
       <main className={styles.main}>
 

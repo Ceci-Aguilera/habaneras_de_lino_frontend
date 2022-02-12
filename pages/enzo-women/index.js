@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useCart } from '../../context/CartContext'
 import CollectionGrid from '../../components/CollectionGrid'
 import SecondaryNavbar from '../../components/SecondaryNavbar'
+import NextNavbar from '../../components/NextNavbar'
 
 import { Row, Col } from 'react-bootstrap'
 
@@ -46,7 +47,8 @@ export default function WomenIndex() {
       </Head>
 
 
-      <SecondaryNavbar navbarShow={false} />
+      <NextNavbar navy={true}/>
+      <SecondaryNavbar navbarShow={false} navy={true}/>
 
       <h1 className={styles.enzo_women_title}>
         WOMEN 
