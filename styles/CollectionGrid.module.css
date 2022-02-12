@@ -11,7 +11,7 @@
 
 .card {
   margin-top: 20px;
-  height: 400px;
+  height: 350px;
   width: 300px;
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
   margin-left: auto !important;
@@ -20,7 +20,7 @@
 }
 
 .card_image {
-  height: 400px;
+  height: 350px;
   width: 300px;
   border-radius: 10px;
   margin-left: auto !important;
@@ -28,7 +28,7 @@
 }
 
 .card_coll_image {
-  height: 400px;
+  height: 350px;
   width: 300px;
   border-radius: 10px;
   margin-left: auto !important;
@@ -36,7 +36,7 @@
 }
 
 .carousel{
-  height: 500px;
+  height: 450px;
   width: 100%;
   margin-top: 0px;
   margin-left: auto !important;

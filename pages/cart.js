@@ -7,6 +7,7 @@ import { useCart } from "../context/CartContext";
 import CartDetail from "../components/CartDetail";
 import SecondaryNavbar from "../components/SecondaryNavbar";
 import NextNavbar from "../components/NextNavbar";
+import stylesT from '../styles/CategoryID.module.css'
 
 export default function Home() {
   const { cart } = useCart();
@@ -33,10 +34,15 @@ export default function Home() {
         <meta charSet="utf-8" />
         </Head>
 
-        <NextNavbar navy={true}/>
-      <SecondaryNavbar navbarShow={false} navy={true}/>
+        <NextNavbar navy={false}/>
+      <SecondaryNavbar navbarShow={false} navy={false}/>
 
       <main className={styles.main}>
+      <div className={stylesT.background_div} style={{ backgroundImage: `url('/images/Navbar/LUX8A.jpg')` }}>
+        <div className={stylesT.title_div}>
+        <h2 className={stylesT.about_title_catch}><span className={stylesT.about_title_span_catch}>Comfort, Luxury, and Modernity</span></h2>
+        </div>
+        </div>
         <CartDetail />
       </main>
 

@@ -9,6 +9,7 @@ import NextNavbar from '../../components/NextNavbar';
 
 const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 
+import stylesT from '../../styles/CategoryID.module.css'
 
 const config = {
   headers: {
@@ -69,9 +70,14 @@ export default function ProductDetailFunction({product}) {
         <meta charSet="utf-8" />
       </Head>
 
-      <NextNavbar navy={true}/>
-      <SecondaryNavbar navbarShow={false} navy={true}/>
+      <NextNavbar navy={false}/>
+      <SecondaryNavbar navbarShow={false} navy={false}/>
       <main className={styles.main}>
+      <div className={stylesT.background_div} style={{ backgroundImage: `url('/images/Navbar/LUX8A.jpg')` }}>
+        <div className={stylesT.title_div}>
+        <h2 className={stylesT.about_title_catch}><span className={stylesT.about_title_span_catch}>Comfort, Luxury, and Modernity</span></h2>
+        </div>
+        </div>
         <ProductDetail product={product} />
       </main>
     </div>

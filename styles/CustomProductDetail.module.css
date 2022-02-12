@@ -1,5 +1,5 @@
 .customProductsDetailContainer {
-    margin-top: 50px;
+  margin-top: 200px;
     margin-bottom: 100px;
     /* background-color:white; */
   }
@@ -106,6 +106,10 @@
   }
   
   @media screen and (min-width: 758px) and (max-width: 992px) {
+    .customProductsDetailContainer {
+      margin-top: 50px;
+    }
+
     .productCol {
       margin-top: 50px !important;
     }
@@ -122,6 +126,10 @@
   }
   
   @media screen and (max-width: 758px) {
+    .customProductsDetailContainer {
+      margin-top: 50px;
+    }
+    
     .productCol {
       margin-top: 50px !important;
     }
