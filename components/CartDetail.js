@@ -92,7 +92,7 @@ const CartDetail = () => {
                       <p>{prod.product.title}</p>
 			  </Row> */}
                     <Row className={styles.row_product_vars}>
-                      <Col xs={6} sm={6} md={6} lg={6}>
+                      <Col xs={6} sm={6} md={6} lg={6} className={styles.col_prod}>
                         <p>
                           {" "}
                           {language == "en" ? "Size:" : "Talla:"}{" "}
@@ -123,8 +123,12 @@ const CartDetail = () => {
                         ) : (
                           <div />
                         )}
+ 
                       </Col>
-                      <Col xs={6} sm={6} md={6} lg={6}>
+                      <Col xs={6} sm={6} md={6} lg={6} className={styles.col_prod}>
+
+                      
+
                         <p>
                           {language == "en" ? "Amount" : "Cantidad"}:{" "}
                           {prod.cant}
@@ -147,6 +151,11 @@ const CartDetail = () => {
                             </div>
                           </div>
                         )}
+                        <p>
+                          {" "}
+                          {language == "en" ? "Code:" : "Codigo:"}{" "}
+                          {prod.product.code}
+                        </p>
                         <p>
                           {language == "en" ? "Price" : "Precio"}: ${parseFloat(
                             prod.price

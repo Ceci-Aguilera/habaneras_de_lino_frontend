@@ -295,6 +295,7 @@ const ProductDetail = ({ product }) => {
 
                 {cant > 0 ? <p className={styles.product_price_p}><span className={styles.blue_span}>Price: </span> ${parseFloat(product.price * cant).toFixed(2)}</p> : <p className={styles.product_price_p}>$0</p>}
 
+                <p className={styles.product_code}><span className={styles.blue_span}>Code: </span>{product.code}</p>
 
               </Card.Body>
               <Card.Footer className={styles.card_footer}>
