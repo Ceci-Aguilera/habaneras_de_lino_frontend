@@ -141,8 +141,8 @@ const CustomProductDetail = ({ product, original_product }) => {
             <Card.Body className={styles.card_body}>
             <Row>
 
-<Col xs={12} sm={12} md={6} lg={6}>
               {product.product.subtag === "ARRIBA" ? (
+<Col xs={12} sm={12} md={6} lg={6}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>{language == "en" ? "Size" : "Talla"}</Form.Label>
                   <Form.Select
@@ -160,7 +160,9 @@ const CustomProductDetail = ({ product, original_product }) => {
                     <option value="XXL">XXL</option>
                   </Form.Select>
                 </Form.Group>
+                </Col>
               ) : (
+                <Col xs={12} sm={12} md={12} lg={12}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>
                     {" "}
@@ -185,8 +187,8 @@ const CustomProductDetail = ({ product, original_product }) => {
                     <option value="44">44</option>
                   </Form.Select>
                 </Form.Group>
+                </Col>
               )}
-              </Col>
 
               <Col xs={12} sm={12} md={6} lg={6}>
               {product.product.subtag === "ARRIBA" ? (
@@ -243,6 +245,7 @@ const CustomProductDetail = ({ product, original_product }) => {
 
               </Col>
 
+              {product.product.subtag === "ARRIBA" ? (
               <Col xs={12} sm={12} md={6} lg={6}>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -257,6 +260,22 @@ const CustomProductDetail = ({ product, original_product }) => {
                 />
               </Form.Group>
               </Col>
+              ):(
+                <Col xs={12} sm={12} md={12} lg={12}>
+
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>
+                    {language == "en" ? "Amount" : "Cantidad"}
+                  </Form.Label>
+                  <Form.Control
+                    type="number"
+                    onChange={(e) => setCant(e.target.value)}
+                    value={cant}
+                    className={styles.form_control}
+                  />
+                </Form.Group>
+                </Col>
+              )}
 
               </Row>
 

@@ -132,8 +132,8 @@ const ProductDetail = ({ product }) => {
               <Card.Body className={styles.card_body}>
                 <Row>
 
-                  <Col xs={12} sm={12} md={6} lg={6}>
                     {product.subtag === "ARRIBA" ? (
+                  <Col xs={12} sm={12} md={6} lg={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>
                           {language == "en" ? "Size" : "Talla"}
@@ -150,7 +150,9 @@ const ProductDetail = ({ product }) => {
                           <option value="XXL">XXL</option>
                         </Form.Select>
                       </Form.Group>
+                      </Col>
                     ) : (
+                      <Col xs={12} sm={12} md={12} lg={12}>
                       <Form.Group className="mb-3" controlId="formBasicEmail" >
                         <Form.Label>
                           {" "}
@@ -172,12 +174,12 @@ const ProductDetail = ({ product }) => {
                           <option value="44">44</option>
                         </Form.Select>
                       </Form.Group>
+                  </Col>
                     )}
 
-                  </Col>
+
 
                   <Col xs={12} sm={12} md={6} lg={6}>
-
                     {product.subtag === "ARRIBA" ? (
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>
@@ -205,8 +207,8 @@ const ProductDetail = ({ product }) => {
 
                   </Col>
 
-                  <Col xs={12} sm={12} md={6} lg={6}>
 
+                  <Col xs={12} sm={12} md={6} lg={6}>
                     {product.subtag === "ARRIBA" ? (
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>
@@ -234,8 +236,10 @@ const ProductDetail = ({ product }) => {
 
                   </Col>
 
-                  <Col xs={12} sm={12} md={6} lg={6}>
 
+                  {product.subtag === "ARRIBA" ? (
+
+                  <Col xs={12} sm={12} md={6} lg={6}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>
                         {" "}
@@ -249,6 +253,23 @@ const ProductDetail = ({ product }) => {
                       />
                     </Form.Group>
                   </Col>
+                  ):(
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>
+                        {" "}
+                        {language == "en" ? "Amount" : "Cantidad"}
+                      </Form.Label>
+                      <Form.Control
+                        type="number"
+                        onChange={(e) => setCant(e.target.value)}
+                        value={cant}
+                        className={styles.form_control}
+                      />
+                    </Form.Group>
+                  </Col>
+                  )
+                  }
 
                 </Row>
 
