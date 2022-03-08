@@ -4,7 +4,7 @@
     font-weight: 300 !important;
     text-align: center;
     margin-top: 300px;
-    height: 200px;
+    height: 250px;
     width: 100% !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -25,11 +25,15 @@
   
 
   .contactUsCol{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
     width: 100%;
 
+  }
+
+  .contactUsColP{
+    /* font-weight: bold; */
   }
   
   .footerLink,
@@ -65,13 +69,20 @@
     margin-right: auto !important;
   }
 
+  .developer_row{
+    width: max-content;
+    margin-top: 30px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   @media screen and (max-width: 758px) {
     .footerWrapper {
       color: white !important;
       display: flex;
       width: 100%;
       flex-direction: column;
-      margin-top: 120px;
+      margin-top: 80px;
       margin-left: auto !important;
       margin-right: auto !important;
       justify-content: center;
@@ -83,7 +94,7 @@
       font-weight: 300 !important;
       text-align: center;
       margin-top: 50px;
-      height: 500px;
+      height: 600px;
       width: 100% !important;
       position: relative;
       bottom: 0;
@@ -95,13 +106,15 @@
     .contactUsColP{
       color: white !important;
       text-decoration: none;
-      margin-top: 30px;
-      padding: 0px;
+      margin-top: 10px;
+      padding: 0px !important;
     }
 
     .contactUsInfoCol{
       margin-top: 10px;
       width:max-content;
+      padding-left: 50px !important;
+      padding-right: 50px !important;
     }
   
     .footerLink,
@@ -113,10 +126,14 @@
     }
 
     .contactUsRow{
-      width: 100%;
+      color: white !important;
       display: flex;
       flex-direction: row;
       justify-content: center;
+      width: 100%;
+      margin: 0px;
+      margin-top: 30px;
+      padding: 0px;
     }
   }
 
@@ -127,7 +144,7 @@
       font-weight: 300 !important;
       text-align: center;
       margin-top: 50px;
-      height: 400px;
+      height: 500px !important;
       width: 100% !important;
       position: relative;
       bottom: 0;

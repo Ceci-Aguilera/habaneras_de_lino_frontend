@@ -119,6 +119,12 @@ const Footer = () => {
         </Col>
 
       </Row>
+
+      <Row className={styles.developer_row} >
+        <p className={styles.p}>
+          Developed by Cecilia Fernandez Aguilera
+        </p>
+      </Row>
     </footer>
   );
 };
