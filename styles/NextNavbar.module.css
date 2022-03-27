@@ -1,9 +1,3 @@
-/*================================================
-    Variables that change depending on devices
-
-    Default values are for Extra Large devices 1400px
- ================================================ */
-
 .navbar_wrapper {
   width: 100%;
   background-color: white !important;
@@ -43,11 +37,8 @@
 }
 
 .navbar {
-  height: 250px;
-  /* background-color:transparent !important; */
+  height: 200px;
   z-index: 999999;
-  /* background-color: white !important; */
-  /* background-color: #25284b !important; */
 }
 
 .navbar_navy{
@@ -60,7 +51,6 @@
   z-index: 1;
 }
 
-
 .navbar_white{
   background-color: transparent !important;
   background: none;
@@ -68,13 +58,10 @@
 }
 
 .brand {
-  /* color: #244c77 !important; */
   font-size: 120px;
   font-family: "Corinthia", cursive !important;
   font-weight: 500;
 }
-
-
 
 .navbar_cart_svg {
   width: 40px !important;
@@ -90,7 +77,6 @@
   height: 30px;
   width: 25px;
   background-color: transparent;
-  /* color: #244c77; */
   text-align: center;
   margin-left: -5px;
   margin-top: -5px;

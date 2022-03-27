@@ -27,7 +27,7 @@
   font-family: "Monstserrat", sans-serif;
   font-size: 20px;
   color: rgba(100,100,100, 1) !important;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
   width: 60%;
   margin-left: auto !important;
@@ -43,7 +43,7 @@
   width: 90%;
   min-width: 300px;
   height: 1px;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 100px;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -58,7 +58,7 @@
   }
 
   .br{
-    margin-top: 150px !important;
+    margin-top: 50px !important;
   }
 
   .about_p_div{

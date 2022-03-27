@@ -79,19 +79,6 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true, navy= true })
         variant="dark"
         className={`${styles.navbar} ${navy?styles.navbar_navy:styles.navbar_white}`}
       >
-        {linkBackShow === true ? (
-          <Navbar.Brand
-            className={`navbar-brand ${styles.brand_small} ${
-              styles.navbar_link
-            }`}
-            onClick={(e) => router.back()}
-          >
-            <LeftArrowIcon width={20} height={20} />{" "}
-            {language == "en" ? "BACK" : "Atrás"}
-          </Navbar.Brand>
-        ) : (
-          <div />
-        )}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Navbar.Collapse
@@ -113,6 +100,20 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true, navy= true })
 
               <NavDropdown.Item>Accessories</NavDropdown.Item>
             </NavDropdown> */}
+
+            {linkBackShow === true ? (
+          <Navbar.Brand
+            className={`navbar-brand ${styles.brand_small} ${
+              styles.navbar_link
+            }`}
+            onClick={(e) => router.back()}
+          >
+            <LeftArrowIcon width={20} height={20} />{" "}
+            {language == "en" ? "BACK" : "Atrás"}
+          </Navbar.Brand>
+        ) : (
+          <div />
+        )}
 
             <NavDropdown
               title={language == "en" ? "WOMEN" : "MUJERES"}
@@ -219,9 +220,9 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true, navy= true })
             {/* <Nav.Link href="#" className={styles.navbar_link}>
               COLLECTION 2022
             </Nav.Link> */}
-          </Nav>
+          {/* </Nav> */}
 
-          <Nav className={`mx-auto order-0  ${styles.navbar_contact_nav}`}>
+          {/* <Nav className={`mx-auto order-0  ${styles.navbar_contact_nav}`}> */}
             <Nav.Link
               href="/#offers"
               className={`${styles.navbar_link} ${styles.navbar_link_modal}`}

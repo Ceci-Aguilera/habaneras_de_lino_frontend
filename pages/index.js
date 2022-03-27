@@ -74,7 +74,7 @@ export default function Home() {
 
       <NextNavbar navy={false}/>
 
-      <SecondaryNavbar navbarShow={false} navy={false}/>
+      <SecondaryNavbar navbarShow={false} navy={false} linkBackShow={false} />
 
 
       <main className={styles.main}>
@@ -90,15 +90,15 @@ export default function Home() {
         
         {/* <NextCarousel /> */}
 
-        <h1 className={stylesi.title_h1}>Habaneras de Lino</h1>
+        {/* <h1 className={stylesi.title_h1}>Habaneras de Lino</h1>
 
         <h2 className={stylesi.catch_phrase_h2}>
           {languageTranslate("slogan")}
-        </h2>
+        </h2> */}
 
 
 
-        <Row className={stylesi.tag_div}>
+        {/* <Row className={stylesi.tag_div}>
           <Col xs={12} sm={12} md={12} lg={12}>
             <Link href={`/enzo-men/`}>
               <div className={stylesi.enzo_men_div}>
@@ -112,7 +112,7 @@ export default function Home() {
                 />
               </div>
             </Link>
-          </Col>
+          </Col> */}
 
           {/* <Col xs={12} sm={12} md={6} lg={6}>
             <Link href={`/enzo-women/`}>
@@ -130,9 +130,12 @@ export default function Home() {
               </div>
             </Link>
           </Col> */}
-        </Row>
+        {/* </Row> */}
 
-        <div className={stylesi.br} />
+        <div className={stylesi.small_br} />
+
+        <div className={stylesi.collection_carousel_wrapper_div}>
+
 
         <CollectionCarousel collection={"Luxury"} />
         <CollectionCarousel collection={"Etnik"} />
@@ -141,6 +144,7 @@ export default function Home() {
         <CollectionCarousel collection={"Romance"} />
         <CollectionCarousel collection={"Navy"} />
 
+        </div>
         <Offers />
 
         <AboutUs />

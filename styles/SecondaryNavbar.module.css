@@ -1,7 +1,4 @@
 .navbar{
-  /* background-color: #244c77 !important; */
-  /* height: 100%; */
-  /* min-height: 30px; */
   height: 50px;
   font-family: "Montserrat", sans-serif;
   z-index: 999999;
@@ -33,12 +30,9 @@
   border-bottom: 3px solid white;
 }
 
-
 .navbar_link:hover:after{
   transform: scaleX(1);
 }
-
-
 
 .navbar_contact_nav{
   margin-right: 50px !important;
@@ -72,7 +66,6 @@
   
 }
 
-
 .brand_small{
   padding-left: 50px !important;
   cursor: pointer;
@@ -80,7 +73,6 @@
 
 .navbar_navy{
   background-color:#25284b !important;
-  /* background-color: transparent !important; */
 }
 
 .navbar_white{

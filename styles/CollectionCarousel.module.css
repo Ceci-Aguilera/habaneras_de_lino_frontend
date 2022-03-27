@@ -4,7 +4,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 60px !important;
     cursor: pointer;
-    margin-top: 150px !important;
+    margin-top: 100px !important;
     margin-bottom: 50px;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .carousel_item_div{
-    margin-top: 30px;
+    margin-top: 0px;
     width: 280px;
     height: 400px;
     margin-left: auto!important;
