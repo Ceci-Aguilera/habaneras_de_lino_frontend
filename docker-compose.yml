@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  habanerasdelino_nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: habaneras-de-lino-nextjs
+    ports:
+      - 3000:3000
+    env_file: .env.local
