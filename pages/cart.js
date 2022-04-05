@@ -71,7 +71,7 @@ export default function Home() {
       <main className={styles.main}>
       <div className={stylesT.background_div} style={{ backgroundImage: `url('/images/Navbar/LUX8A.jpg')` }}>
         <div className={stylesT.title_div}>
-        <h2 className={stylesT.about_title_catch}><span className={stylesT.about_title_span_catch}>Comfort, Luxury, and Modernity</span></h2>
+        <h2 className={`${stylesT.about_title_catch} ${stylesT.about_title_cart}`}><span className={stylesT.about_title_span_catch}>Comfort, Luxury, and Modernity</span></h2>
         </div>
         </div>
         <CartDetail />
