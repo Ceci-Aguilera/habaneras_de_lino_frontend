@@ -1,27 +1,33 @@
+<div align="center">
+
 # Habaneras de Lino
  
  ![alt text](./public/logos/Habaneras_de_Lino_Logo.png)
 
+ ![Next js version](https://img.shields.io/badge/NEXT_js-12.0.8-4c566a?logo=next.js&&longCache=truelogoColor=white&colorB=pink&style=flat-square&colorA=4c566a) ![Bootstrap version](https://img.shields.io/badge/Bootstrap-5.0.2-4c566a?logo=bootstrap&&longCache=true&logoColor=white&colorB=pink&style=flat-square&colorA=4c566a) ![Django version](https://img.shields.io/badge/Django-3.2.8-4c566a?logo=django&&longCache=truelogoColor=white&colorB=pink&style=flat-square&colorA=4c566a) ![Django-RestFramework](https://img.shields.io/badge/Django_Rest_Framework-3.12.4-red.svg?longCache=true&style=flat-square&logo=django&logoColor=white&colorA=4c566a&colorB=pink) ![Commit activity](https://img.shields.io/github/commit-activity/y/Ceci-Aguilera/habaneras_de_lino_frontend/master?&&longCache=true&logoColor=white&colorB=green&style=flat-square&colorA=4c566a) ![Last Commit](https://img.shields.io/github/last-commit/Ceci-Aguilera/habaneras_de_lino_frontend/master?&&longCache=true&logoColor=white&colorB=green&style=flat-square&colorA=4c566a) 
+
+
+</div>
 ## Table of Contents
 
-1. [Brief Introduction](#frontend)
-1. [Quick Installation for testing using Docker](#docker)
-1. [Custom Installation](#installation)
+1. [Description](#introduction)
+1. [Install (Run) with Docker](#docker)
+1. [Installation without Docker](#installation)
 1. [Screenshots of the Frontend Next js App](#screenshots_frontend)
 1. [Screenshots of the Django Backend Admin Panel](#screenshots)
 
-<a name="frontend"></a>
-### Brief Introduction
+<a name="introduction"></a>
+## Description
 __Habaneras de Lino__ is an online store to buy linen and cotton clothes that offers its customers an experience of comfort, luxury ,and modernity. The clients can filter the clothing by category, collection, and other characteristics, as well as customize the product (set color, size, sleeve cut, ...), and save them in their cart as well as apply coupons for discount. 
 
-#### Useful Notes:
-- This repository contains the frontend of the store that is built using NEXT js while the backend was built using Django, and has its own repository (see [Ceci-Aguilera/habaneras_de_lino_api](https://github.com/Ceci-Aguilera/habaneras_de_lino_api)). Most of the calls to the backend are made with __axios__, and for the calls involving the client's cart, a token ([Knox Token](https://james1345.github.io/django-rest-knox/)) should always be provided except when the client has never purchased at the store (is a new client).
-- The cart and language of the website are managed via Context to provide a fast and pleasant experience for the client. At the top page of the store there is a switch button to change between languages (so far Spanish and English are available) and the change is made instantaneously after pressing an option. Same applies to the cart, at any action (add, edit, or delete product actions) the change is applied just after pressing the corresponding button for the action.
-- The layout and design are responsive and can adapt to different screen sizes. The screen sizes taken into account correspond to Mobile, Mini-Tablet, Tablet, and Desktop Views. For this propose, react-bootstrap was used as well as the bootstrap grid.
-- The payments are managed via Paypal. See [Paypal Documentation for Devs](https://developer.paypal.com/home).
+- ### Useful Notes:
+   - This repository contains the frontend of the store that is built using NEXT js while the backend was built using Django, and has its own repository (see [Ceci-Aguilera/habaneras_de_lino_api](https://github.com/Ceci-Aguilera/habaneras_de_lino_api)). Most of the calls to the backend are made with __axios__, and for the calls involving the client's cart, a token ([Knox Token](https://james1345.github.io/django-rest-knox/)) should always be provided except when the client has never purchased at the store (is a new client).
+   - The cart and language of the website are managed via Context to provide a fast and pleasant experience for the client. At the top page of the store there is a switch button to change between languages (so far Spanish and English are available) and the change is made instantaneously after pressing an option. Same applies to the cart, at any action (add, edit, or delete product actions) the change is applied just after pressing the corresponding button for the action.
+   - The layout and design are responsive and can adapt to different screen sizes. The screen sizes taken into account correspond to Mobile, Mini-Tablet, Tablet, and Desktop Views. For this propose, react-bootstrap was used as well as the bootstrap grid.
+   - The payments are managed via Paypal. See [Paypal Documentation for Devs](https://developer.paypal.com/home).
 
 <a name="docker"></a>
-### Quick Installation for testing using Docker
+## Install (Run) with Docker
 
 1. Clone the repo:
 
@@ -53,7 +59,7 @@ __Habaneras de Lino__ is an online store to buy linen and cotton clothes that of
 
 <a name="installation"></a>
 
-### Custom Installation
+## Installation without Docker
 
 1. Clone the repo:
 
@@ -88,22 +94,32 @@ __Habaneras de Lino__ is an online store to buy linen and cotton clothes that of
 
 
 
-
-
 <a name="screenshots_frontend"></a>
 
-### Screenshots of the Frontend NEXT JS App
+## Screenshots of the Frontend NEXT JS App
 
-#### Mobile View
+### Mobile View
+
+<div align="center">
 
 ![alt text](./screenshots/Product_Grid_Mobile_1.png) ![alt text](./screenshots/Product_Grid_Mobile_2.png) ![alt text](./screenshots/Product_Grid_Mobile_3.png)
 
+</div>
+
+<div align="center">
+
 ![alt text](./screenshots/Product_Detail_Mobile.png) ![alt text](./screenshots/Product_Detail_Mobile_2.png) ![alt text](./screenshots/Wholesalers_Discount_Mobile.png)
+
+</div>
+
+<div align="center">
 
 ![alt text](./screenshots/Shiiping_Mobile_1.png) ![alt text](./screenshots/Shiiping_Mobile_4.png) ![alt text](./screenshots/Shiiping_Mobile_3.png)
 
+</div>
+
 ---
-#### Desktop View
+### Desktop View
 
 
 
@@ -139,7 +155,7 @@ __Habaneras de Lino__ is an online store to buy linen and cotton clothes that of
 
 <a name="screenshots"></a>
 
-### Screenshots of the Django Backend Admin Panel
+## Screenshots of the Django Backend Admin Panel
 
 
 ![alt text](./screenshots/Habaneras_de_Lino_Api.png)
