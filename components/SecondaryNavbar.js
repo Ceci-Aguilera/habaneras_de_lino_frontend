@@ -254,9 +254,6 @@ const SecondaryNavbar = ({ navbarShow = true, linkBackShow = true, navy= true })
               {language == "en" ? "FIND SIZE" : "TALLAS"}
             </Nav.Link>
 
-            <Nav.Link href="#footer" className={styles.navbar_link}>
-              <WhatsAppIcon width={25} height={25} /> +1 941 447 5126
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

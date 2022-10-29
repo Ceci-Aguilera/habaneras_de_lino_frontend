@@ -106,7 +106,7 @@ const Footer = () => {
         </Col>
         <Col xs={12} sm={12} md={4} lg={4} className={styles.contactUsInfoCol}>
           <p className={styles.contactUsP}>
-           <EmailIcon width={25} height={25} /> habanerasdelino@gmail.com
+           <EmailIcon width={25} height={25} /> sales@habanerasdelino.com
           </p>
         </Col>
 

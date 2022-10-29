@@ -2,25 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/CollectionCarousel.module.css";
 import {
-  Nav,
-  Navbar,
-  NavDropdown,
   Container,
-  Form,
-  FormControl,
-  FormGroup,
-  InputGroup,
   Button,
-  Col,
-  Row,
-  ControlLabel,
   Card,
-  // Carousel,
 } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import router from "next/router";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useLanguage } from "../context/LanguageContext";
@@ -30,8 +18,8 @@ const domain = process.env.NEXT_PUBLIC_API_DOMAIN_NAME;
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    items: 4,
+    slidesToSlide: 2, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -61,48 +49,54 @@ const CollectionCarousel = ({ collection }) => {
     }
   };
 
-  // console.log("DSAKLJDKAJDJKAJDKJ KJSAKJD KASJDK JAJDA SK")
-  // console.log(collection)
-  // console.log(collectionInfo)
 
   return collectionInfo == null ? (
     <div />
   ) : (
-    <Container className={styles.collectionCarouselDiv} id={`${collection}`}>
+    <div className={styles.collectionCarouselDiv} id={`${collection}`}>
       <h2 className={styles.coll_name}>{languageTranslate(collection)}</h2>
 
       <Carousel
         swipeable={false}
         draggable={false}
-        showDots={true}
+        showDots={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={5000}
+        autoPlaySpeed={10000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
-        containerClass="carousel-container"
+        containerClass={styles.container_carousel}
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType={"desktop"}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
+        dotListClass={styles.custom_dot_list_style}
         className={styles.carousel}
+        partialVisible={false}
       >
         {collectionInfo.all_products_per_collection
-          .slice(0, collectionInfo.all_products_per_collection.length / 2)
           .map((prod, prod_index) => {
             return (
               <div key={prod_index} className={styles.carousel_item_div}>
                 <Link href={`/product/${prod.id}/`}>
                   <Card className={styles.card}>
+                    <div className={styles.card_image_div}>
                     <Card.Img
                       variant="top"
                       src={prod.image}
                       className={styles.card_coll_image}
                       alt={prod.title}
                     />
+                    </div>
+                    <Card.Body className={styles.carousel_info_div}>
+                     <p className={styles.carousel_item_info}>
+                      {prod.title}
+                     </p>
+                     <p className={styles.carousel_item_info}>
+                        ${parseFloat(prod.price).toFixed(2)}
+                     </p>
+                    </Card.Body>
                   </Card>
                 </Link>
               </div>
@@ -110,47 +104,6 @@ const CollectionCarousel = ({ collection }) => {
           })}
       </Carousel>
 
-      <Carousel
-        swipeable={false}
-        draggable={false}
-        showDots={true}
-        responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={5000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        deviceType={"desktop"}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-        className={styles.carousel}
-      >
-        {collectionInfo.all_products_per_collection
-          .slice(
-            collectionInfo.all_products_per_collection.length / 2,
-            collectionInfo.all_products_per_collection.length
-          )
-          .map((prod, prod_index) => {
-            return (
-              <div key={prod_index} className={styles.carousel_item_div}>
-                <Link href={`/product/${prod.id}/`}>
-                  <Card className={styles.card}>
-                    <Card.Img
-                      variant="top"
-                      src={prod.image}
-                      className={styles.card_coll_image}
-                      alt={prod.title}
-                    />
-                  </Card>
-                </Link>
-              </div>
-            );
-          })}
-      </Carousel>
 
       <div className={styles.link_div}>
         <Link
@@ -158,12 +111,11 @@ const CollectionCarousel = ({ collection }) => {
           href={`/collection/${collectionInfo.id}/`}
         >
           <Button className={styles.coll_link_button} variant="primary">
-            {language == "en" ? "View More of" : "Ver Más de"}{" "}
-            {collectionInfo.title}
+            {language == "en" ? "VIEW MORE" : "VER MAS"}
           </Button>
         </Link>
       </div>
-    </Container>
+    </div>
   );
 };
 

@@ -13,8 +13,9 @@
 }
 
 .card{
-    border: 0px;
-    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+    border-radius: 0px;
+    border: 1px solid transparent;
+    /* box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38); */
     transition: transform .2s;
 }
 
@@ -25,15 +26,17 @@
 .card_coll_image{
     height: 350px;
     width: 100%;
+    border: 1px solid #444444aa;
 }
 
 .card_footer{
-
     text-align: center;
-    color: white;
-    font-size: 20px;
+    /* color: white; */
+    background-color: transparent;
+    color: #444444aa;
+    font-size: 30px;
     text-transform: uppercase;
-    background-color: #25284b;
+    /* background-color: #25284b; */
 }
 
 .collections_resume_h2{

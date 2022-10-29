@@ -40,7 +40,7 @@ const language_dictionary = (lan, key) => {
                 {" "}
                 reach to us at any time at{" "}
                 <span style={{ color: "#244c77" }}>
-                  (habanerasdelino@gmail.com)
+                  (sales@habanerasdelino.com)
                 </span>{" "}
                 or by{" "}
               </p>
@@ -94,7 +94,7 @@ const language_dictionary = (lan, key) => {
                 {" "}
                 contáctenos en cualquier momento a nuestro correo{" "}
                 <span style={{ color: "#244c77" }}>
-                  (habanerasdelino@gmail.com)
+                  (sales@habanerasdelino.com)
                 </span>{" "}
                 o{" "}
               </p>

@@ -1,7 +1,6 @@
 .productsDetailContainer {
-  margin-top: 250px;
+  margin-top: 450px;
   margin-bottom: 100px;
-  /* background-color:white; */
 }
 
 .card_div {
@@ -16,7 +15,7 @@
   background-color: white;
   color: #25284b;
   font-family: "Montserrat", sans-serif;
-  border: 1px solid #25284b !important;
+  border: 1px solid transparent !important;
   font-weight: lighter;
   font-size: 24px;
   margin-left: auto !important;
@@ -24,13 +23,17 @@
   text-align: center;
   width: 500px;
   height: 600px;
-  border-radius: 10px;
-  box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+  border-radius: 0px;
 }
 .card_image {
-  width: 500px;
-  height: 600px;
-  border-radius: 10px;
+  width: 490px;
+  height: 590px;
+  text-align: center;
+  margin-top: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: auto !important;
+  border-radius: 0px;
   border-color: rgba(200, 200, 200, 0.6) !important;
 }
 
@@ -38,7 +41,7 @@
   width: 150px;
   height: 200px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .s_images_card::-webkit-scrollbar {
@@ -49,7 +52,7 @@
   width: 150px;
   max-height: 700px;
   border: 1px solid transparent !important;
-  border-radius: 10px;
+  border-radius: 0px;
   border-color: rgba(200, 200, 200, 0.6) !important;
   overflow-x: hidden;
   overflow-y: visible;
@@ -68,7 +71,7 @@
   color: white;
   border-color: #25284b;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   min-width: 200px;
   padding-bottom: 10px;
 }
@@ -85,8 +88,8 @@
 .card_image_mcard {
   width: 500px;
   height: 600px;
-  border-radius: 10px;
-  border-color: rgba(200, 200, 200, 0.6) !important;
+  border-radius: 0px;
+  border-color: #444444aa !important;
 }
 
 .form_control{
@@ -176,7 +179,7 @@
   .card_image_mcard {
     width: 300px;
     height: 400px;
-    border-radius: 10px;
+    border-radius: 0px;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center;
@@ -185,7 +188,7 @@
   .card_image {
     width: 300px;
     height: 400px;
-    border-radius: 10px;
+    border-radius: 0px;
     border-color: rgba(200, 200, 200, 0.6) !important;
   }
 
@@ -195,7 +198,7 @@
     width: 100px;
     height: 150px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 0px;
     border-color: rgba(200, 200, 200, 0.6) !important;
   }
 
@@ -207,7 +210,7 @@
     width: 100%;
     max-width: 300px !important;
     border: 1px solid transparent !important;
-    border-radius: 10px;
+    border-radius: 0px;
     margin-left: auto !important;
     margin-right: auto !important;
     height: max-content;

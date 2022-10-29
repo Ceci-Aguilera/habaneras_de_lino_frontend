@@ -37,7 +37,7 @@
 }
 
 .navbar {
-  height: 200px;
+  height: 180px;
   z-index: 999999;
 }
 
@@ -60,7 +60,8 @@
 .brand {
   font-size: 120px;
   font-family: "Corinthia", cursive !important;
-  font-weight: 500;
+  font-weight: 400;
+  word-spacing: 20px;
 }
 
 .navbar_cart_svg {

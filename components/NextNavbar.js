@@ -1,36 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../styles/NextNavbar.module.css";
-import mstyles from "../styles/main.module.css";
 import {
   Nav,
   Navbar,
-  NavDropdown,
   Container,
-  Form,
-  FormControl,
-  FormGroup,
-  InputGroup,
-  Button,
-  Col,
-  Row,
-  ControlLabel,
-  Modal,
-  DropdownButton,
-  Dropdown,
 } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import router from "next/router";
 import { useCart } from "../context/CartContext";
 import { useLanguage } from "../context/LanguageContext";
-import { fas, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckSquare, faCoffee } from "@fortawesome/fontawesome-free-solid";
-
-import navbarImage from "../public/images/Navbar/LUX4A.jpg";
-
-import tallas from "../public/images/tallas.jpeg";
 
 const SvgComponent = (props, color) => (
   <svg
@@ -69,7 +46,7 @@ const NextNavbar = ({ show_second_navbar = false, navy= true }) => {
   return (navy == null ||  navy == undefined)?<div></div>:(
     <>
       <div className={styles.navbar_wrapper}>
-        <div className={styles.top_navbar_border}>
+        {/* <div className={styles.top_navbar_border}>
           <p className={styles.lan_p}>
             <Button
               className={styles.lan_button}
@@ -85,7 +62,7 @@ const NextNavbar = ({ show_second_navbar = false, navy= true }) => {
               ENGLISH
             </Button>
           </p>
-        </div>
+        </div> */}
         <Navbar
           collapseOnSelect
           expand="md"
@@ -94,7 +71,6 @@ const NextNavbar = ({ show_second_navbar = false, navy= true }) => {
           className={`${styles.navbar} ${navy?styles.navbar_navy:styles.navbar_white}`}
         >
           <Container>
-            {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
 
             <Navbar.Brand
               className={`navbar-brand d-md-none ${styles.brand_small}`}

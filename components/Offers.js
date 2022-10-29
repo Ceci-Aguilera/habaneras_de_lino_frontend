@@ -23,7 +23,7 @@ const language_dictionary = (lan, key) => {
           units. To know more about these offers and discounts, contact us via{" "}
           <span style={{ color: "#244c77" }}>
             {" "}
-            email (habanerasdelino@gmail.com){" "}
+            email (sales@habanerasdelino.com){" "}
           </span>{" "}
           or by{" "}
           <span style={{ color: "#244c77" }}>
@@ -40,7 +40,7 @@ const language_dictionary = (lan, key) => {
           size/color or with different decorative shapes than the ones already
           in stock. To know more about this policy or to order a customized
           product contact us at{" "}
-          <span style={{ color: "#244c77" }}>habanerasdelino@gmail.com</span> or
+          <span style={{ color: "#244c77" }}>sales@habanerasdelino.com</span> or
           by{" "}
           <span style={{ color: "#244c77" }}>
             WhatsApp/Phone (+1 941 447 5126)
@@ -67,7 +67,7 @@ const language_dictionary = (lan, key) => {
           unidades, 24 unidades, 50 unidades y +50 unidades. Para conocer más
           sobre estas ofertas y descuentos, contáctenos a través de{" "}
           <span style={{ color: "#244c77" }}>
-            nuestro correo (habanerasdelino@gmail.com)
+            nuestro correo (sales@habanerasdelino.com)
           </span>{" "}
           o{" "}
           <span style={{ color: "#244c77" }}>
@@ -85,7 +85,7 @@ const language_dictionary = (lan, key) => {
           o con formas decorativas diferentes a los que ya están en stock. Para
           conocer más sobre esta política o para solicitar un producto
           personalizado contáctenos vía nuestro email{" "}
-          <span style={{ color: "#244c77" }}>habanerasdelino@gmail.com</span> o{" "}
+          <span style={{ color: "#244c77" }}>sales@habanerasdelino.com</span> o{" "}
           <span style={{ color: "#244c77" }}>
             WhatsApp/Telf (+1 941 447 5126)
           </span>. Estos productos deben arribar al cliente entre 10 y 15 días

@@ -83,54 +83,11 @@ export default function Home() {
       <div className={stylesi.background_div} style={{ backgroundImage: `url('/images/Navbar/LUX8A.jpg')` }}>
         <div className={stylesi.title_div}>
         <h2 className={stylesi.about_title}>
-          <span className={stylesi.about_title_span}>Comfort, Luxury, and Modernity</span>
+          <span className={stylesi.about_title_span}>Comfortable, Luxurious, and Modern ...</span>
         </h2>
         </div>
         </div>
         
-        {/* <NextCarousel /> */}
-
-        {/* <h1 className={stylesi.title_h1}>Habaneras de Lino</h1>
-
-        <h2 className={stylesi.catch_phrase_h2}>
-          {languageTranslate("slogan")}
-        </h2> */}
-
-
-
-        {/* <Row className={stylesi.tag_div}>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <Link href={`/enzo-men/`}>
-              <div className={stylesi.enzo_men_div}>
-                <Image
-                  // sizes="(max-width: 400px) 100vw, 400px"
-                  src={enzo_men_image}
-                  alt="Enzo Men Clothes Image"
-                  // width="80%"
-                  // height="90%"
-                  className={styles.enzo_men_img}
-                />
-              </div>
-            </Link>
-          </Col> */}
-
-          {/* <Col xs={12} sm={12} md={6} lg={6}>
-            <Link href={`/enzo-women/`}>
-              <div className={stylesi.enzo_women_div}>
-                <Image
-                  sizes="(max-width: 259px) 100vw, 259px"
-                  //                 srcset="
-                  // /../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_200 200w,
-                  // /../public/images/Enzo Women/Enzo_Women_dmlhc7_c_scale,w_256.png 256w"
-                  src={enzo_women_image}
-                  alt="Enzo Women Clothes Image"
-                  width="80%"
-                  height="100%"
-                />
-              </div>
-            </Link>
-          </Col> */}
-        {/* </Row> */}
 
         <div className={stylesi.small_br} />
 

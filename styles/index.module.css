@@ -59,25 +59,28 @@
 .about_title {
     color: #25284b;
     font-family: "Montserrat", sans-serif;
-    font-size: 80px;
+    font-size: 150px;
     text-align: center;
     margin-left: auto !important;
     margin-right: auto !important;
     background-color: transparent !important;
     opacity: 1 !important; 
-    padding-top: 250px !important;
+    padding-top: 200px !important;
   }
 
-  .about_title_span{
+.about_title_span{
     font-size: 50px;
+    font-weight: 300 !important;
+    padding: 10px;
     color: white;
+    background-color: #44444488;
 }
 
 .background_div{
-    top:30px;
+    top:0;
     left:0;
     position: absolute;
-    height: 400px;
+    height: 450px;
     width: 100%;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -97,7 +100,7 @@
   }
 
   .collection_carousel_wrapper_div{
-      padding-top: 50px !important;
+      padding-top: 250px !important;
   }
 
 @media screen and (min-width: 992px) { 

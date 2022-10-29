@@ -212,7 +212,7 @@ const sendShippingInfo = async (body, cart_token) => {
       const result = await res.data["Result"];
       if (result === "Success") {
         // return "Success"
-        router.push("/checkout-paypal")
+        router.push("/checkout-stripe")
       } else {
         console.log("Error in Shipping Info")
       }

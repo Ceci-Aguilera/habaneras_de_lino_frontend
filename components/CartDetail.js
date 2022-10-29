@@ -258,7 +258,7 @@ const CartDetail = () => {
                       To obtain a wholesaler coupon for a purchase of at last 12
                       units, contact us at our{" "}
                       <span style={{ color: "#244c77" }}>
-                        email (habanerasdelino@gmail.com)
+                        email (sales@habanerasdelino.com)
                       </span>{" "}
                       or by{" "}
                       <span style={{ color: "#244c77" }}>
@@ -271,7 +271,7 @@ const CartDetail = () => {
                       mayorista para una compra de al menos 12 unidades puede
                       contactarnos a nuestro{" "}
                       <span style={{ color: "#244c77" }}>
-                        email (habanerasdelino@gmail.com)
+                        email (sales@habanerasdelino.com)
                       </span>{" "}
                       o{" "}
                       <span style={{ color: "#244c77" }}>

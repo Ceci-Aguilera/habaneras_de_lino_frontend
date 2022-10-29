@@ -57,3 +57,11 @@ a {
   font-weight: 700;
   font-display: swap;
 }
+
+.react-multiple-carousel__arrow--left{
+  left: 0px !important;
+}
+
+.react-multiple-carousel__arrow--right{
+  right: 0px !important;
+}

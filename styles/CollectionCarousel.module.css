@@ -1,37 +1,72 @@
+.carousel{
+    width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+} 
+
+
 .coll_name{
-    color: #25284b;
+    color: #444444dd !important;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 60px !important;
+    font-family: "Corinthia", cursive !important;
+    font-size: 50px !important;
     cursor: pointer;
-    margin-top: 100px !important;
+    margin-top: 50px !important;
     margin-bottom: 50px;
 }
 
+.card_image_div{
+    width: 260px;
+    height: 350px;;
+    text-align: center;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    border-radius: 0px; 
+}
+
+
 .card_coll_image{
-    width: 280px;
+    width: 260px;
     height: 350px;
-    border-radius: 15px;
+    text-align: center;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    border-radius: 0px;
+    object-fit: cover;
+    border: 1px solid #44444466;
 }
 
 .carousel_item_div{
     margin-top: 0px;
-    width: 280px;
-    height: 400px;
+    width: 300px;
+    height: 420px;
     margin-left: auto!important;
     margin-right: auto!important;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .card{
-    width: 280px;
-    height: 350px;
+    width: 300px;
+    height: 380px;
     margin-left: auto!important;
     margin-right: auto!important;
     text-align: center;
-    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
-    border-radius: 10px;
+    /* box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38); */
+    border-radius: 0px;
+    border: 1px solid transparent;
+}
+
+.carousel_info_div{
+    margin-top: 0px;
+    padding: 5px;
+}
+
+.carousel_item_info{
+    color: #444444dd;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 .link_div{
@@ -104,18 +139,18 @@
 
     .card{
         width: 250px;
-        height: 300px;
+        height: 360px;
         margin-left: auto!important;
         margin-right: auto!important;
         text-align: center;
         box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
-        border-radius: 10px;
+        border-radius: 0px;
     }
 
     .card_coll_image{
         width: 250px;
         height: 300px;
-        border-radius: 12px;
+        border-radius: 0px;
     }
     
     .carousel_item_div{
@@ -125,7 +160,7 @@
         margin-left: auto!important;
         margin-right: auto!important;
         text-align: center;
-        border-radius: 10px;
+        border-radius: 0px;
     }
 
 }
